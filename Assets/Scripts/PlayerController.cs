@@ -37,12 +37,11 @@ public class PlayerController : MonoBehaviour
         direction.x = Input.GetAxis(horizontalAxis);
         direction.y = Input.GetAxis(verticalAxis);
         //Flip sprites if needed
-        if (flipHorizontal)
+        if (flipHorizontal && Mathf.Abs(direction.x) > 0.1)
         {
             foreach (var item in spriteRenderers)
             {
-                item.flipX = originalSpriteDirection == HorizontalDirection.left? direction.x > 0 : direction.x < 0;
-                
+                item.flipX = originalSpriteDirection == HorizontalDirection.left ? direction.x > 0 : direction.x < 0;
             }
         }
 
