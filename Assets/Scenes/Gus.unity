@@ -1059,6 +1059,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4973792041207809534, guid: f6fdec01778fe564ba952890003427b3, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973792041207809534, guid: f6fdec01778fe564ba952890003427b3, type: 3}
       propertyPath: attackDistance
       value: 1
       objectReference: {fileID: 0}

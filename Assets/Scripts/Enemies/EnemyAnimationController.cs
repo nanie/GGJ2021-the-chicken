@@ -38,6 +38,7 @@ public class EnemyAnimationController : FollowerEnemy
                 animator.SetBool("attack", true);
                 break;
             case StatusAnimation.dead:
+                animator.SetTrigger("dead");
                 break;
             case StatusAnimation.charging:
                 break;
