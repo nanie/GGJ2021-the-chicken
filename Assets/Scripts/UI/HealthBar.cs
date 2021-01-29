@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour
         transform.position = targetPosition;
         manager.OnCharacterDamaged += ChangeValues;
         manager.OnCharacterDie += Died;
-        total = manager.GetCurrent();    
+        total = manager.GetCurrent();
     }
 
     private void Died()
@@ -50,6 +50,6 @@ public class HealthBar : MonoBehaviour
     }
     private void ChangeValues(int value)
     {
-        barFiller.fillAmount = value / total;
+        barFiller.fillAmount = (float)value / (float)total;
     }
 }
