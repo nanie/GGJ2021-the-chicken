@@ -6,10 +6,10 @@ using UnityEngine;
 public class DamageEffects : MonoBehaviour
 {
     [SerializeField] private CameraShake cameraShake;
+    [SerializeField] private DamageManager playerDamageMagager;
     private void OnEnable()
     {
-        var pd = FindObjectOfType<PlayerDamage>();
-        pd.OnPlayerDamaged += DoDamageEffect;
+        playerDamageMagager.OnCharacterDamaged += DoDamageEffect;
     }
 
     private void DoDamageEffect(int obj)

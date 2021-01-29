@@ -7,11 +7,10 @@ using System;
 public class HealthCanvas : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI healthText;
-
+    [SerializeField] private DamageManager playerDamageManager;
     private void OnEnable()
     {
-        var pd = FindObjectOfType<PlayerDamage>();
-        pd.OnPlayerDamaged += SetDamage;
+        playerDamageManager.OnCharacterDamaged += SetDamage;
     }
     private void SetDamage(int health)
     {

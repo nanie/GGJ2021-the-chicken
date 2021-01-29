@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
     }
-
     void Update()
     {
         if (!_canWalk)

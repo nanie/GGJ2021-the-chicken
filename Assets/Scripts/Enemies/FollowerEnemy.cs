@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using System;
+
 public class FollowerEnemy : BaseEnemy
 {
     internal Transform target;
@@ -10,16 +12,26 @@ public class FollowerEnemy : BaseEnemy
     internal float attackDistance = 0.2f;
     [SerializeField]
     private float attackTime = 1f;
-
+    AIPath aI;
 
     private float timerAttack;
 
     void Start()
     {
         timerAttack = attackTime;
+        OnEnemyDie += Died;
+        aI = GetComponent<AIPath>();
     }
+
+    private void Died()
+    {
+        aI.canMove = false;
+    }
+
     public override void CheckAttack()
     {
+        if (dead)
+            return;
         if (following == true && Vector2.Distance(target.position, transform.position) <= attackDistance)
         {
             timerAttack -= Time.deltaTime;
@@ -43,7 +55,6 @@ public class FollowerEnemy : BaseEnemy
     {
         this.target = target;
         following = true;
-        AIPath aI = GetComponent<AIPath>();
         AIDestinationSetter aIDestination = GetComponent<AIDestinationSetter>();
         aIDestination.target = target;
     }

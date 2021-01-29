@@ -16,7 +16,9 @@ GameObject:
   - component: {fileID: 1186969534}
   - component: {fileID: 8987210571617110952}
   - component: {fileID: 8699752602800080211}
-  m_Layer: 0
+  - component: {fileID: 5142107320512110574}
+  - component: {fileID: 1186969536}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -137,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34ef90a0e8a2fa4b94d32f62bbbaace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0}
   horizontalAxis: Horizontal
   verticalAxis: Vertical
   flipHorizontal: 1
@@ -185,3 +186,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce59431428ed7442809ee7dae781761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5142107320512110574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8343479602076765633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12da25044db8eb545a2799ec6e9ff7c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraShake: {fileID: 0}
+  playerDamageMagager: {fileID: 8699752602800080211}
+--- !u!114 &1186969536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8343479602076765633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e3e945418496d4e89104af03f3d6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 1.25
+  attackPower: 1
+  attackOffsetRight: {x: 0.42, y: 0.72}
+  attackOffsetLeft: {x: -0.42, y: 0.72}
+  inputButtonNormal: Fire1
+  inputButtonSpecial: Fire2
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 128
