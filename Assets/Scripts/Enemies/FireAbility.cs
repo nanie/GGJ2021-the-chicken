@@ -14,9 +14,18 @@ public class FireAbility : FollowerEnemy
     AIPath aIPath;
     bool charging = false;
     public float chargeTime;
+    public bool isStatic;
+    
     private void Start()
     {
         aIPath = GetComponent<AIPath>();
+        if (isStatic == true)
+        {
+            aIPath.canMove = false;
+        }else
+        {
+            aIPath.canMove = true;
+        }
         timer = reuseTime;
     }
 
@@ -32,7 +41,10 @@ public class FireAbility : FollowerEnemy
             {
                 timer = chargeTime;
                 charging = true;                // recebe o tempo que demora para conjurar a habilidade especial
-                aIPath.canMove = false;
+                if (!isStatic)
+                {
+                    aIPath.canMove = false;
+                }
             }
         }
         else // ataque normal
@@ -50,7 +62,10 @@ public class FireAbility : FollowerEnemy
             Shoot(); // usa a habilidade especial
             timer = reuseTime; // coloca em tempo de recarga a habilidade especial
             charging = false;
-            aIPath.canMove = true;
+            if (!isStatic)
+            {
+                aIPath.canMove = true;
+            }
         }
     }
 
@@ -59,6 +74,7 @@ public class FireAbility : FollowerEnemy
         var hitInfo = Physics2D.OverlapCircleAll(transform.position, radius, layer);
         if (hitInfo.Length > 0)
         {
+            
             SetDamage(hitInfo[0].transform.gameObject, chargedAttackPower);
         }
     }
