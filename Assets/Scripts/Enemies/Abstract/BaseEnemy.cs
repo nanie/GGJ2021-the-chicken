@@ -26,4 +26,9 @@ public abstract class BaseEnemy : MonoBehaviour
     {
        
     }
+
+    public void SetDamage(int amount)
+    {
+        //TODO implementar dano no inimigo
+    }
 }

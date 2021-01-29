@@ -13,17 +13,19 @@ public class PlayerController : MonoBehaviour
 
     //Horizontal and vertical axis from player input
     [HideInInspector]
-    public Vector2 direction;
+    private Vector2 direction;
     [Header("Common settings")]
     [SerializeField] private string horizontalAxis = "Horizontal";
     [SerializeField] private string verticalAxis = "Vertical";
     private IAnimatorManager animator;
     [Header("Flip Renderer settings")]
     [SerializeField] private bool flipHorizontal;
-    [SerializeField] private HorizontalDirection originalSpriteDirection;
+    public HorizontalDirection originalSpriteDirection;
 
     private SpriteRenderer[] spriteRenderers;
     private bool _movementStarted = true;
+    private IAttackSkill currentSkill;
+    private bool _canWalk = true;
     void Start()
     {
         animator = GetComponentInChildren<IAnimatorManager>();
@@ -33,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!_canWalk)
+            return;
         //Find input axis
         direction.x = Input.GetAxis(horizontalAxis);
         direction.y = Input.GetAxis(verticalAxis);
@@ -55,13 +59,19 @@ public class PlayerController : MonoBehaviour
             animator.SetWalking(false);
             _movementStarted = true;
         }
-
-
     }
-
     void FixedUpdate()
     {
         rigidBody.MovePosition(rigidBody.position + direction * speed * Time.fixedDeltaTime);
     }
 
+    public Vector2 GetCurrentDirection()
+    {
+        return direction;
+    }
+
+    public void PlayerCanWalk(bool canWalk)
+    {
+        _canWalk = canWalk;
+    }
 }
