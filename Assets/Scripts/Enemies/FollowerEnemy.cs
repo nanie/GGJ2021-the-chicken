@@ -53,6 +53,7 @@ public class FollowerEnemy : BaseEnemy
 
     internal void StartFollow(Transform target)
     {
+        StatusDidChange(StatusAnimation.walking);
         this.target = target;
         following = true;
         AIDestinationSetter aIDestination = GetComponent<AIDestinationSetter>();

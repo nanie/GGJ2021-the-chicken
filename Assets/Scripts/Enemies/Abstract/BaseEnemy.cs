@@ -11,12 +11,19 @@ public abstract class BaseEnemy : MonoBehaviour
     public bool canDie = true;
     public float deathDestroyDelay = 1;
     public int maxHealth = 3;
+    public Action<StatusAnimation> OnStatusChange = delegate (StatusAnimation status) { };
     private DamageManager damageManager;
     internal bool dead = false;
+
     private void Awake()
     {
         if (canDie)
             CreateHealthBar();
+    }
+
+    internal void StatusDidChange(StatusAnimation status)
+    {
+        OnStatusChange.Invoke(status);
     }
 
     private void CreateHealthBar()
@@ -42,12 +49,14 @@ public abstract class BaseEnemy : MonoBehaviour
     private void EnemyDied()
     {
         dead = true;
+        StatusDidChange(StatusAnimation.dead);
         OnEnemyDie.Invoke();
         Destroy(gameObject, deathDestroyDelay);
     }
 
     public void SetDamage(GameObject other, int amount = -1)
     {
+        StatusDidChange(StatusAnimation.attacking);
         amount = amount < 0 ? damageAmount : amount;
         if (other.tag == "Player")
         {
@@ -71,6 +80,10 @@ public abstract class BaseEnemy : MonoBehaviour
     public void SetDamage(int amount)
     {
         if (canDie)
+        {
             damageManager.SetDamage(amount);
+            StatusDidChange(StatusAnimation.receiveDamage);
+        }
+       
     }
 }

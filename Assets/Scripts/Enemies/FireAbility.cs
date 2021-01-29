@@ -39,6 +39,7 @@ public class FireAbility : FollowerEnemy
         {
             if (following == true && Vector2.Distance(target.position, transform.position) <= attackDistance)
             {
+                StatusDidChange(StatusAnimation.charging);
                 timer = chargeTime;
                 charging = true;                // recebe o tempo que demora para conjurar a habilidade especial
                 if (!isStatic)
@@ -73,8 +74,7 @@ public class FireAbility : FollowerEnemy
     {
         var hitInfo = Physics2D.OverlapCircleAll(transform.position, radius, layer);
         if (hitInfo.Length > 0)
-        {
-            
+        {            
             SetDamage(hitInfo[0].transform.gameObject, chargedAttackPower);
         }
     }
