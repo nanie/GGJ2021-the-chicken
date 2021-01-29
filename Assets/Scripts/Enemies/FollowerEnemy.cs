@@ -30,6 +30,10 @@ public class FollowerEnemy : BaseEnemy
 
     public override void CheckAttack()
     {
+        if (target != null) // se não tem nenhum alvo
+        {
+            StatusDidChange(StatusAnimation.idle); // idle 
+        }
         if (dead)
             return;
         if (following == true && Vector2.Distance(target.position, transform.position) <= attackDistance)
@@ -39,6 +43,13 @@ public class FollowerEnemy : BaseEnemy
             {
                 timerAttack = attackTime;
                 SetDamage(target.gameObject);
+            }
+        }
+        else if (target != null)
+        {
+            if (Vector2.Distance(target.position, transform.position) > attackDistance && following == true)
+            {
+                StatusDidChange(StatusAnimation.walking);
             }
         }
     }
@@ -53,7 +64,7 @@ public class FollowerEnemy : BaseEnemy
 
     internal void StartFollow(Transform target)
     {
-        StatusDidChange(StatusAnimation.walking);
+        
         this.target = target;
         following = true;
         AIDestinationSetter aIDestination = GetComponent<AIDestinationSetter>();
