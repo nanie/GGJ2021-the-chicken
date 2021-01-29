@@ -1344,16 +1344,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c59b4b2991849419fa2a17c66f1f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 2
+  damageAmount: 1
   attackDistance: 0.2
   attackTime: 1
-  radius: 1
-  distance: 0
+  radius: 4.68
+  chargedAttackPower: 5
   layer:
     serializedVersion: 2
     m_Bits: 8
   reuseTime: 5
-  chargeTime: 2
+  chargeTime: 1.5
 --- !u!58 &2123583925
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1401,7 +1401,7 @@ MonoBehaviour:
   height: 1.91
   repathRate: 0.5
   canSearch: 1
-  canMove: 0
+  canMove: 1
   maxSpeed: 3
   gravity: {x: 0, y: 0, z: 0}
   groundMask:

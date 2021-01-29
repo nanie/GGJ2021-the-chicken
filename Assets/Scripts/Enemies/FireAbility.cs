@@ -7,9 +7,9 @@ using System;
 public class FireAbility : FollowerEnemy
 {
     public float radius;
-    public float distance;
+    public int chargedAttackPower;
     public LayerMask layer;
-     float timer;
+    float timer;
     public float reuseTime;
     AIPath aIPath;
     bool charging = false;
@@ -26,16 +26,13 @@ public class FireAbility : FollowerEnemy
         {
             CheckChargingEnd();
         }
-
-        else if(timer <= 0)
+        else if (timer <= 0)
         {
-            
             if (following == true && Vector2.Distance(target.position, transform.position) <= attackDistance)
             {
                 timer = chargeTime;
                 charging = true;                // recebe o tempo que demora para conjurar a habilidade especial
                 aIPath.canMove = false;
-
             }
         }
         else // ataque normal
@@ -53,19 +50,18 @@ public class FireAbility : FollowerEnemy
             Shoot(); // usa a habilidade especial
             timer = reuseTime; // coloca em tempo de recarga a habilidade especial
             charging = false;
+            aIPath.canMove = true;
         }
     }
 
     void Shoot()
     {
-        RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, radius, transform.right, distance, 3);
-        if (hitInfo)
+        var hitInfo = Physics2D.OverlapCircleAll(transform.position, radius, layer);
+        if (hitInfo.Length > 0)
         {
-            SetDamage(hitInfo.transform.gameObject);
+            SetDamage(hitInfo[0].transform.gameObject, chargedAttackPower);
         }
     }
-
-
 
     private void OnDrawGizmosSelected()
     {

@@ -10,21 +10,17 @@ public class FollowerEnemy : BaseEnemy
     internal float attackDistance = 0.2f;
     [SerializeField]
     private float attackTime = 1f;
-  
-    
+
+
     private float timerAttack;
-   
-    // Start is called before the first frame update
+
     void Start()
     {
-      timerAttack = attackTime;
-      
-}
-
-    // Update is called once per frame
+        timerAttack = attackTime;
+    }
     public override void CheckAttack()
     {
-        if(following == true && Vector2.Distance(target.position, transform.position) <= attackDistance)
+        if (following == true && Vector2.Distance(target.position, transform.position) <= attackDistance)
         {
             timerAttack -= Time.deltaTime;
             if (timerAttack <= 0)
@@ -32,11 +28,10 @@ public class FollowerEnemy : BaseEnemy
                 timerAttack = attackTime;
                 SetDamage(target.gameObject);
             }
-            
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    internal void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -44,14 +39,12 @@ public class FollowerEnemy : BaseEnemy
         }
     }
 
-    void StartFollow(Transform target)
+    internal void StartFollow(Transform target)
     {
         this.target = target;
         following = true;
-        AIPath aI = GetComponent<AIPath>(); 
+        AIPath aI = GetComponent<AIPath>();
         AIDestinationSetter aIDestination = GetComponent<AIDestinationSetter>();
         aIDestination.target = target;
-
-        
     }
 }

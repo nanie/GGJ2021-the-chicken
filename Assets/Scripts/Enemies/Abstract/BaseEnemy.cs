@@ -7,12 +7,13 @@ public abstract class BaseEnemy : MonoBehaviour
 {
     public int damageAmount;
 
-    public void SetDamage(GameObject other)
+    public void SetDamage(GameObject other, int amount = -1)
     {
-        if(other.tag == "Player")
+        amount = amount < 0 ? damageAmount: amount;
+        if (other.tag == "Player")
         {
             var damageController = other.GetComponent<PlayerDamage>();
-            damageController.SetDamage(damageAmount);
+            damageController.SetDamage(amount);
         }
     }
 
