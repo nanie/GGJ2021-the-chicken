@@ -4,10 +4,10 @@ using UnityEngine;
 using Pathfinding;
 public class FollowerEnemy : BaseEnemy
 {
-    Transform target;
-    bool following = false;
+    internal Transform target;
+    internal bool following = false;
     [SerializeField]
-    private float attackDistance = 0.2f;
+    internal float attackDistance = 0.2f;
     [SerializeField]
     private float attackTime = 1f;
   
@@ -22,7 +22,7 @@ public class FollowerEnemy : BaseEnemy
 }
 
     // Update is called once per frame
-    void Update()
+    public override void CheckAttack()
     {
         if(following == true && Vector2.Distance(target.position, transform.position) <= attackDistance)
         {

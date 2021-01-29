@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,5 +14,15 @@ public abstract class BaseEnemy : MonoBehaviour
             var damageController = other.GetComponent<PlayerDamage>();
             damageController.SetDamage(damageAmount);
         }
+    }
+
+    private void Update()
+    {
+        CheckAttack();
+    }
+
+    public virtual void CheckAttack()
+    {
+       
     }
 }
