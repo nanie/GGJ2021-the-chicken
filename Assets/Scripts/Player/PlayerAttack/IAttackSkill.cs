@@ -8,5 +8,4 @@ public interface IAttackSkill
     void UseSkillCharged(Transform player, LayerMask mask);
     float ChargeTime();
     void ShowVisualFeedback(Transform player, float chargeTime);
-
 }

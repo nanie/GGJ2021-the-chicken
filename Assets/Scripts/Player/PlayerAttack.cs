@@ -27,6 +27,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetButtonDown(inputButtonNormal))
         {
+            //TODO adicionar reuso
             NormalAttack();
         }
 
@@ -50,6 +51,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 selectedSkill.UseSkillQuick(transform, attackMask);
             }
+            holdTime = 0;
         }
 
     }
