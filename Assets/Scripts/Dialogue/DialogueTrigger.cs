@@ -10,7 +10,7 @@ public class DialogueTrigger : MonoBehaviour
     // Start is called before the first frame update
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canInteracte == true && isOpen == false)
+        if (Input.GetButtonDown("Fire1") && canInteracte == true && isOpen == false)
         {
             
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);

@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L) )
         {
             DisplayOnScreen();
         }
@@ -51,13 +51,15 @@ public class DialogueManager : MonoBehaviour
     public void OpenAnim()
     {
             animator.SetBool("open", true);
-            dialoguetrigger.open(true);
+            isOpen = true;
+            dialoguetrigger.open(isOpen);
     }
 
     public void CloseAnim()
     {
+        isOpen = false;
             animator.SetBool("open", false);
-        dialoguetrigger.open(false);
+            dialoguetrigger.open(isOpen);
     }
     
     public void DisplayOnScreen()
