@@ -93,6 +93,10 @@ public abstract class BaseEnemy : MonoBehaviour
             damageManager.SetDamage(amount);
             StatusDidChange(StatusAnimation.receiveDamage);
         }
+    }
 
+    public void Heal(int amount)
+    {
+        damageManager.Heal(amount);
     }
 }
