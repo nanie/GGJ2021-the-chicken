@@ -13,8 +13,9 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private LayerMask attackMask;
     private PlayerController playerController;
     private float holdTime;
-    HorizontalDirection direction;
-    IAttackSkill selectedSkill;
+    private HorizontalDirection direction;
+    private IAttackSkill selectedSkill;
+    private int attackPowerBonus = 0;
     void Start()
     {
         playerController = GetComponent<PlayerController>();
@@ -65,7 +66,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 if (enemy.TryGetComponent(out BaseEnemy baseEnemy))
                 {
-                    baseEnemy.SetDamage(attackPower);
+                    baseEnemy.SetDamage(attackPower + attackPowerBonus);
                 }
             }
         }
@@ -95,6 +96,10 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    public void SetBonus(int amount)
+    {
+        attackPowerBonus = amount;
+    }
     private Vector3 CalculateAttackOffset()
     {
         if (direction == HorizontalDirection.right)
