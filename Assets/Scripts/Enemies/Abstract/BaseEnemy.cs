@@ -56,12 +56,16 @@ public abstract class BaseEnemy : MonoBehaviour
 
     public void SetDamage(GameObject other, int amount = -1)
     {
+         float timer = 1f;
         StatusDidChange(StatusAnimation.attacking);
         amount = amount < 0 ? damageAmount : amount;
         if (other.tag == "Player")
         {
-            var damageController = other.GetComponent<DamageManager>();
-            damageController.SetDamage(amount);
+            timer = -Time.deltaTime;
+                if (timer <= 0) {
+                var damageController = other.GetComponent<DamageManager>();
+                damageController.SetDamage(amount);
+            }
         }
     }
 
