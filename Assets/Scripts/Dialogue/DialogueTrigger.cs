@@ -6,10 +6,11 @@ public class DialogueTrigger : MonoBehaviour
 {
     public bool canInteracte; 
     public DialogueBlueprint dialogue;
+    private bool isOpen = false;
     // Start is called before the first frame update
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canInteracte == true)
+        if (Input.GetButtonDown("Fire1") && canInteracte == true && isOpen == false)
         {
             
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
@@ -29,5 +30,10 @@ public class DialogueTrigger : MonoBehaviour
         {
             canInteracte = false;
         }
+    }
+
+    public void open(bool isOpen)
+    {
+        this.isOpen = isOpen;
     }
 }

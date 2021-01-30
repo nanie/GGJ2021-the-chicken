@@ -2,19 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class DialogueManager : MonoBehaviour
 {
-    public Text dialogueText;
-    public Text nameText;
+    public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI nameText;
     Queue<string> sentences;
     public Animator animator;
     public bool isOpen;
-    
+    public DialogueTrigger dialoguetrigger;
     // Start is called before the first frame update
     void Start()
     {
        
         sentences = new Queue<string>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L) )
+        {
+            DisplayOnScreen();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseAnim();
+        }
+
+      
     }
 
     public void StartDialogue(DialogueBlueprint dialogue)
@@ -35,25 +50,37 @@ public class DialogueManager : MonoBehaviour
 
     public void OpenAnim()
     {
-        if (isOpen)
-        {
             animator.SetBool("open", true);
-        }
+            isOpen = true;
+            dialoguetrigger.open(isOpen);
     }
 
     public void CloseAnim()
     {
         isOpen = false;
-        if (!isOpen)
-        {
             animator.SetBool("open", false);
-        }
+            dialoguetrigger.open(isOpen);
     }
     
     public void DisplayOnScreen()
     {
         string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
+        StartCoroutine(TypeSentence(sentence));
+        
+
+        //dialogueText.text = sentence;
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char character in sentence.ToCharArray())
+        {
+            
+            dialogueText.text += character;
+            yield return null;
+        }
+
         //dialogueText.text = sentence;
     }
 
