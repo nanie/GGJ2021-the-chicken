@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8081907346566361380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.226, y: -1.73, z: 0}
+  m_LocalScale: {x: 0.48699, y: 0.48699, z: 0.48699}
   m_Children: []
   m_Father: {fileID: 8573696623446172525}
   m_RootOrder: 0
@@ -126,7 +126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8573696622408473891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.26, z: 0}
+  m_LocalPosition: {x: 0, y: 1.132, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8573696623446172525}
@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 8573696623446172526}
   - component: {fileID: 8573696623446172521}
   - component: {fileID: 8573696623446172513}
+  - component: {fileID: 8081907346014569518}
   m_Layer: 7
   m_Name: Boss_Fox
   m_TagString: Untagged
@@ -260,7 +261,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12168348, y: 3.602726}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5253563
 --- !u!114 &8573696623446172513
@@ -279,34 +280,55 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   healthBarPivot: {fileID: 8573696622408473890}
-  damageAmount: 1
+  damageAmount: 2
   canDie: 1
   deathDestroyDelay: 1
   maxHealth: 20
   skillConfig:
-  - health: 20
-    skills:
-    - prefab: {fileID: 4973792041207809524, guid: f6fdec01778fe564ba952890003427b3, type: 3}
-      skillReuse: 5
-      skillChargeTime: 2
-      spawnPoints:
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
   - health: 15
     skills:
     - prefab: {fileID: 4973792041207809524, guid: f6fdec01778fe564ba952890003427b3, type: 3}
       skillReuse: 5
       skillChargeTime: 2
+      singleChild: 0
       spawnPoints:
       - {fileID: 0}
       - {fileID: 0}
       - {fileID: 0}
+  - health: 0
+    skills:
     - prefab: {fileID: 4973792041207809524, guid: f6fdec01778fe564ba952890003427b3, type: 3}
       skillReuse: 5
       skillChargeTime: 2
+      singleChild: 0
+      spawnPoints:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+    - prefab: {fileID: 8407741737001700975, guid: 163d40255bfacd64584521a0bb427a20, type: 3}
+      skillReuse: 5
+      skillChargeTime: 2
+      singleChild: 1
       spawnPoints:
       - {fileID: 0}
       - {fileID: 0}
       - {fileID: 0}
       - {fileID: 0}
+  attackDistance: 1.83
+  attackTime: 1
+  OnBossDie:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8081907346014569518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573696623446172514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b9ec4105cf70740a00fe6fd02141a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8081907346566361401}

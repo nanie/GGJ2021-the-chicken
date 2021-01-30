@@ -15,7 +15,6 @@ public class EnemyAnimationController : MonoBehaviour
         {
             enemy.OnStatusChange += ChangeAnimation;
         }
-
     }
 
     private void ChangeAnimation(StatusAnimation status)

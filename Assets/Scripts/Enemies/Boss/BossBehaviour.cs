@@ -3,17 +3,22 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BossBehaviour : BaseEnemy
 {
     [SerializeField] private BossSkillConfig[] skillConfig;
     [SerializeField] private float attackDistance;
     [SerializeField] private float attackTime;
+    [SerializeField] private UnityEvent OnBossDie;
     private AIPath aIPath;
     private bool isCharging;
     private Transform player;
+    private List<IBossMinion> minions = new List<IBossMinion>();
     float timerAttack;
+    private bool isDead = false;
     void Start()
     {
         aIPath = GetComponent<AIPath>();
@@ -21,6 +26,17 @@ public class BossBehaviour : BaseEnemy
         AIDestinationSetter aIDestination = GetComponent<AIDestinationSetter>();
         aIDestination.target = player;
         ChooseNextSkill();
+        OnEnemyDie += BossDied;
+    }
+
+    private void BossDied()
+    {
+        isDead = true;
+        foreach (var minion in minions)
+        {
+            minion.BossIsDead();
+        }
+        OnBossDie.Invoke();
     }
 
     public override void CheckAttack()
@@ -41,7 +57,7 @@ public class BossBehaviour : BaseEnemy
 
     private void ChooseNextSkill()
     {
-        var config = skillConfig.Where(q => q.health < CurrentHealth).OrderBy(q => q.health).First();
+        var config = skillConfig.Where(q => q.health < CurrentHealth).OrderByDescending(q => q.health).First();
         StartCoroutine(ExecuteSkill(config.skills[UnityEngine.Random.Range(0, config.skills.Length)]));
     }
 
@@ -51,21 +67,50 @@ public class BossBehaviour : BaseEnemy
         StatusDidChange(StatusAnimation.charging);
         isCharging = true;
         aIPath.canMove = false;
-        yield return new WaitForSeconds(skill.skillChargeTime);     
+        yield return new WaitForSeconds(skill.skillChargeTime);
         foreach (var point in skill.spawnPoints)
         {
-            var minion = Instantiate(skill.prefab, point.position, point.rotation);
-            var follower = minion.GetComponent<IFollowerMinion>();
-            if(follower!=null)
+            if (!skill.singleChild || point.childCount == 0)
             {
-                follower.FollowTarget(player);
+                var minion = Instantiate(skill.prefab, point.position, point.rotation);
+                if (skill.singleChild)
+                    minion.transform.SetParent(point);
+                var follower = minion.GetComponent<IFollowerMinion>();
+                if (follower != null)
+                {
+                    follower.FollowTarget(player);
+                }
+                var minionBehaviour = minion.GetComponent<IBossMinion>();
+                minions.Add(minionBehaviour);
+                minionBehaviour.OnDeath += delegate () { MinionDied(minionBehaviour); };
             }
+
         }
         yield return new WaitForSeconds(1.0f);
         isCharging = false;
         aIPath.canMove = true;
         StatusDidChange(StatusAnimation.walking);
         ChooseNextSkill();
+    }
+
+    private void MinionDied(IBossMinion minion)
+    {
+        if (isDead)
+            return;
+        if (minions.Contains(minion))
+        {
+            minions.Remove(minion);
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red; 
+        GUIStyle style = new GUIStyle();
+        style.normal.textColor = Color.red;
+        var labelPos = transform.position + new Vector3(0, attackDistance + 0.2f, 0);       
+        Handles.Label(labelPos, "Attack Radius", style);
+        Gizmos.DrawWireSphere(transform.position, attackDistance);
     }
 }
 [Serializable]
@@ -81,5 +126,6 @@ public class BossSkill
     public GameObject prefab;
     public float skillReuse;
     public float skillChargeTime;
+    public bool singleChild;
     public Transform[] spawnPoints;
 }

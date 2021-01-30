@@ -40,4 +40,10 @@ public class DamageManager : MonoBehaviour
     {
         return currentHealth;
     }
+
+    public void InstantDeath()
+    {
+        currentHealth = 0;
+        OnCharacterDie.Invoke();
+    }
 }
