@@ -20,13 +20,21 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetButtonDown("Fire1") && isOpen && sentences.Count > 0)
         {
+            
             DisplayOnScreen();
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetButtonDown("Cancel"))
         {
             CloseAnim();
+        }
+        else if (sentences.Count <= 0)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                StartDialogue(dialoguetrigger.dialogue);
+            }
         }
 
 
@@ -64,7 +72,9 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayOnScreen()
     {
+        
         string sentence = sentences.Dequeue();
+        StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
 
 
@@ -76,7 +86,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (char character in sentence.ToCharArray())
         {
-
+            
             dialogueText.text += character;
             yield return null;
         }

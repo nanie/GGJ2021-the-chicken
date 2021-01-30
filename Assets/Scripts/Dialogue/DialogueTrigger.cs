@@ -8,11 +8,13 @@ public class DialogueTrigger : MonoBehaviour
     public bool canInteracte;
     public DialogueBlueprint dialogue;
     private bool isOpen = false;
+    [SerializeField] private DialogueManager dialogueManager;
     // Start is called before the first frame update
     private void Update()
     {
         if (Input.GetButtonDown("Fire1") && canInteracte == true && isOpen == false)
         {
+            Debug.Log("aaaaaaaaaaaa");
             interactText.SetActive(false);
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
@@ -23,6 +25,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             interactText.SetActive(true);
             canInteracte = true;
+           
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -31,6 +34,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             interactText.SetActive(false);
             canInteracte = false;
+            dialogueManager.CloseAnim();
         }
     }
 

@@ -3080,6 +3080,7 @@ MonoBehaviour:
       suas primeiras instru\xE7\xF5es. Aperte L para ir ao pr\xF3ximo di\xE1logo."
     - "Para atacar, use a tecla L. Para se movimentar voc\xEA pode utilizar tanto
       as teclas WASD, quanto as setas do teclado."
+  dialogueManager: {fileID: 1339898544}
 --- !u!58 &1529772589
 CircleCollider2D:
   m_ObjectHideFlags: 0
