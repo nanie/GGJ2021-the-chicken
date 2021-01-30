@@ -14,13 +14,13 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+
         sentences = new Queue<string>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) )
+        if (Input.GetKeyDown(KeyCode.L))
         {
             DisplayOnScreen();
         }
@@ -29,7 +29,7 @@ public class DialogueManager : MonoBehaviour
             CloseAnim();
         }
 
-      
+
     }
 
     public void StartDialogue(DialogueBlueprint dialogue)
@@ -50,23 +50,23 @@ public class DialogueManager : MonoBehaviour
 
     public void OpenAnim()
     {
-            animator.SetBool("open", true);
-            isOpen = true;
-            dialoguetrigger.open(isOpen);
+        animator.SetBool("open", true);
+        isOpen = true;
+        dialoguetrigger.open(isOpen);
     }
 
     public void CloseAnim()
     {
         isOpen = false;
-            animator.SetBool("open", false);
-            dialoguetrigger.open(isOpen);
+        animator.SetBool("open", false);
+        dialoguetrigger.open(isOpen);
     }
-    
+
     public void DisplayOnScreen()
     {
         string sentence = sentences.Dequeue();
         StartCoroutine(TypeSentence(sentence));
-        
+
 
         //dialogueText.text = sentence;
     }
@@ -76,7 +76,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (char character in sentence.ToCharArray())
         {
-            
+
             dialogueText.text += character;
             yield return null;
         }
@@ -90,5 +90,5 @@ public class DialogueManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    
+
 }

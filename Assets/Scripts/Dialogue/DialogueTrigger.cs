@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public bool canInteracte; 
+    public GameObject interactText;
+    public bool canInteracte;
     public DialogueBlueprint dialogue;
     private bool isOpen = false;
     // Start is called before the first frame update
@@ -12,15 +13,15 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && canInteracte == true && isOpen == false)
         {
-            
-                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-            
+            interactText.SetActive(false);
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == 3)
         {
+            interactText.SetActive(true);
             canInteracte = true;
         }
     }
@@ -28,6 +29,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (other.gameObject.layer == 3)
         {
+            interactText.SetActive(false);
             canInteracte = false;
         }
     }
