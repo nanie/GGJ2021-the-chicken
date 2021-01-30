@@ -20,9 +20,11 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1") && isOpen && sentences.Count > 0)
-        {
-            
+        if (!isOpen)
+            return;
+
+        if (Input.GetButtonDown("Fire1") && sentences.Count > 0)
+        {            
             DisplayOnScreen();
         }
         else if (Input.GetButtonDown("Cancel"))

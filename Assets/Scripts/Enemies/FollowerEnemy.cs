@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using System;
+#if UNITY_EDITOR
 using UnityEditor;
-
+#endif
 public class FollowerEnemy : BaseEnemy, IFollowerMinion
 {
     internal Transform target;
@@ -75,6 +76,7 @@ public class FollowerEnemy : BaseEnemy, IFollowerMinion
     {
         StartFollow(target);
     }
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
@@ -84,4 +86,5 @@ public class FollowerEnemy : BaseEnemy, IFollowerMinion
         Handles.Label(labelPos, "Attack Radius", style);
         Gizmos.DrawWireSphere(transform.position, attackDistance);
     }
+#endif
 }

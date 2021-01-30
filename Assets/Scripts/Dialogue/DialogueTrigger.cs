@@ -33,9 +33,10 @@ public class DialogueTrigger : MonoBehaviour
         if (other.gameObject.layer == 3)
         {
             interactText.SetActive(false);
-            canInteracte = false;
-            dialogueManager.CloseAnim();
+           
+            dialogueManager.CloseAnim(); 
         }
+        canInteracte = false;
     }
 
     public void open(bool isOpen)

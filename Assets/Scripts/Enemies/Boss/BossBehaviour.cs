@@ -3,7 +3,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -103,7 +105,7 @@ public class BossBehaviour : BaseEnemy
             minions.Remove(minion);
         }
     }
-
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red; 
@@ -113,6 +115,7 @@ public class BossBehaviour : BaseEnemy
         Handles.Label(labelPos, "Attack Radius", style);
         Gizmos.DrawWireSphere(transform.position, attackDistance);
     }
+#endif
 }
 [Serializable]
 public class BossSkillConfig
