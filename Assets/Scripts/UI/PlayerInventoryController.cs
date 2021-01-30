@@ -16,7 +16,10 @@ public class PlayerInventoryController : MonoBehaviour
             OnItemStart.Invoke(item);
         }
     }
-
+    public void CollectItem()
+    {
+        CollectItem(ItemType.healthPotion);
+    }
     public void CollectItem(ItemType type)
     {
         if (Items.Any(q => q.type == type))
