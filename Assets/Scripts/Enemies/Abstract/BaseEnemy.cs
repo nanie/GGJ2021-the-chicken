@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class BaseEnemy : MonoBehaviour
+public abstract class BaseEnemy : MonoBehaviour, IBossMinion
 {
     [SerializeField] private UnityEvent OnDeath;
     public Transform healthBarPivot;
@@ -17,6 +17,19 @@ public abstract class BaseEnemy : MonoBehaviour
     public Action<StatusAnimation> OnStatusChange = delegate (StatusAnimation status) { };
     private DamageManager damageManager;
     internal bool dead = false;
+
+    event Action IBossMinion.OnDeath
+    {
+        add
+        {
+            OnEnemyDie += value;
+        }
+
+        remove
+        {
+            OnEnemyDie -= value;
+        }
+    }
 
     private void Awake()
     {
@@ -99,4 +112,9 @@ public abstract class BaseEnemy : MonoBehaviour
     {
         damageManager.Heal(amount);
     }
+
+    public void BossIsDead()
+    {
+        damageManager.InstantDeath();
+    }    
 }

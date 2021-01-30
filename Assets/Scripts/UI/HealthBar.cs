@@ -25,7 +25,9 @@ public class HealthBar : MonoBehaviour
 
     private void Died()
     {
-        Destroy(gameObject);
+        manager.OnCharacterDie -= Died;
+        if (gameObject != null)
+            Destroy(gameObject);
     }
 
     private void Update()

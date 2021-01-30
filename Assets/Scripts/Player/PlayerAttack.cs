@@ -11,11 +11,14 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private string inputButtonNormal = "Fire1";
     [SerializeField] private string inputButtonSpecial = "Fire2";
     [SerializeField] private LayerMask attackMask;
+    [SerializeField] private float attackSpeed = 0.5f;
     private PlayerController playerController;
     private float holdTime;
     private HorizontalDirection direction;
-    private IAttackSkill selectedSkill;
     private int attackPowerBonus = 0;
+    private IAttackSkill selectedSkill;
+    private float timer;
+    
     void Start()
     {
         playerController = GetComponent<PlayerController>();
@@ -24,11 +27,13 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+        timer -= Time.deltaTime;
+
         SetDirection();
 
-        if (Input.GetButtonDown(inputButtonNormal))
+        if (Input.GetButtonDown(inputButtonNormal) && timer <= 0)
         {
-            //TODO adicionar reuso
+            timer = attackSpeed;
             NormalAttack();
         }
 
