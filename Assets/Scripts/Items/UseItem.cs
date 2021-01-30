@@ -8,7 +8,9 @@ public class UseItem : MonoBehaviour
     [SerializeField] private PlayerAttack playerAttack;
     [SerializeField] private int powerPotionPower = 1;
     [SerializeField] private int durationPotionPower = 4;
-
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private float speedPotionPower = 2f;
+    [SerializeField] private int speedPotionDuration = 4;
     bool hasAttackBonus;
     bool hasSpeedBonus;
     public bool CanUseItemType(ItemType type)
@@ -55,7 +57,19 @@ public class UseItem : MonoBehaviour
         playerAttack.SetBonus(0);
         hasAttackBonus = false;
     }
+    IEnumerator UseSpeedPotion()
+    {
+        playerController.SetSpeedBonus(speedPotionPower);
+        hasSpeedBonus = true;
+        yield return new WaitForSeconds(speedPotionDuration);
+        playerController.SetSpeedBonus(0f);
+        hasSpeedBonus = false;
+    }
 
+    private void UseHealthPotion()
+    {
+        throw new NotImplementedException();
+    }
     private void UseLightHat()
     {
         throw new NotImplementedException();
@@ -71,13 +85,5 @@ public class UseItem : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    private void UseSpeedPotion()
-    {
-        throw new NotImplementedException();
-    }
-
-    private void UseHealthPotion()
-    {
-        throw new NotImplementedException();
-    }
+    
 }

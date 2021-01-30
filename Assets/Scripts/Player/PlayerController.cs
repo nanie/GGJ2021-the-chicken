@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     //Player movement speed
     private float speed = 5f;
-
+    private float speedBonus;
     //Character Rigidy Body
     private Rigidbody2D rigidBody;
 
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rigidBody.MovePosition(rigidBody.position + direction * speed * Time.fixedDeltaTime);
+        rigidBody.MovePosition(rigidBody.position + direction * (speed + speedBonus) * Time.fixedDeltaTime);
     }
 
     public Vector2 GetCurrentDirection()
@@ -72,5 +72,10 @@ public class PlayerController : MonoBehaviour
     public void PlayerCanWalk(bool canWalk)
     {
         _canWalk = canWalk;
+    }
+
+    public void SetSpeedBonus(float speedBonus)
+    {
+        this.speedBonus = speedBonus;
     }
 }
