@@ -4,7 +4,7 @@ using UnityEngine;
 using Pathfinding;
 using System;
 
-public class FollowerEnemy : BaseEnemy
+public class FollowerEnemy : BaseEnemy, IFollowerMinion
 {
     internal Transform target;
     internal bool following = false;
@@ -63,11 +63,15 @@ public class FollowerEnemy : BaseEnemy
     }
 
     internal void StartFollow(Transform target)
-    {
-        
+    {        
         this.target = target;
         following = true;
         AIDestinationSetter aIDestination = GetComponent<AIDestinationSetter>();
         aIDestination.target = target;
+    }
+
+    public void FollowTarget(Transform target)
+    {
+        StartFollow(target);
     }
 }

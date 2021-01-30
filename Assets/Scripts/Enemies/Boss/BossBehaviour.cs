@@ -8,12 +8,18 @@ using UnityEngine;
 public class BossBehaviour : BaseEnemy
 {
     [SerializeField] private BossSkillConfig[] skillConfig;
+    [SerializeField] private float attackDistance;
+    [SerializeField] private float attackTime;
     private AIPath aIPath;
     private bool isCharging;
-
+    private Transform player;
+    float timerAttack;
     void Start()
     {
         aIPath = GetComponent<AIPath>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        AIDestinationSetter aIDestination = GetComponent<AIDestinationSetter>();
+        aIDestination.target = player;
         ChooseNextSkill();
     }
 
@@ -22,7 +28,15 @@ public class BossBehaviour : BaseEnemy
         if (isCharging)
             return;
 
-        base.CheckAttack();
+        if (Vector2.Distance(player.position, transform.position) <= attackDistance)
+        {
+            timerAttack -= Time.deltaTime;
+            if (timerAttack <= 0)
+            {
+                timerAttack = attackTime;
+                SetDamage(player.gameObject);
+            }
+        }
     }
 
     private void ChooseNextSkill()
@@ -40,7 +54,12 @@ public class BossBehaviour : BaseEnemy
         yield return new WaitForSeconds(skill.skillChargeTime);     
         foreach (var point in skill.spawnPoints)
         {
-            Instantiate(skill.prefab, point.position, point.rotation);
+            var minion = Instantiate(skill.prefab, point.position, point.rotation);
+            var follower = minion.GetComponent<IFollowerMinion>();
+            if(follower!=null)
+            {
+                follower.FollowTarget(player);
+            }
         }
         yield return new WaitForSeconds(1.0f);
         isCharging = false;
