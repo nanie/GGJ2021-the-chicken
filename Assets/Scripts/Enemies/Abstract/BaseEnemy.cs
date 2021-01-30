@@ -13,6 +13,7 @@ public abstract class BaseEnemy : MonoBehaviour
     public bool canDie = true;
     public float deathDestroyDelay = 1;
     public int maxHealth = 3;
+    public int CurrentHealth => damageManager.GetCurrent();
     public Action<StatusAnimation> OnStatusChange = delegate (StatusAnimation status) { };
     private DamageManager damageManager;
     internal bool dead = false;

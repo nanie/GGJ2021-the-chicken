@@ -1,0 +1,2979 @@
+fileFormatVersion: 2
+guid: ab1c7e8b22419f94aa7ca824f00a37f3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4946277606653365504
+    second: Chicken_Idle
+  - first:
+      213: 3721313130205494733
+    second: Chicken_Walk1
+  - first:
+      213: -3240620642431192197
+    second: Chicken_Walk2
+  - first:
+      213: -919815959365237242
+    second: Chicken_Damage
+  - first:
+      213: 5421414132580489442
+    second: Chicken_Death
+  - first:
+      213: -5441731927543073213
+    second: Chicken_Collect
+  - first:
+      213: 7113713119894247735
+    second: Chicken_attack1
+  - first:
+      213: 57110690831265825
+    second: Chicken_attack2
+  - first:
+      213: 131717869680615665
+    second: poring1
+  - first:
+      213: -2095474094267701746
+    second: poring2
+  - first:
+      213: 2580325093453840847
+    second: Chickenlink_Idle
+  - first:
+      213: -1858730172308725740
+    second: Chickenlink_walk1
+  - first:
+      213: 8652692539388573036
+    second: Chickenlink_walk2
+  - first:
+      213: 1072778230596837695
+    second: Chickenlink_damage
+  - first:
+      213: 8060190689247361313
+    second: Chickenlink_death
+  - first:
+      213: -480284162294190306
+    second: Chickenlink_collect
+  - first:
+      213: -1811747422905834933
+    second: Chickenlink_attack1
+  - first:
+      213: -7616994137596694170
+    second: Chickenlink_attack2
+  - first:
+      213: 7629700440528107793
+    second: poring3
+  - first:
+      213: -1700936386729028991
+    second: poring_damage
+  - first:
+      213: 6731437595995976420
+    second: Chickenspeed_Iddle
+  - first:
+      213: -2140248292100400870
+    second: Chickenspeed_Walk1
+  - first:
+      213: 7073961628326474158
+    second: Chickenspeed_Walk2
+  - first:
+      213: -8236464650310484931
+    second: Chickenspeed_damage
+  - first:
+      213: -9166937648506196708
+    second: Chickenspeed_dead
+  - first:
+      213: 3650660397568337606
+    second: Chickenspeed_collect
+  - first:
+      213: -1088940445007536335
+    second: Chickenspeed_attack1
+  - first:
+      213: -1936159214026455808
+    second: Chickenspeed_attack2
+  - first:
+      213: -9098724518807711841
+    second: Rabbit_1
+  - first:
+      213: 1454287280128912216
+    second: Rabbit_2
+  - first:
+      213: 8336136155442521963
+    second: Chickenminer_Idle
+  - first:
+      213: -8250554420904799544
+    second: Chickenminer_walk1
+  - first:
+      213: -1174331155509125460
+    second: Chickenminer_walk2
+  - first:
+      213: -7550942889303022844
+    second: Chickenminer_damage
+  - first:
+      213: 8926675285928061958
+    second: Chickenminer_dead
+  - first:
+      213: -8929332201722969235
+    second: Chickenminer_collect
+  - first:
+      213: 3491173992052184946
+    second: Chickenminer_Attack1
+  - first:
+      213: -2798428958104502516
+    second: Chickenminer_Attack2
+  - first:
+      213: 2410143688035711120
+    second: Rabbit_3
+  - first:
+      213: 7952124807987289292
+    second: Rabbit_damage
+  - first:
+      213: 6714501793110213292
+    second: pig_1
+  - first:
+      213: 862194341840401892
+    second: pig_2
+  - first:
+      213: 8876831886896799465
+    second: pig_3
+  - first:
+      213: -470295532148603851
+    second: fox_idle
+  - first:
+      213: 6439851996404767314
+    second: fox_up
+  - first:
+      213: -823626536324003176
+    second: fox_attack
+  - first:
+      213: -8159746464495038907
+    second: fox_walk1
+  - first:
+      213: 3637700524264170591
+    second: fox_walk2
+  - first:
+      213: -589465747588487253
+    second: fox_walk3
+  - first:
+      213: 6742355352828518612
+    second: fox_damage
+  - first:
+      213: -1239914768843842453
+    second: tree_top
+  - first:
+      213: 4676999010893474259
+    second: Sprites copy 1_51
+  - first:
+      213: -7727141551461707101
+    second: Sprites copy 1_52
+  - first:
+      213: 2768620026225666842
+    second: bush_iddle
+  - first:
+      213: -1711079273889917397
+    second: bush_awake
+  - first:
+      213: -505783481029520729
+    second: bush_up
+  - first:
+      213: 6325106956077056006
+    second: bush_walk1
+  - first:
+      213: 8633164305765155463
+    second: bush_walk2
+  - first:
+      213: 5251782547798670899
+    second: bush_walk3
+  - first:
+      213: 8797090343818795058
+    second: bush_damage
+  - first:
+      213: 8605234449109548767
+    second: bat_fly1
+  - first:
+      213: 2340510404535747859
+    second: Sprites copy 1_61
+  - first:
+      213: -6362126255335156527
+    second: Sprites copy 1_62
+  - first:
+      213: -3190546379169454037
+    second: Sprites copy 1_63
+  - first:
+      213: -3878333943097555427
+    second: Sprites copy 1_64
+  - first:
+      213: 5774960318254082537
+    second: Sprites copy 1_65
+  - first:
+      213: -1968470836017087105
+    second: Sprites copy 1_66
+  - first:
+      213: -4654606719518525227
+    second: Sprites copy 1_67
+  - first:
+      213: -7866540896473805675
+    second: flower
+  - first:
+      213: 8505544730691415996
+    second: stone
+  - first:
+      213: 5440686405255610257
+    second: Sprites copy 1_70
+  - first:
+      213: -1229969418540314340
+    second: bat_fly2
+  - first:
+      213: 6438201275052883088
+    second: bat_charge1
+  - first:
+      213: 2904613638796173740
+    second: Sprites copy 1_73
+  - first:
+      213: 1176054550227903680
+    second: Sprites copy 1_74
+  - first:
+      213: 5119107928633020237
+    second: hat_link
+  - first:
+      213: -2279120764523411834
+    second: hat_speed
+  - first:
+      213: 495666354684792990
+    second: hat_miner
+  - first:
+      213: -5429213055806566896
+    second: bush
+  - first:
+      213: -5019671993977175533
+    second: thornes
+  - first:
+      213: -7783740672116322593
+    second: bat_damage
+  - first:
+      213: 5204135256917727602
+    second: bat_fly3
+  - first:
+      213: 5518959564152136607
+    second: bat_charge2
+  - first:
+      213: 390922800015634191
+    second: Sprites copy 1_83
+  - first:
+      213: -8051381433361431466
+    second: tree_bottom
+  - first:
+      213: -7441673065448537632
+    second: potion
+  - first:
+      213: 7293658303851229897
+    second: chest_close
+  - first:
+      213: 3744029606153231639
+    second: chest_open
+  - first:
+      213: 2947316654907967655
+    second: grass
+  - first:
+      213: 1305556102992968800
+    second: mushroom
+  - first:
+      213: 7850999637544129956
+    second: Sprites copy 1_90
+  - first:
+      213: 2635680166724253783
+    second: nest_0
+  - first:
+      213: -7353579443524380467
+    second: nest_1
+  - first:
+      213: -8140021491644024995
+    second: nest_2
+  - first:
+      213: -3090760651433879941
+    second: Nest_3
+  - first:
+      213: 8058872684306423968
+    second: egg
+  - first:
+      213: 5224771511483142549
+    second: feather
+  - first:
+      213: -1034509625932718351
+    second: carrot
+  - first:
+      213: -1107684233615451503
+    second: carrot_burried
+  - first:
+      213: -2283126816113991823
+    second: Sprites copy 1_99
+  - first:
+      213: 1750565340652742602
+    second: Sprites copy 1_100
+  - first:
+      213: 4507692225296584415
+    second: Sprites copy 1_101
+  - first:
+      213: 7381000657009235317
+    second: Sprites copy 1_102
+  - first:
+      213: -4663765270434796515
+    second: Sprites copy 1_103
+  - first:
+      213: -3657884529128025104
+    second: Sprites copy 1_104
+  - first:
+      213: -7639984070071607859
+    second: Sprites copy 1_105
+  - first:
+      213: 3591985470491698245
+    second: Sprites copy 1_106
+  - first:
+      213: 3447057088819147361
+    second: Sprites copy 1_107
+  - first:
+      213: -4956585489154848812
+    second: Sprites copy 1_108
+  - first:
+      213: -8922522135101606041
+    second: Sprites copy 1_109
+  - first:
+      213: 5954741777094843844
+    second: Sprites copy 1_110
+  - first:
+      213: -6526585078851812351
+    second: Sprites copy 1_111
+  - first:
+      213: -585474644631528140
+    second: Sprites copy 1_112
+  - first:
+      213: -5627464556370573644
+    second: Sprites copy 1_113
+  - first:
+      213: 663559555730098818
+    second: Sprites copy 1_114
+  - first:
+      213: 9029841127566055055
+    second: Sprites copy 1_115
+  - first:
+      213: 4911458115217319555
+    second: Sprites copy 1_116
+  - first:
+      213: -8202824443333733347
+    second: Sprites copy 1_117
+  - first:
+      213: -2275711142052831388
+    second: Sprites copy 1_118
+  - first:
+      213: -846345994841945593
+    second: Sprites copy 1_119
+  - first:
+      213: -7387174247128199839
+    second: Sprites copy 1_120
+  - first:
+      213: 1091204431676676445
+    second: Sprites copy 1_121
+  - first:
+      213: -4789899365175379218
+    second: Sprites copy 1_122
+  - first:
+      213: -8236729304312395489
+    second: Sprites copy 1_123
+  - first:
+      213: 4727295251641220847
+    second: Sprites copy 1_124
+  - first:
+      213: 8212924479927688876
+    second: Sprites copy 1_125
+  - first:
+      213: -4966754782898059794
+    second: Sprites copy 1_126
+  - first:
+      213: -5266338685667712123
+    second: Sprites copy 1_127
+  - first:
+      213: 7477684038734762986
+    second: Sprites copy 1_128
+  - first:
+      213: -5500331304094689652
+    second: Sprites copy 1_129
+  - first:
+      213: 8156653956433779685
+    second: Sprites copy 1_130
+  - first:
+      213: -1901540432207750759
+    second: Sprites copy 1_131
+  - first:
+      213: -4318596076372162038
+    second: Sprites copy 1_132
+  - first:
+      213: -2642731435947782257
+    second: Sprites copy 1_133
+  - first:
+      213: -1448917831124859437
+    second: Sprites copy 1_134
+  - first:
+      213: -9148756765514317130
+    second: Sprites copy 1_135
+  - first:
+      213: -4960684704734084001
+    second: Sprites copy 1_136
+  - first:
+      213: 8183508640435987997
+    second: Sprites copy 1_137
+  - first:
+      213: 953806107210210575
+    second: Sprites copy 1_138
+  - first:
+      213: -4632418275763691256
+    second: Sprites copy 1_139
+  - first:
+      213: -4927997459100728176
+    second: Sprites copy 1_140
+  - first:
+      213: 3441326796542549321
+    second: Sprites copy 1_141
+  - first:
+      213: -5778421606905695865
+    second: Sprites copy 1_142
+  - first:
+      213: 3213775871455887555
+    second: Sprites copy 1_143
+  - first:
+      213: -1079979229717626372
+    second: Sprites copy 1_144
+  - first:
+      213: -5479195050062099422
+    second: Sprites copy 1_145
+  - first:
+      213: 7492187094201489489
+    second: Sprites copy 1_146
+  - first:
+      213: -1095396194786300459
+    second: Sprites copy 1_147
+  - first:
+      213: 8436156755613970737
+    second: Sprites copy 1_148
+  - first:
+      213: 92049799912340615
+    second: Sprites copy 1_149
+  - first:
+      213: -6936420943983451243
+    second: Sprites copy 1_150
+  - first:
+      213: 1171399212444170897
+    second: Sprites copy 1_151
+  - first:
+      213: -6060597126095066361
+    second: Sprites copy 1_152
+  - first:
+      213: -8752921519381046009
+    second: Sprites copy 1_153
+  - first:
+      213: 8533797241534136972
+    second: Sprites copy 1_154
+  - first:
+      213: -3446334412217907085
+    second: Sprites copy 1_155
+  - first:
+      213: -1442233566812392949
+    second: Sprites copy 1_156
+  - first:
+      213: -2630077901755915032
+    second: Sprites copy 1_157
+  - first:
+      213: -2275723235096135957
+    second: Sprites copy 1_158
+  - first:
+      213: -8780540211911686394
+    second: Sprites copy 1_159
+  - first:
+      213: -4885644999487969001
+    second: Sprites copy 1_160
+  - first:
+      213: -5194460176657681244
+    second: Sprites copy 1_161
+  - first:
+      213: -7854308831912595491
+    second: Sprites copy 1_162
+  - first:
+      213: 6431818519733718524
+    second: Sprites copy 1_163
+  - first:
+      213: -981336364972465677
+    second: Sprites copy 1_164
+  - first:
+      213: -3949605029405592622
+    second: Sprites copy 1_165
+  - first:
+      213: -2506341323320357702
+    second: Sprites copy 1_166
+  - first:
+      213: 7246588749485004122
+    second: Sprites copy 1_167
+  - first:
+      213: 4663283853909753273
+    second: Sprites copy 1_168
+  - first:
+      213: -2303557848371384976
+    second: Sprites copy 1_169
+  - first:
+      213: -6772978912495295260
+    second: Sprites copy 1_170
+  - first:
+      213: -9165786408607762966
+    second: Sprites copy 1_171
+  - first:
+      213: -4326137605705221888
+    second: Sprites copy 1_172
+  - first:
+      213: -1767778213614800957
+    second: Sprites copy 1_173
+  - first:
+      213: 9183146952399541770
+    second: Sprites copy 1_174
+  - first:
+      213: -8618628087576116662
+    second: Sprites copy 1_175
+  - first:
+      213: 1670378592948450020
+    second: Sprites copy 1_176
+  - first:
+      213: -3738175897621344122
+    second: Sprites copy 1_177
+  - first:
+      213: 7639480046345231178
+    second: Sprites copy 1_178
+  - first:
+      213: -8756290286513333755
+    second: Sprites copy 1_179
+  - first:
+      213: 8234987331643113917
+    second: Sprites copy 1_180
+  - first:
+      213: 4190397790765824976
+    second: Sprites copy 1_181
+  - first:
+      213: -7278639613940378282
+    second: Sprites copy 1_182
+  - first:
+      213: -4573259590118362719
+    second: Sprites copy 1_183
+  - first:
+      213: 3094454106036896104
+    second: Sprites copy 1_184
+  - first:
+      213: 6668176184784681792
+    second: Sprites copy 1_185
+  - first:
+      213: 8175841252257134177
+    second: Sprites copy 1_186
+  - first:
+      213: -6474413644457245289
+    second: Sprites copy 1_187
+  - first:
+      213: -415504230520598011
+    second: Sprites copy 1_188
+  - first:
+      213: 6156821996388959129
+    second: Sprites copy 1_189
+  - first:
+      213: -8994488806773231297
+    second: Sprites copy 1_190
+  - first:
+      213: 666952434481241936
+    second: Sprites copy 1_191
+  - first:
+      213: -3455750348524884478
+    second: Sprites copy 1_192
+  - first:
+      213: 3444493583944274414
+    second: Sprites copy 1_193
+  - first:
+      213: -3923204574344778619
+    second: Sprites copy 1_194
+  - first:
+      213: 6881093323634951960
+    second: Sprites copy 1_195
+  - first:
+      213: -3246731501494218195
+    second: Sprites copy 1_196
+  - first:
+      213: -3787151254497647251
+    second: Sprites copy 1_197
+  - first:
+      213: -4129646043850865046
+    second: Sprites copy 1_198
+  - first:
+      213: 6777840397187888989
+    second: Sprites copy 1_199
+  - first:
+      213: -4411812442303713470
+    second: Sprites copy 1_200
+  - first:
+      213: 7862432894599424694
+    second: Sprites copy 1_201
+  - first:
+      213: 8906458658150669440
+    second: Sprites copy 1_202
+  - first:
+      213: 7931186941495578751
+    second: Sprites copy 1_203
+  - first:
+      213: -6976045584641533100
+    second: Sprites copy 1_204
+  - first:
+      213: 8922377721675446074
+    second: Sprites copy 1_205
+  - first:
+      213: 7487185542015244851
+    second: Sprites copy 1_206
+  - first:
+      213: -7375786165421390000
+    second: Sprites copy 1_207
+  - first:
+      213: -6425900088174440502
+    second: Sprites copy 1_208
+  - first:
+      213: -8353494139076151885
+    second: Sprites copy 1_209
+  - first:
+      213: 7256658559003596592
+    second: Sprites copy 1_210
+  - first:
+      213: 1458371757809141686
+    second: Sprites copy 1_211
+  - first:
+      213: 5072341213678400933
+    second: Sprites copy 1_212
+  - first:
+      213: 6912019155582251897
+    second: Sprites copy 1_213
+  - first:
+      213: 5273326927053512708
+    second: Sprites copy 1_214
+  - first:
+      213: -3340367211154056182
+    second: Sprites copy 1_215
+  - first:
+      213: -8299112132499399612
+    second: Sprites copy 1_216
+  - first:
+      213: 7932367807472342864
+    second: Sprites copy 1_217
+  - first:
+      213: -1262122816097949791
+    second: Sprites copy 1_218
+  - first:
+      213: -6196089623367401833
+    second: Sprites copy 1_219
+  - first:
+      213: 2743483676330793834
+    second: Sprites copy 1_220
+  - first:
+      213: -5882020616387641274
+    second: Sprites copy 1_221
+  - first:
+      213: -3848997451512124116
+    second: Sprites copy 1_222
+  - first:
+      213: 349680300444888567
+    second: Sprites copy 1_223
+  - first:
+      213: -7628585116183554213
+    second: Sprites copy 1_224
+  - first:
+      213: 795416521747277235
+    second: Sprites copy 1_225
+  - first:
+      213: -2662036544546987602
+    second: Sprites copy 1_226
+  - first:
+      213: -3243812912921977945
+    second: Sprites copy 1_227
+  - first:
+      213: -5482318528822026165
+    second: Sprites copy 1_228
+  - first:
+      213: 4747602140671721829
+    second: Sprites copy 1_229
+  - first:
+      213: -7149143288891481561
+    second: Sprites copy 1_230
+  - first:
+      213: 8471310807748623114
+    second: Sprites copy 1_231
+  - first:
+      213: -4207245114645081881
+    second: Sprites copy 1_232
+  - first:
+      213: -1284108072537631186
+    second: Sprites copy 1_233
+  - first:
+      213: 5377342816474224196
+    second: Sprites copy 1_234
+  - first:
+      213: -7567316987808419075
+    second: Sprites copy 1_235
+  - first:
+      213: 8584257868014798268
+    second: Sprites copy 1_236
+  - first:
+      213: 3751215263790856071
+    second: Sprites copy 1_237
+  - first:
+      213: 8751830158442561268
+    second: Sprites copy 1_238
+  - first:
+      213: 7841427757825253979
+    second: Sprites copy 1_239
+  - first:
+      213: 3740673935993407458
+    second: Sprites copy 1_240
+  - first:
+      213: 4874763453121823621
+    second: Sprites copy 1_241
+  - first:
+      213: -911878656172528909
+    second: Sprites copy 1_242
+  - first:
+      213: 5428992270888386208
+    second: Sprites copy 1_243
+  - first:
+      213: 5450224948532429453
+    second: Sprites copy 1_244
+  - first:
+      213: -8268280271044848647
+    second: Sprites copy 1_245
+  - first:
+      213: 8258578561742939611
+    second: Sprites copy 1_246
+  - first:
+      213: -2501431755201015455
+    second: Sprites copy 1_247
+  - first:
+      213: 8146316765121358010
+    second: Sprites copy 1_248
+  - first:
+      213: 6579575269816156338
+    second: Sprites copy 1_249
+  - first:
+      213: 8319789199431203188
+    second: Sprites copy 1_250
+  - first:
+      213: 3470896893308751481
+    second: Sprites copy 1_251
+  - first:
+      213: -730086507444397951
+    second: Sprites copy 1_252
+  - first:
+      213: 5833363929410681945
+    second: Sprites copy 1_253
+  - first:
+      213: 7038900030328865948
+    second: Sprites copy 1_254
+  - first:
+      213: 1991340298514978546
+    second: Sprites copy 1_255
+  - first:
+      213: 79479669117606665
+    second: Sprites copy 1_256
+  - first:
+      213: -3255827285395775137
+    second: Sprites copy 1_257
+  - first:
+      213: -3223823774040348583
+    second: Sprites copy 1_258
+  - first:
+      213: 3261906105759135411
+    second: Sprites copy 1_259
+  - first:
+      213: -2688147175058061703
+    second: Sprites copy 1_260
+  - first:
+      213: 490678958657258639
+    second: Sprites copy 1_261
+  - first:
+      213: -7243253497403563307
+    second: Sprites copy 1_262
+  - first:
+      213: 1058966674219801478
+    second: Sprites copy 1_263
+  - first:
+      213: -7784428746294900025
+    second: Sprites copy 1_264
+  - first:
+      213: 5470500898109945215
+    second: Sprites copy 1_265
+  - first:
+      213: -4600970247682264631
+    second: Sprites copy 1_266
+  - first:
+      213: -543817182519728474
+    second: Sprites copy 1_267
+  - first:
+      213: 5361324020225067872
+    second: Sprites copy 1_268
+  - first:
+      213: -6656833763456383999
+    second: Sprites copy 1_269
+  - first:
+      213: 7373074599954862655
+    second: Sprites copy 1_270
+  - first:
+      213: -7525916224413123064
+    second: Sprites copy 1_271
+  - first:
+      213: 2252694856757536186
+    second: Sprites copy 1_272
+  - first:
+      213: -5943516562149713940
+    second: Sprites copy 1_273
+  - first:
+      213: -8929547469838918523
+    second: Sprites copy 1_274
+  - first:
+      213: -3569087305412137788
+    second: Sprites copy 1_275
+  - first:
+      213: -7534710089552659663
+    second: Sprites copy 1_276
+  - first:
+      213: -1420774562304352199
+    second: Sprites copy 1_277
+  - first:
+      213: -4922482575043581181
+    second: Sprites copy 1_278
+  - first:
+      213: -1725805005513993707
+    second: Sprites copy 1_279
+  - first:
+      213: 4381308177897988138
+    second: Sprites copy 1_280
+  - first:
+      213: 406987441353612653
+    second: Sprites copy 1_281
+  - first:
+      213: 9018328071641897401
+    second: Sprites copy 1_282
+  - first:
+      213: 493193478198941489
+    second: Sprites copy 1_283
+  - first:
+      213: 1592617528020706809
+    second: Sprites copy 1_284
+  - first:
+      213: 5039598067690313173
+    second: Sprites copy 1_285
+  - first:
+      213: -783484694841612543
+    second: Sprites copy 1_286
+  - first:
+      213: -1025066512539818422
+    second: Sprites copy 1_287
+  - first:
+      213: 7420933150776284226
+    second: Sprites copy 1_288
+  - first:
+      213: 5319479474198658852
+    second: Sprites copy 1_289
+  - first:
+      213: 2277117594047232153
+    second: Sprites copy 1_290
+  - first:
+      213: 8336618906424153425
+    second: Sprites copy 1_291
+  - first:
+      213: -8921792170297624719
+    second: Sprites copy 1_292
+  - first:
+      213: -9162329082271528255
+    second: Sprites copy 1_293
+  - first:
+      213: 6976339699839312200
+    second: Sprites copy 1_294
+  - first:
+      213: 3449572611997275155
+    second: Sprites copy 1_295
+  - first:
+      213: -1426817581456858372
+    second: Sprites copy 1_296
+  - first:
+      213: 2749881026798170857
+    second: Sprites copy 1_297
+  - first:
+      213: 8606975052701318105
+    second: Sprites copy 1_298
+  - first:
+      213: 641538655824699848
+    second: Sprites copy 1_299
+  - first:
+      213: -1741836593905823697
+    second: Sprites copy 1_300
+  - first:
+      213: -5238741639761679161
+    second: Sprites copy 1_301
+  - first:
+      213: 722256949825368093
+    second: Sprites copy 1_302
+  - first:
+      213: 8842348335558409474
+    second: Sprites copy 1_303
+  - first:
+      213: 3707367463009631948
+    second: Sprites copy 1_304
+  - first:
+      213: -3542368190301082788
+    second: Sprites copy 1_305
+  - first:
+      213: 3184336288984728793
+    second: Sprites copy 1_306
+  - first:
+      213: 8151038221711903480
+    second: Sprites copy 1_307
+  - first:
+      213: 1378045551068302705
+    second: Sprites copy 1_308
+  - first:
+      213: 5056436388581988267
+    second: Sprites copy 1_309
+  - first:
+      213: 8156706502937454720
+    second: Sprites copy 1_310
+  - first:
+      213: 6069703320782326374
+    second: Sprites copy 1_311
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chicken_Idle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003f4f629ba4b5bb0800000000000000
+      internalID: -4946277606653365504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken_Walk1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd35e75392c4a330800000000000000
+      internalID: 3721313130205494733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken_Walk2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 5400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73371cf1b00703d0800000000000000
+      internalID: -3240620642431192197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken_Damage
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 5400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 606cc4322482c33f0800000000000000
+      internalID: -919815959365237242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken_Death
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e81eb00e6bbc3b40800000000000000
+      internalID: 5421414132580489442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken_Collect
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 5400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346b4e7b4a51b74b0800000000000000
+      internalID: -5441731927543073213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken_attack1
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 5400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7391559746cf8b260800000000000000
+      internalID: 7113713119894247735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken_attack2
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 5400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120ffd7eed5eac000800000000000000
+      internalID: 57110690831265825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poring1
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 5400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f062e064b4f3d100800000000000000
+      internalID: 131717869680615665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poring2
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 5400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06e32fd9616be2e0800000000000000
+      internalID: -2095474094267701746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenlink_Idle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1c75850082fc320800000000000000
+      internalID: 2580325093453840847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenlink_walk1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410ec3a91c67436e0800000000000000
+      internalID: -1858730172308725740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenlink_walk2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65bde8450a841870800000000000000
+      internalID: 8652692539388573036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenlink_damage
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 4800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f312f7ded1643ee00800000000000000
+      internalID: 1072778230596837695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenlink_death
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129ff762abc8bdf60800000000000000
+      internalID: 8060190689247361313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenlink_collect
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 4800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f653b5910b559f0800000000000000
+      internalID: -480284162294190306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenlink_attack1
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 4800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42e7f261516bd6e0800000000000000
+      internalID: -1811747422905834933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenlink_attack2
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 4800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661f05c30300b4690800000000000000
+      internalID: -7616994137596694170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poring3
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 4800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119b154702422e960800000000000000
+      internalID: 7629700440528107793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poring_damage
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 4800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182da734e5f0568e0800000000000000
+      internalID: -1700936386729028991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenspeed_Iddle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2bc0134deda6d50800000000000000
+      internalID: 6731437595995976420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenspeed_Walk1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a191832948f4c42e0800000000000000
+      internalID: -2140248292100400870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenspeed_Walk2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1b42b1f92cb2260800000000000000
+      internalID: 7073961628326474158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenspeed_damage
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 4200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c7e290a0332bd80800000000000000
+      internalID: -8236464650310484931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenspeed_dead
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d22a6f6ce78c080800000000000000
+      internalID: -9166937648506196708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenspeed_collect
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 4200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6a5a02a40c9a230800000000000000
+      internalID: 3650660397568337606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenspeed_attack1
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 4200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f15c94f6e43e0f0800000000000000
+      internalID: -1088940445007536335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenspeed_attack2
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 4200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0058a5bf3716125e0800000000000000
+      internalID: -1936159214026455808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_1
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 4200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f445bd146dab180800000000000000
+      internalID: -9098724518807711841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_2
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 4200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85be37d739aae2410800000000000000
+      internalID: 1454287280128912216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenminer_Idle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b672178aaa7efa370800000000000000
+      internalID: 8336136155442521963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenminer_walk1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2d0fda774208d80800000000000000
+      internalID: -8250554420904799544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenminer_walk2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae54333900f3bfe0800000000000000
+      internalID: -1174331155509125460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenminer_damage
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 3600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403e4d3e279a53790800000000000000
+      internalID: -7550942889303022844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenminer_dead
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c200380ebe1eb70800000000000000
+      internalID: 8926675285928061958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenminer_collect
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6388d21ca3a41480800000000000000
+      internalID: -8929332201722969235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenminer_Attack1
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2775a5daf34237030800000000000000
+      internalID: 3491173992052184946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chickenminer_Attack2
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 3600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fb30770bbf929d0800000000000000
+      internalID: -2798428958104502516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_3
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098b40f2aec827120800000000000000
+      internalID: 2410143688035711120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_damage
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 3600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc57a5716f9b5e60800000000000000
+      internalID: 7952124807987289292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2403
+        width: 603
+        height: 905
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2ce0e4ec3be2d50800000000000000
+      internalID: 6714501793110213292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_2
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 2409
+        width: 601
+        height: 902
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5bfb09f2127fb00800000000000000
+      internalID: 862194341840401892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pig_3
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2404
+        width: 606
+        height: 907
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee1855d197d03b70800000000000000
+      internalID: 8876831886896799465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fox_idle
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 3000
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53444da84bc2979f0800000000000000
+      internalID: -470295532148603851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fox_up
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3000
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25adbcb5543fe5950800000000000000
+      internalID: 6439851996404767314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fox_attack
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3000
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a82da6704e194f0800000000000000
+      internalID: -823626536324003176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fox_walk1
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3000
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e068e92d1c2ce80800000000000000
+      internalID: -8159746464495038907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fox_walk2
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 3000
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54a40c7a55bb7230800000000000000
+      internalID: 3637700524264170591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fox_walk3
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3000
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba76ab3960cc1d7f0800000000000000
+      internalID: -589465747588487253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fox_damage
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 3000
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d02cca8878a19d50800000000000000
+      internalID: 6742355352828518612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_top
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 1207
+        width: 1212
+        height: 1202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c5d4b4610facee0800000000000000
+      internalID: -1239914768843842453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bush_iddle
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ba63dbe3d1c6620800000000000000
+      internalID: 2768620026225666842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bush_awake
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26124157760148e0800000000000000
+      internalID: -1711079273889917397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bush_up
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a299ff8a981bf8f0800000000000000
+      internalID: -505783481029520729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bush_walk1
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6004353c34b47c750800000000000000
+      internalID: 6325106956077056006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bush_walk2
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 2400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782c6b412392fc770800000000000000
+      internalID: 8633164305765155463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bush_walk3
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33eb22fe66412e840800000000000000
+      internalID: 5251782547798670899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bush_damage
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 2400
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23896580f0b851a70800000000000000
+      internalID: 8797090343818795058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_fly1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 1791
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdef024932feb6770800000000000000
+      internalID: 8605234449109548767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites copy 1_65
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9e289ffc7c42050800000000000000
+      internalID: 5774960318254082537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites copy 1_66
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d3c7c34369ea4e0800000000000000
+      internalID: -1968470836017087105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites copy 1_67
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8b3f989d3876fb0800000000000000
+      internalID: -4654606719518525227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flower
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c889ebbbe64d290800000000000000
+      internalID: -7866540896473805675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 1800
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfae064ed3c90670800000000000000
+      internalID: 8505544730691415996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites copy 1_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fbe87a573318b40800000000000000
+      internalID: 5440686405255610257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_fly2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c119f4b94554eeee0800000000000000
+      internalID: -1229969418540314340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_charge1
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c7ef7d2f5195950800000000000000
+      internalID: 6438201275052883088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hat_link
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f8e05f989ba0740800000000000000
+      internalID: 5119107928633020237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hat_speed
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6868d5e6dbfee50e0800000000000000
+      internalID: -2279120764523411834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hat_miner
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9099166ce5f0e600800000000000000
+      internalID: 495666354684792990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bush
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e8cbead7f87a4b0800000000000000
+      internalID: -5429213055806566896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thornes
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 1200
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3128306baea865ab0800000000000000
+      internalID: -5019671993977175533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_damage
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde0fb649199af390800000000000000
+      internalID: -7783740672116322593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_fly3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279daa7817dc83840800000000000000
+      internalID: 5204135256917727602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_charge2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93680f9b78479c40800000000000000
+      internalID: 5518959564152136607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_bottom
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 600
+        width: 1199
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65401519e3fb34090800000000000000
+      internalID: -8051381433361431466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potion
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1095f46cdd9b890800000000000000
+      internalID: -7441673065448537632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest_close
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2712a7597483560800000000000000
+      internalID: 7293658303851229897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest_open
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d1f4f071775f330800000000000000
+      internalID: 3744029606153231639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8c160d1e8f6e820800000000000000
+      internalID: 2947316654907967655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mushroom
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 600
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c3d39cb544e1210800000000000000
+      internalID: 1305556102992968800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites copy 1_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5d98fe29a54fc60800000000000000
+      internalID: 7850999637544129956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nest_0
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758342fa521d39420800000000000000
+      internalID: 2635680166724253783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nest_1
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc85d110576d2f990800000000000000
+      internalID: -7353579443524380467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nest_2
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57338eb495d80f80800000000000000
+      internalID: -8140021491644024995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nest_3
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76578520996b15d0800000000000000
+      internalID: -3090760651433879941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: egg
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0ee26320ed6df60800000000000000
+      internalID: 8058872684306423968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: feather
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5919886f10e128840800000000000000
+      internalID: 5224771511483142549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 0
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fede8de9fea4a1f0800000000000000
+      internalID: -1034509625932718351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot_burried
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19adc0cee07b0a0f0800000000000000
+      internalID: -1107684233615451503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites copy 1_99
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 0
+        width: 600
+        height: 600
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f5b5cd144b050e0800000000000000
+      internalID: -2283126816113991823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
