@@ -32,21 +32,7 @@ AnimationClip:
     path: Link
     classID: 212
     script: {fileID: 0}
-  - curve:
-    - time: 0
-      value: {fileID: -7550942889303022844, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-    attribute: m_Sprite
-    path: Chickenminer_Idle
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-    - time: 0
-      value: {fileID: -8236464650310484931, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-    attribute: m_Sprite
-    path: Chickenspeed_Iddle
-    classID: 212
-    script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 2
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -67,31 +53,15 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
-    - serializedVersion: 2
-      path: 2067119795
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-    - serializedVersion: 2
-      path: 3279435237
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: -919815959365237242, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     - {fileID: 1072778230596837695, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-    - {fileID: -7550942889303022844, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-    - {fileID: -8236464650310484931, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

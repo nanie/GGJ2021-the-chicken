@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,8 +8,29 @@ public class SingleAnimationManager : MonoBehaviour, IAnimatorManager
     private Animator _animator;
     private void Start()
     {
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
+        DamageManager dgm = GetComponent<DamageManager>();
+        dgm.OnCharacterDamaged += CharacterDamaged;
+        dgm.OnCharacterDie += CharacterDied;
+        PlayerAttack playerAttack = GetComponent<PlayerAttack>();
+        playerAttack.OnPlayerAttack += PlayerAttacked;
     }
+
+    private void PlayerAttacked(bool isCharged, bool isQuick)
+    {
+        _animator.SetTrigger("Attack");
+    }
+
+    private void CharacterDied()
+    {
+        _animator.SetTrigger("dead");
+    }
+
+    private void CharacterDamaged(int obj)
+    {
+        _animator.SetTrigger("receiveDamage");
+    }
+
     public void SetDirection(Vector2 direction)
     {
         _animator.SetBool("walking", true);

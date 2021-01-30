@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private string inputButtonSpecial = "Fire2";
     [SerializeField] private LayerMask attackMask;
     [SerializeField] private float attackSpeed = 0.5f;
+    public Action<bool, bool> OnPlayerAttack = delegate (bool isCharged, bool isQuick) { };
     private PlayerController playerController;
     private float holdTime;
     private HorizontalDirection direction;
@@ -34,6 +36,7 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButtonDown(inputButtonNormal) && timer <= 0)
         {
             timer = attackSpeed;
+            OnPlayerAttack.Invoke(false, false);
             NormalAttack();
         }
 
@@ -51,10 +54,12 @@ public class PlayerAttack : MonoBehaviour
             playerController.PlayerCanWalk(true);
             if (selectedSkill != null && holdTime > selectedSkill.ChargeTime())
             {
+                OnPlayerAttack.Invoke(true, false);
                 selectedSkill.UseSkillCharged(transform, attackMask);
             }
             else
             {
+                OnPlayerAttack.Invoke(true, true);
                 selectedSkill.UseSkillQuick(transform, attackMask);
             }
             holdTime = 0;
