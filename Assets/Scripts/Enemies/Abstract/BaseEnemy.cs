@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class BaseEnemy : MonoBehaviour
 {
+    [SerializeField] private UnityEvent OnDeath;
     public Transform healthBarPivot;
     public int damageAmount;
     public Action OnEnemyDie = delegate () { };
@@ -51,18 +53,20 @@ public abstract class BaseEnemy : MonoBehaviour
         dead = true;
         StatusDidChange(StatusAnimation.dead);
         OnEnemyDie.Invoke();
+        OnDeath.Invoke();
         Destroy(gameObject, deathDestroyDelay);
     }
 
     public void SetDamage(GameObject other, int amount = -1)
     {
-         float timer = 1f;
+        float timer = 1f;
         StatusDidChange(StatusAnimation.attacking);
         amount = amount < 0 ? damageAmount : amount;
         if (other.tag == "Player")
         {
             timer = -Time.deltaTime;
-                if (timer <= 0) {
+            if (timer <= 0)
+            {
                 var damageController = other.GetComponent<DamageManager>();
                 damageController.SetDamage(amount);
             }
@@ -88,6 +92,6 @@ public abstract class BaseEnemy : MonoBehaviour
             damageManager.SetDamage(amount);
             StatusDidChange(StatusAnimation.receiveDamage);
         }
-       
+
     }
 }
