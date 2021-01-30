@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     Queue<string> sentences;
     public Animator animator;
     public bool isOpen;
-    
+    public DialogueTrigger dialoguetrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +28,8 @@ public class DialogueManager : MonoBehaviour
         {
             CloseAnim();
         }
+
+      
     }
 
     public void StartDialogue(DialogueBlueprint dialogue)
@@ -48,17 +50,14 @@ public class DialogueManager : MonoBehaviour
 
     public void OpenAnim()
     {
-        
             animator.SetBool("open", true);
-        
+            dialoguetrigger.open(true);
     }
 
     public void CloseAnim()
     {
-        
-        
             animator.SetBool("open", false);
-        
+        dialoguetrigger.open(false);
     }
     
     public void DisplayOnScreen()
@@ -75,6 +74,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (char character in sentence.ToCharArray())
         {
+            
             dialogueText.text += character;
             yield return null;
         }

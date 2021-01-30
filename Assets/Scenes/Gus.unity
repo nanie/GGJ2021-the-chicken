@@ -2162,6 +2162,7 @@ MonoBehaviour:
   nameText: {fileID: 331874157}
   animator: {fileID: 1198700893}
   isOpen: 0
+  dialoguetrigger: {fileID: 1529772588}
 --- !u!4 &1339898545
 Transform:
   m_ObjectHideFlags: 0
