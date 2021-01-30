@@ -11,6 +11,7 @@ public class HealthCanvas : MonoBehaviour
     private void OnEnable()
     {
         playerDamageManager.OnCharacterDamaged += SetDamage;
+        SetDamage(playerDamageManager.GetCurrent());
     }
     private void SetDamage(int health)
     {

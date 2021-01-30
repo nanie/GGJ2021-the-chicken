@@ -25,6 +25,7 @@ public class BossBehaviour : BaseEnemy
         player = GameObject.FindGameObjectWithTag("Player").transform;
         AIDestinationSetter aIDestination = GetComponent<AIDestinationSetter>();
         aIDestination.target = player;
+        StatusDidChange(StatusAnimation.walking);
         ChooseNextSkill();
         OnEnemyDie += BossDied;
     }
@@ -89,7 +90,7 @@ public class BossBehaviour : BaseEnemy
         yield return new WaitForSeconds(1.0f);
         isCharging = false;
         aIPath.canMove = true;
-        StatusDidChange(StatusAnimation.walking);
+        StatusDidChange(StatusAnimation.finishCharging);
         ChooseNextSkill();
     }
 

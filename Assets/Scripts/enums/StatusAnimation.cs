@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum StatusAnimation 
 {
-    idle, walking, attacking, dead, charging, receiveDamage
+    idle, walking, attacking, dead, charging, receiveDamage, finishCharging
 }

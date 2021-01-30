@@ -136,7 +136,7 @@ TextureImporter:
     second: fox_idle
   - first:
       213: 6439851996404767314
-    second: fox_up
+    second: fox_charge
   - first:
       213: -823626536324003176
     second: fox_attack
@@ -1975,7 +1975,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fox_up
+      name: fox_charge
       rect:
         serializedVersion: 2
         x: 2400

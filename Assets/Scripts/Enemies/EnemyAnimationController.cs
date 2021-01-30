@@ -40,7 +40,10 @@ public class EnemyAnimationController : MonoBehaviour
                 animator.SetTrigger("dead");
                 break;
             case StatusAnimation.charging:
-                animator.SetTrigger("chargingAttack");
+                animator.SetBool("chargingAttack", true);
+                break;
+            case StatusAnimation.finishCharging:
+                animator.SetBool("chargingAttack", false);
                 break;
             case StatusAnimation.receiveDamage:
                 animator.SetTrigger("receiveDamage");

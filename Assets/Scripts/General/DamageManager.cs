@@ -16,7 +16,7 @@ public class DamageManager : MonoBehaviour
     }
     private void Start()
     {
-        OnCharacterDamaged.Invoke(currentHealth);
+        
     }
     public void SetDamage(int damageAmount)
     {
