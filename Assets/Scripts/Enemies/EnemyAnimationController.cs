@@ -41,6 +41,7 @@ public class EnemyAnimationController : FollowerEnemy
                 animator.SetTrigger("dead");
                 break;
             case StatusAnimation.charging:
+                animator.SetTrigger("chargingAttack");
                 break;
             case StatusAnimation.receiveDamage:
                 animator.SetTrigger("receiveDamage");
