@@ -10,9 +10,16 @@ public class UseItem : MonoBehaviour
     [SerializeField] private int durationPotionPower = 4;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private float speedPotionPower = 2f;
+    [SerializeField] private float speedHatPower = 3f;
     [SerializeField] private int speedPotionDuration = 4;
+    [SerializeField] private GameObject[] galinhas;
     bool hasAttackBonus;
     bool hasSpeedBonus;
+
+    private void Start()
+    {
+        
+    }
     public bool CanUseItemType(ItemType type)
     {
         switch (type)
@@ -59,10 +66,10 @@ public class UseItem : MonoBehaviour
     }
     IEnumerator UseSpeedPotion()
     {
-        playerController.SetSpeedBonus(speedPotionPower);
+        playerController.SetPotionSpeedBonus(speedPotionPower);
         hasSpeedBonus = true;
         yield return new WaitForSeconds(speedPotionDuration);
-        playerController.SetSpeedBonus(0f);
+        playerController.SetPotionSpeedBonus(0f);
         hasSpeedBonus = false;
     }
 
@@ -72,17 +79,49 @@ public class UseItem : MonoBehaviour
     }
     private void UseLightHat()
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < 4; i++)
+        {
+            if (i == 2)
+            {
+                galinhas[i].SetActive(true);
+            }
+            else
+            {
+                galinhas[i].SetActive(false);
+            }
+        }
     }
 
     private void UseSpeedHat()
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < 4; i++)
+        {
+            if (i == 3)
+            {
+                galinhas[i].SetActive(true);
+            }
+            else
+            {
+                galinhas[i].SetActive(false);
+            }
+        }
+        playerController.SetHatSpeedBonus(speedHatPower);
+        
     }
 
     private void UseLinkHat()
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < 4; i++)
+        {
+            if (i == 1)
+            {
+                galinhas[i].SetActive(true);
+            }
+            else
+            {
+                galinhas[i].SetActive(false);
+            }
+        }
     }
 
     

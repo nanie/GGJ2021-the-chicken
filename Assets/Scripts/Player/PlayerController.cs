@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     //Player movement speed
     private float speed = 5f;
-    private float speedBonus;
+    private float potionSpeedBonus;
+    private float hatSpeedBonus;
     //Character Rigidy Body
     private Rigidbody2D rigidBody;
 
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rigidBody.MovePosition(rigidBody.position + direction * (speed + speedBonus) * Time.fixedDeltaTime);
+        rigidBody.MovePosition(rigidBody.position + direction * (speed + potionSpeedBonus) * Time.fixedDeltaTime);
     }
 
     public Vector2 GetCurrentDirection()
@@ -74,8 +75,13 @@ public class PlayerController : MonoBehaviour
         _canWalk = canWalk;
     }
 
-    public void SetSpeedBonus(float speedBonus)
+    public void SetPotionSpeedBonus(float potionSpeedBonus)
     {
-        this.speedBonus = speedBonus;
+        this.potionSpeedBonus = potionSpeedBonus;
+    }
+
+    public void SetHatSpeedBonus(float hatSpeedBonus)
+    {
+        this.hatSpeedBonus = hatSpeedBonus;
     }
 }
