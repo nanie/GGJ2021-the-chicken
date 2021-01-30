@@ -16,10 +16,7 @@ public class UseItem : MonoBehaviour
     bool hasAttackBonus;
     bool hasSpeedBonus;
 
-    private void Start()
-    {
-        
-    }
+    
     public bool CanUseItemType(ItemType type)
     {
         switch (type)
