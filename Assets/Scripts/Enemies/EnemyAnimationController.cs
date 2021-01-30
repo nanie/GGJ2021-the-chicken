@@ -22,19 +22,13 @@ public class EnemyAnimationController : MonoBehaviour
         switch (status)
         {
             case StatusAnimation.idle:
+                animator.SetBool("walk", false);
                 break;
             case StatusAnimation.walking:
-                if (animator.GetBool("attack") == true) // se estava atacando
-                {
-                    animator.SetBool("attack", false); // para de atacar -> começa a andar
-                }
-                else
-                {
-                    animator.SetBool("walk", true); 
-                }
+                animator.SetBool("walk", true);
                 break;
             case StatusAnimation.attacking:
-                animator.SetBool("attack", true);
+                animator.SetTrigger("Attack");
                 break;
             case StatusAnimation.dead:
                 animator.SetTrigger("dead");
@@ -51,5 +45,5 @@ public class EnemyAnimationController : MonoBehaviour
         }
     }
 
-   
+
 }
