@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum ItemType
 {
-    healthPotion, speedPotion, attackPower, link_hat, speed_hat, light_hat
+    healthPotion, speedPotion, attackPower, link_hat, speed_hat, light_hat, key
 }

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3337033366986917305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.81, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 4.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3337033368135543488}
@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3337033367055812574}
   - component: {fileID: 3337033367055812561}
+  - component: {fileID: 4725167015799290878}
   m_Layer: 7
   m_Name: EnemyGFX
   m_TagString: Untagged
@@ -55,8 +56,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3337033367055812575}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14050007, y: 0.099999905, z: 20.504663}
-  m_LocalScale: {x: 0.22806041, y: 0.22806041, z: 0.22806041}
+  m_LocalPosition: {x: -0.481, y: -1.841, z: 0}
+  m_LocalScale: {x: 0.54764, y: 0.54764, z: 0.54764}
   m_Children: []
   m_Father: {fileID: 3337033368135543488}
   m_RootOrder: 0
@@ -101,8 +102,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5429213055806566896, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-  m_Color: {r: 0, g: 0.301291, b: 1, a: 1}
+  m_Sprite: {fileID: 2768620026225666842, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -112,6 +113,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4725167015799290878
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3337033367055812575}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b448a6089936fa46b50d8ec14e7b8ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3337033368135543498
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +146,7 @@ GameObject:
   - component: {fileID: 3337033368135543503}
   - component: {fileID: 3337033368135543500}
   - component: {fileID: 3337033368135543501}
+  - component: {fileID: 4255815173410279811}
   m_Layer: 7
   m_Name: Bush
   m_TagString: Untagged
@@ -240,9 +261,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.016605377, y: 0.58121586}
   serializedVersion: 2
-  m_Radius: 2.68
+  m_Radius: 1.2850838
 --- !u!114 &3337033368135543501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,14 +279,14 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
-  healthBarPivot: {fileID: 0}
+  healthBarPivot: {fileID: 3337033366986917304}
   damageAmount: 1
   canDie: 1
   deathDestroyDelay: 1
-  maxHealth: 3
-  attackDistance: 0.2
+  maxHealth: 6
+  attackDistance: 1.99
   attackTime: 1
-  radius: 4.68
+  radius: 3.14
   chargedAttackPower: 5
   layer:
     serializedVersion: 2
@@ -273,3 +294,16 @@ MonoBehaviour:
   reuseTime: 5
   chargeTime: 1.5
   isStatic: 0
+--- !u!114 &4255815173410279811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3337033368135543498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b9ec4105cf70740a00fe6fd02141a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4725167015799290878}

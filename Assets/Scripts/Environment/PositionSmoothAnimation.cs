@@ -11,7 +11,7 @@ public class PositionSmoothAnimation : MonoBehaviour
     bool isOnOriginalPosition;
     void Start()
     {
-        originalPosition = transform.position;
+        originalPosition = transform.localPosition;
         isOnOriginalPosition = true;
     }
 
@@ -23,10 +23,10 @@ public class PositionSmoothAnimation : MonoBehaviour
     IEnumerator AnimatePosition()
     {
         Vector3 target = isOnOriginalPosition ? (originalPosition + valuesToAdd) : originalPosition;
-        while (Vector3.Distance(target, transform.position) > 0.01f)
+        while (Vector3.Distance(target, transform.localPosition) > 0.01f)
         {
             float step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position, target, step);
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, step);
             yield return null;
         }
         isOnOriginalPosition = !isOnOriginalPosition;

@@ -10,6 +10,7 @@ public class PlayerInventoryController : MonoBehaviour
     [SerializeField] private UseItem useItem;
     public Action<InventoryItem> OnItemChange = delegate (InventoryItem item) { };
     public Action<InventoryItem> OnItemStart = delegate (InventoryItem item) { };
+    public bool hasKey;
     private void Start()
     {
         foreach (var item in Items)
@@ -22,9 +23,9 @@ public class PlayerInventoryController : MonoBehaviour
     {
         foreach (var item in Items)
         {
-            if(item.amount > 0 && Input.GetKeyDown(item.keyCode))
+            if (item.amount > 0 && Input.GetKeyDown(item.keyCode))
             {
-                if(useItem.CanUseItemType(item.type))
+                if (useItem.CanUseItemType(item.type))
                 {
                     item.amount--;
                     OnItemChange.Invoke(item);
@@ -45,6 +46,10 @@ public class PlayerInventoryController : MonoBehaviour
             item.amount++;
             item.discovered = true;
             OnItemChange.Invoke(item);
+        }
+        else if (type == ItemType.key)
+        {
+            hasKey = true;
         }
     }
 }
