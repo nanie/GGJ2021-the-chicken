@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.22700001}
-  m_AnchoredPosition: {x: 0.005004883, y: -1.4163818}
+  m_AnchoredPosition: {x: 0.005126953, y: -1.4163818}
   m_SizeDelta: {x: 0, y: -3.303009}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &43543102
@@ -284,7 +284,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 68b38bf02a717554785751364139617f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -788,9 +788,30 @@ MonoBehaviour:
   imgIntro: {fileID: 293194522}
   txtCaption: {fileID: 43543102}
   pages:
+  - waitTime: 6
+    image: {fileID: 0}
+    text: O nome dele era Elo, mas todo mundo chamava ele de Jennifer.
   - waitTime: 5
-    image: {fileID: 21300000, guid: 6b8af40f01c600a46baa79aa8f2983ec, type: 3}
-    text: teste
+    image: {fileID: 0}
+    text: "N\xE3o... N\xE3o, pera! A hist\xF3ria nem \xE9 dele."
+  - waitTime: 3
+    image: {fileID: 0}
+    text: "Essa, \xE9 uma hist\xF3ria de uma galinha."
+  - waitTime: 3
+    image: {fileID: 0}
+    text: Galinhas foram oprimidas por tanto tempo,
+  - waitTime: 3
+    image: {fileID: 0}
+    text: que se esqueceram o que era liberdade
+  - waitTime: 3
+    image: {fileID: 0}
+    text: e, assim, perderam a capacidade de voar.
+  - waitTime: 4
+    image: {fileID: 0}
+    text: "Essa \xE9 a hist\xF3ria de uma galinha chamada Fran,"
+  - waitTime: 4
+    image: {fileID: 0}
+    text: "galinha escolhida que se lembrou de como \xE9 voar,"
   - waitTime: 5
-    image: {fileID: -8929332201722969235, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-    text: ' 2222222'
+    image: {fileID: 0}
+    text: "e que ir\xE1 libertar todas as galinhas com o poder da Ovorce!"
