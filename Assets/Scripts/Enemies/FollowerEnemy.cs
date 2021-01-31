@@ -32,7 +32,7 @@ public class FollowerEnemy : BaseEnemy, IFollowerMinion
 
     public override void CheckAttack()
     {
-        if (target != null) // se não tem nenhum alvo
+        if (target == null) // se não tem nenhum alvo
         {
             StatusDidChange(StatusAnimation.idle); // idle 
         }

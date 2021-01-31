@@ -15,14 +15,15 @@ public class FireAbility : FollowerEnemy
     bool charging = false;
     public float chargeTime;
     public bool isStatic;
-    
+
     private void Start()
     {
         aIPath = GetComponent<AIPath>();
         if (isStatic == true)
         {
             aIPath.canMove = false;
-        }else
+        }
+        else
         {
             aIPath.canMove = true;
         }
@@ -75,7 +76,7 @@ public class FireAbility : FollowerEnemy
     {
         var hitInfo = Physics2D.OverlapCircleAll(transform.position, radius, layer);
         if (hitInfo.Length > 0)
-        {            
+        {
             SetDamage(hitInfo[0].transform.gameObject, chargedAttackPower);
         }
     }
