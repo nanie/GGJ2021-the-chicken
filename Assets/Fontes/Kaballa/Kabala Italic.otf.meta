@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d35b7e950c03ded468ae419f9e87c7ca
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Kabala
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 70d9b4ca784d3454abcf3fe655ac36ea, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

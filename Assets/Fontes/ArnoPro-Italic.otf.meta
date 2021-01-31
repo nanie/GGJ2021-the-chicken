@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 935bfa78b1274f34ea1008252b60e50d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Arno Pro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f2046f0aba4b2a045bf9a01e70031e6d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

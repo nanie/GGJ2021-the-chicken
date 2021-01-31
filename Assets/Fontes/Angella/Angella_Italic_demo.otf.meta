@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 27a137aa4348fa946b2adec7be74f3e0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Angella
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e69cd576c2b24d8449d55d008385770a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
