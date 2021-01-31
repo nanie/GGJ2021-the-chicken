@@ -11,6 +11,11 @@ public class LockedDoor : MonoBehaviour
     bool isOpen = false;
     bool canOpen;
     private PlayerInventoryController playerInventory;
+
+    private void Start()
+    {
+        playerInventory = FindObjectOfType<PlayerInventoryController>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
