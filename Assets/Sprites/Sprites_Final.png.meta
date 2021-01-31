@@ -938,6 +938,9 @@ TextureImporter:
   - first:
       213: 6069703320782326374
     second: Sprites copy 1_311
+  - first:
+      213: 1132630700909242548
+    second: particleLeaves
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2957,6 +2960,27 @@ TextureImporter:
       bones: []
       spriteID: 17f5b5cd144b050e0800000000000000
       internalID: -2283126816113991823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: particleLeaves
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1201
+        width: 601
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8a56d1f99e7bf00800000000000000
+      internalID: 1132630700909242548
       vertices: []
       indices: 
       edges: []
