@@ -9,14 +9,14 @@ public class UseItem : MonoBehaviour
     [SerializeField] private int powerPotionPower = 1;
     [SerializeField] private int durationPotionPower = 4;
     [SerializeField] private PlayerController playerController;
+    [SerializeField] private DamageManager damageManager;
     [SerializeField] private float speedPotionPower = 2f;
     [SerializeField] private float speedHatPower = 3f;
     [SerializeField] private int speedPotionDuration = 4;
+    [SerializeField] private int healAmount = 5;
     [SerializeField] private GameObject[] galinhas;
     bool hasAttackBonus;
-    bool hasSpeedBonus;
-
-    
+    bool hasSpeedBonus;    
     public bool CanUseItemType(ItemType type)
     {
         switch (type)
@@ -72,7 +72,7 @@ public class UseItem : MonoBehaviour
 
     private void UseHealthPotion()
     {
-        throw new NotImplementedException();
+        damageManager.Heal(healAmount);
     }
     private void UseLightHat()
     {

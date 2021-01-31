@@ -398,6 +398,8 @@ GameObject:
   - component: {fileID: 8699752602800080211}
   - component: {fileID: 5142107320512110574}
   - component: {fileID: 1186969536}
+  - component: {fileID: 8343479603246889599}
+  - component: {fileID: 8343479603246889601}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -533,3 +535,73 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   attackSpeed: 0.5
+--- !u!114 &8343479603246889599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8343479602076765633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02fbc7d744c2a8b479c0bde6328a31be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items:
+  - type: 0
+    amount: 0
+    discovered: 0
+    icon: {fileID: -7441673065448537632, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 49
+  - type: 1
+    amount: 0
+    discovered: 0
+    icon: {fileID: -7441673065448537632, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 50
+  - type: 2
+    amount: 0
+    discovered: 0
+    icon: {fileID: -7441673065448537632, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 51
+  - type: 3
+    amount: 0
+    discovered: 0
+    icon: {fileID: 5119107928633020237, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 52
+  - type: 4
+    amount: 0
+    discovered: 0
+    icon: {fileID: -2279120764523411834, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 53
+  - type: 5
+    amount: 0
+    discovered: 0
+    icon: {fileID: 495666354684792990, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 54
+  useItem: {fileID: 8343479603246889601}
+--- !u!114 &8343479603246889601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8343479602076765633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e4bf822651bf548b6839c5b174464d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAttack: {fileID: 1186969536}
+  powerPotionPower: 1
+  durationPotionPower: 4
+  playerController: {fileID: 8343479602076765629}
+  damageManager: {fileID: 8699752602800080211}
+  speedPotionPower: 2
+  speedHatPower: 3
+  speedPotionDuration: 4
+  healAmount: 5
+  galinhas:
+  - {fileID: 2111216165}
+  - {fileID: 1181366110}
+  - {fileID: 1935523734}
+  - {fileID: 2000298073}

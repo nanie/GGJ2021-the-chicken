@@ -12,7 +12,7 @@ public class ItemElement : MonoBehaviour
 
     public void SetData(Sprite icon, int amount, int index, bool discovered)
     {
-        index = (index + 1) & 10;
+        index = (index + 1) % 10;
         textIndex.text = index.ToString();
         imgIcon.sprite = icon;
         textAmount.text = $"x{amount}";
