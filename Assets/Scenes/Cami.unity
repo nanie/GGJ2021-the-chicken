@@ -1428,7 +1428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772179174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 43.13, y: 151.97, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1886,11 +1886,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8616357266804684409, guid: 3485c8b030a0c5a408c1429f1fc866bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 43.13
       objectReference: {fileID: 0}
     - target: {fileID: 8616357266804684409, guid: 3485c8b030a0c5a408c1429f1fc866bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 151.97
       objectReference: {fileID: 0}
     - target: {fileID: 8616357266804684409, guid: 3485c8b030a0c5a408c1429f1fc866bf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2885,6 +2885,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1950088326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8987210571617110952, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+  m_PrefabInstance: {fileID: 8343479603246889596}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a13df2b39c29d4aa9037bbb3b7e33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1975428309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3264,10 +3275,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1181366112, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2580325093453840847, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    - target: {fileID: 1935523736, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6731437595995976420, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    - target: {fileID: 2000298075, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8336136155442521963, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    - target: {fileID: 2111216167, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4946277606653365504, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     - target: {fileID: 5142107320512110574, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: cameraShake
       value: 
       objectReference: {fileID: 1122889235}
+    - target: {fileID: 5399053613744998701, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8343479602076765633, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3278,11 +3309,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8343479602076765635, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 43.13
       objectReference: {fileID: 0}
     - target: {fileID: 8343479602076765635, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 151.97
       objectReference: {fileID: 0}
     - target: {fileID: 8343479602076765635, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3316,6 +3347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8343479603246889599, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: animationManager
+      value: 
+      objectReference: {fileID: 1950088326}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
 --- !u!114 &8343479603246889597 stripped

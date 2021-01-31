@@ -39,6 +39,11 @@ public class SingleAnimationManager : MonoBehaviour, IAnimatorManager
         _animator.SetBool("walking", true);
     }
 
+    public void CollectItem()
+    {
+        _animator.SetTrigger("collect");
+    }
+    
     public void SetWalking(bool IsWalking)
     {
         _animator.SetBool("walking", IsWalking);

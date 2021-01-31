@@ -15,6 +15,7 @@ public class UseItem : MonoBehaviour
     [SerializeField] private int speedPotionDuration = 4;
     [SerializeField] private int healAmount = 5;
     [SerializeField] private GameObject[] galinhas;
+   
     bool hasAttackBonus;
     bool hasSpeedBonus;    
     public bool CanUseItemType(ItemType type)

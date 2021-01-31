@@ -8,6 +8,7 @@ public class PlayerInventoryController : MonoBehaviour
 {
     [SerializeField] private InventoryItem[] Items;
     [SerializeField] private UseItem useItem;
+    [SerializeField] private SingleAnimationManager animationManager;
     public Action<InventoryItem> OnItemChange = delegate (InventoryItem item) { };
     public Action<InventoryItem> OnItemStart = delegate (InventoryItem item) { };
     public bool hasKey;
@@ -49,6 +50,7 @@ public class PlayerInventoryController : MonoBehaviour
         }
         else if (type == ItemType.key)
         {
+            animationManager.CollectItem();
             hasKey = true;
         }
     }
