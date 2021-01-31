@@ -14,6 +14,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && canInteracte == true && isOpen == false)
         {
+         
             interactText.SetActive(false);
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
