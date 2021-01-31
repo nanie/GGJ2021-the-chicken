@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a57261930bcb6b74ebc13a837a310a94
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Angella Outline
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 733b7daae35ee774992215afd3eaf247, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
