@@ -2,13 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class DamageManager : MonoBehaviour
 {
     public Action<int> OnCharacterDamaged = delegate (int currentHealth) { };
     public Action OnCharacterDie = delegate () { };
-    private int maxHealth = 10;
-    private int currentHealth = 10;
+    private int maxHealth = 12;
+    private int currentHealth = 12;
+    
+    
     public void SetHealthTotal(int amount)
     {
         maxHealth = amount;
@@ -16,7 +18,8 @@ public class DamageManager : MonoBehaviour
     }
     private void Start()
     {
-        
+        //healthImage = GetComponent<Image[]>();
+        //heartSprites = GetComponent<Sprite[]>();
     }
     public void SetDamage(int damageAmount)
     {
@@ -27,6 +30,7 @@ public class DamageManager : MonoBehaviour
         }
         else
         {
+            
             OnCharacterDamaged.Invoke(currentHealth);
         }
     }
