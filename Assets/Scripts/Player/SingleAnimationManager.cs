@@ -30,7 +30,10 @@ public class SingleAnimationManager : MonoBehaviour, IAnimatorManager
     {
         _animator.SetTrigger("receiveDamage");
     }
-
+    public void Fall()
+    {
+        _animator.SetTrigger("fall");
+    }
     public void SetDirection(Vector2 direction)
     {
         _animator.SetBool("walking", true);

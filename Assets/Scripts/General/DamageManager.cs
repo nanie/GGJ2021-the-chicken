@@ -7,8 +7,8 @@ public class DamageManager : MonoBehaviour
 {
     public Action<int> OnCharacterDamaged = delegate (int currentHealth) { };
     public Action OnCharacterDie = delegate () { };
-    private int maxHealth = 10;
-    private int currentHealth = 10;
+    private int maxHealth = 12;
+    private int currentHealth = 12;
     public void SetHealthTotal(int amount)
     {
         maxHealth = amount;

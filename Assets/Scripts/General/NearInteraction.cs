@@ -5,7 +5,8 @@ using UnityEngine.Events;
 
 public class NearInteraction : MonoBehaviour
 {
-    [SerializeField] private UnityEvent OnInteract;
+    public UnityEvent OnInteract;
+
     [SerializeField] private bool SingleInteraction = true;
     bool canInteract = false;
 
@@ -20,9 +21,9 @@ public class NearInteraction : MonoBehaviour
             if (SingleInteraction)
             {
                 canInteract = false;
-                Destroy(this);               
+                Destroy(this);
             }
-               
+
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
