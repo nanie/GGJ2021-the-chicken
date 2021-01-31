@@ -789,29 +789,29 @@ MonoBehaviour:
   txtCaption: {fileID: 43543102}
   pages:
   - waitTime: 6
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: eadd0ca74fe91dc46974da8bbb9711a6, type: 3}
     text: O nome dele era Elo, mas todo mundo chamava ele de Jennifer.
   - waitTime: 5
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: eadd0ca74fe91dc46974da8bbb9711a6, type: 3}
     text: "N\xE3o... N\xE3o, pera! A hist\xF3ria nem \xE9 dele."
   - waitTime: 3
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 8208bc6250556c54f810f8c5cc5605ec, type: 3}
     text: "Essa, \xE9 uma hist\xF3ria de uma galinha."
   - waitTime: 3
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 8208bc6250556c54f810f8c5cc5605ec, type: 3}
     text: Galinhas foram oprimidas por tanto tempo,
   - waitTime: 3
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 8208bc6250556c54f810f8c5cc5605ec, type: 3}
     text: que se esqueceram o que era liberdade
   - waitTime: 3
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 8208bc6250556c54f810f8c5cc5605ec, type: 3}
     text: e, assim, perderam a capacidade de voar.
   - waitTime: 4
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 1e0443b6ba9b85c4d90fdfa2ab70d1f0, type: 3}
     text: "Essa \xE9 a hist\xF3ria de uma galinha chamada Fran,"
   - waitTime: 4
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 1e0443b6ba9b85c4d90fdfa2ab70d1f0, type: 3}
     text: "galinha escolhida que se lembrou de como \xE9 voar,"
   - waitTime: 5
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 5a9ea30000a9e154285f446d2fafe2e2, type: 3}
     text: "e que ir\xE1 libertar todas as galinhas com o poder da Ovorce!"

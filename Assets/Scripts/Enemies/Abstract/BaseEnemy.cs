@@ -9,7 +9,7 @@ public abstract class BaseEnemy : MonoBehaviour, IBossMinion
     [SerializeField] private UnityEvent OnDeath;
     public Transform healthBarPivot;
     public int damageAmount;
-    public Action OnEnemyDie = delegate () { };
+    public Action<GameObject> OnEnemyDie = delegate (GameObject enemy) { };
     public bool canDie = true;
     public float deathDestroyDelay = 1;
     public int maxHealth = 3;
@@ -18,7 +18,7 @@ public abstract class BaseEnemy : MonoBehaviour, IBossMinion
     private DamageManager damageManager;
     internal bool dead = false;
 
-    event Action IBossMinion.OnDeath
+    event Action<GameObject> IBossMinion.OnDeath
     {
         add
         {
@@ -66,7 +66,7 @@ public abstract class BaseEnemy : MonoBehaviour, IBossMinion
     {
         dead = true;
         StatusDidChange(StatusAnimation.dead);
-        OnEnemyDie.Invoke();
+        OnEnemyDie.Invoke(gameObject);
         OnDeath.Invoke();
         Destroy(gameObject, deathDestroyDelay);
     }

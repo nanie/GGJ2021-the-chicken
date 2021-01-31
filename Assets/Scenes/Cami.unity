@@ -1767,7 +1767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.3164978, y: 0.018203735}
+  m_AnchoredPosition: {x: -0.3164978, y: 0.018188477}
   m_SizeDelta: {x: 13.2946, y: 13.9639}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &992041018
@@ -3174,6 +3174,18 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 853036204}
+    - target: {fileID: 330275562106521714, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Radius
+      value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 330275562247990942, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Radius
+      value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 330275562667930531, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Radius
+      value: 3.13
+      objectReference: {fileID: 0}
     - target: {fileID: 711538101255749008, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.82
@@ -3185,6 +3197,14 @@ PrefabInstance:
     - target: {fileID: 1147062982995016464, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864888111333294608, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864888111333294608, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: attackDistance
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1864888111333294608, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: OnBossDie.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3209,6 +3229,10 @@ PrefabInstance:
     - target: {fileID: 2247922476462044429, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_LocalPosition.y
       value: 8.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247922476541158102, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Radius
+      value: 3.13
       objectReference: {fileID: 0}
     - target: {fileID: 2247922476813481393, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: dialogueManager
@@ -3297,6 +3321,18 @@ PrefabInstance:
     - target: {fileID: 5510773563168239873, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6499903824978035593, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Radius
+      value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6499903825692936885, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Radius
+      value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6499903825972890602, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Radius
+      value: 3.13
       objectReference: {fileID: 0}
     - target: {fileID: 7547703923368630473, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_IsActive

@@ -25,7 +25,7 @@ public class FollowerEnemy : BaseEnemy, IFollowerMinion
         aI = GetComponent<AIPath>();
     }
 
-    private void Died()
+    private void Died(GameObject enemy)
     {
         aI.canMove = false;
     }

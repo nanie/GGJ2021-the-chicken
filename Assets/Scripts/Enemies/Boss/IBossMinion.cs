@@ -5,6 +5,6 @@ using UnityEngine;
 
 public interface IBossMinion
 {
-    event Action OnDeath;
+    event Action<GameObject> OnDeath;
     void BossIsDead();   
 }

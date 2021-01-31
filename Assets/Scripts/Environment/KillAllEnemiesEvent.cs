@@ -8,23 +8,29 @@ public class KillAllEnemiesEvent : MonoBehaviour
 {
     [SerializeField] private UnityEvent OnAllEnemyKilled;
     [SerializeField] private List<BaseEnemy> enemies;
-    int count;
+    bool finished = false;
     void Start()
     {
-        count = enemies.Count;
         foreach (var item in enemies)
         {
             item.OnEnemyDie += EnemyKilled;
         }
     }
 
-    private void EnemyKilled()
+    private void EnemyKilled(GameObject enemy)
     {
-        count--;
-        if (count <= 0)
+        if (enemy == null)
+            return;
+        var baseEnemy = enemy.GetComponent<BaseEnemy>();
+        if (enemies.Contains(baseEnemy))
         {
+            enemies.Remove(baseEnemy);
+        }
+
+        if (enemies.Count <= 0 && !finished)
+        {
+            finished = true;
             OnAllEnemyKilled.Invoke();
-            enabled = false;
         }
     }
 }

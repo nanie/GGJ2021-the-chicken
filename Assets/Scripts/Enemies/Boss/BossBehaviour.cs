@@ -32,7 +32,7 @@ public class BossBehaviour : BaseEnemy
         OnEnemyDie += BossDied;
     }
 
-    private void BossDied()
+    private void BossDied(GameObject enemy)
     {
         isDead = true;
         foreach (var minion in minions)
@@ -85,7 +85,7 @@ public class BossBehaviour : BaseEnemy
                 }
                 var minionBehaviour = minion.GetComponent<IBossMinion>();
                 minions.Add(minionBehaviour);
-                minionBehaviour.OnDeath += delegate () { MinionDied(minionBehaviour); };
+                minionBehaviour.OnDeath += delegate (GameObject enemy) { MinionDied(minionBehaviour); };
             }
 
         }

@@ -160,9 +160,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018793762, y: 0.012528837}
+  m_Offset: {x: 0.14813344, y: 0.012528891}
   serializedVersion: 2
-  m_Radius: 1.27
+  m_Radius: 3.161845
 --- !u!114 &4973792041207809534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   canDie: 1
   deathDestroyDelay: 1
   maxHealth: 3
-  attackDistance: 0.95
+  attackDistance: 0.66
   attackTime: 1
 --- !u!114 &5601855964989357356
 MonoBehaviour:
@@ -411,3 +411,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8905156083705185055}
   clip: {fileID: 8300000, guid: 956cf0f33d4b5f34f8d494802c3c809c, type: 3}
+  clip2: {fileID: 0}
+  randomPitch1: 0
+  randomPitch2: 0
