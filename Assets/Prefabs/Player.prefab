@@ -752,12 +752,12 @@ MonoBehaviour:
   - type: 1
     amount: 0
     discovered: 0
-    icon: {fileID: -7441673065448537632, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    icon: {fileID: -1968470836017087105, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 50
   - type: 2
     amount: 0
     discovered: 0
-    icon: {fileID: -7441673065448537632, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    icon: {fileID: 5774960318254082537, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 51
   - type: 3
     amount: 0
@@ -775,6 +775,7 @@ MonoBehaviour:
     icon: {fileID: 495666354684792990, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 54
   useItem: {fileID: 8343479603246889601}
+  animationManager: {fileID: 0}
   hasKey: 0
 --- !u!114 &8343479603246889601
 MonoBehaviour:
