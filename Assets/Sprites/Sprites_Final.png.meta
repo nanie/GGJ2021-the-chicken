@@ -199,10 +199,10 @@ TextureImporter:
     second: Sprites copy 1_64
   - first:
       213: 5774960318254082537
-    second: Sprites copy 1_65
+    second: potion_force
   - first:
       213: -1968470836017087105
-    second: Sprites copy 1_66
+    second: Potion_sprint
   - first:
       213: -4654606719518525227
     second: ThornBush
@@ -259,7 +259,7 @@ TextureImporter:
     second: tree_bottom
   - first:
       213: -7441673065448537632
-    second: potion
+    second: potion_health
   - first:
       213: 7293658303851229897
     second: chest_close
@@ -2293,7 +2293,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites copy 1_65
+      name: potion_force
       rect:
         serializedVersion: 2
         x: 3000
@@ -2314,7 +2314,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites copy 1_66
+      name: Potion_sprint
       rect:
         serializedVersion: 2
         x: 3600
@@ -2650,7 +2650,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: potion
+      name: potion_health
       rect:
         serializedVersion: 2
         x: 3000
@@ -2973,7 +2973,7 @@ TextureImporter:
         width: 601
         height: 601
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

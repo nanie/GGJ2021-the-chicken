@@ -9,7 +9,7 @@ public class ItemPanelManager : MonoBehaviour
     [SerializeField] private Transform itemElementParent;
     private PlayerInventoryController inventory;
     private Dictionary<ItemType, ItemElement> itemElements = new Dictionary<ItemType, ItemElement>();
-    private void Start()
+    private void Awake()
     {
         inventory = FindObjectOfType<PlayerInventoryController>();
         inventory.OnItemStart += StartItem;
