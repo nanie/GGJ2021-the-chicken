@@ -31,6 +31,6 @@ public class EndOfGameManager : MonoBehaviour
     public void PlayAgain()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
