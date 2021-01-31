@@ -9,8 +9,7 @@ public class DamageManager : MonoBehaviour
     public Action OnCharacterDie = delegate () { };
     private int maxHealth = 12;
     private int currentHealth = 12;
-    
-    
+
     public void SetHealthTotal(int amount)
     {
         maxHealth = amount;
@@ -18,8 +17,7 @@ public class DamageManager : MonoBehaviour
     }
     private void Start()
     {
-        //healthImage = GetComponent<Image[]>();
-        //heartSprites = GetComponent<Sprite[]>();
+        
     }
     public void SetDamage(int damageAmount)
     {

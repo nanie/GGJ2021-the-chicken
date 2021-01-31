@@ -62,7 +62,8 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rigidBody.MovePosition(rigidBody.position + direction * (speed + potionSpeedBonus) * Time.fixedDeltaTime);
+        if (_canWalk)
+            rigidBody.MovePosition(rigidBody.position + direction * (speed + potionSpeedBonus) * Time.fixedDeltaTime);
     }
 
     public Vector2 GetCurrentDirection()
@@ -72,6 +73,11 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerCanWalk(bool canWalk)
     {
+        if (!canWalk)
+        {
+            direction = new Vector2();
+            animator.SetWalking(false);
+        }
         _canWalk = canWalk;
     }
 

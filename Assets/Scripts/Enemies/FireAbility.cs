@@ -63,6 +63,7 @@ public class FireAbility : FollowerEnemy
             Shoot(); // usa a habilidade especial
             timer = reuseTime; // coloca em tempo de recarga a habilidade especial
             charging = false;
+            StatusDidChange(StatusAnimation.finishCharging);
             if (!isStatic)
             {
                 aIPath.canMove = true;
