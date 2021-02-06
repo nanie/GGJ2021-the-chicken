@@ -67,9 +67,11 @@ public class FollowerEnemy : BaseEnemy, IFollowerMinion
     internal void StartFollow(Transform target)
     {        
         this.target = target;
-        following = true;
+        
         AIDestinationSetter aIDestination = GetComponent<AIDestinationSetter>();
         aIDestination.target = target;
+        following = true;
+        StatusDidChange(StatusAnimation.walking);
     }
 
     public void FollowTarget(Transform target)
