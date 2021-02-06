@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7abb6cce14cce41804682ac981584e, type: 3}
+  m_Name: PlayerInventory
+  m_EditorClassIdentifier: 
+  _items:
+  - type: 0
+    amount: 0
+    discovered: 0
+    icon: {fileID: -7441673065448537632, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 49
+  - type: 1
+    amount: 0
+    discovered: 0
+    icon: {fileID: -1968470836017087105, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 50
+  - type: 2
+    amount: 0
+    discovered: 0
+    icon: {fileID: 5774960318254082537, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 51
+  - type: 3
+    amount: 0
+    discovered: 0
+    icon: {fileID: 5119107928633020237, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 52
+  - type: 4
+    amount: 0
+    discovered: 0
+    icon: {fileID: -2279120764523411834, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 53
+  - type: 5
+    amount: 0
+    discovered: 0
+    icon: {fileID: 495666354684792990, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    keyCode: 54

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerInventoryController : MonoBehaviour
 {
-    [SerializeField] private InventoryItem[] Items;
+    [SerializeField] private PlayerInventoryData _inventory;
     [SerializeField] private UseItem useItem;
     [SerializeField] private SingleAnimationManager animationManager;
     public Action<InventoryItem> OnItemChange = delegate (InventoryItem item) { };
@@ -14,7 +14,7 @@ public class PlayerInventoryController : MonoBehaviour
     public bool hasKey;
     private void Start()
     {
-        foreach (var item in Items)
+        foreach (var item in _inventory._items)
         {
             OnItemStart.Invoke(item);
         }
@@ -22,7 +22,7 @@ public class PlayerInventoryController : MonoBehaviour
 
     private void Update()
     {
-        foreach (var item in Items)
+        foreach (var item in _inventory._items)
         {
             if (item.amount > 0 && Input.GetKeyDown(item.keyCode))
             {
@@ -41,9 +41,9 @@ public class PlayerInventoryController : MonoBehaviour
     }
     public void CollectItem(ItemType type)
     {
-        if (Items.Any(q => q.type == type))
+        if (_inventory._items.Any(q => q.type == type))
         {
-            var item = Items.Where(q => q.type == type).First();
+            var item = _inventory._items.Where(q => q.type == type).First();
             item.amount++;
             item.discovered = true;
             OnItemChange.Invoke(item);
@@ -54,14 +54,4 @@ public class PlayerInventoryController : MonoBehaviour
             hasKey = true;
         }
     }
-}
-
-[Serializable]
-public class InventoryItem
-{
-    public ItemType type;
-    public int amount;
-    public bool discovered;
-    public Sprite icon;
-    public KeyCode keyCode;
 }
