@@ -6,7 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/PlayerInventoryData")]
 public class PlayerInventoryData : ScriptableObject
 {
-    public InventoryItem[] _items;
+    [SerializeField] private List<InventoryItem> _items;
+    public List<InventoryItem> Items => _items;
 }
 
 [Serializable]

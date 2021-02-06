@@ -5,26 +5,29 @@ using UnityEngine;
 
 public class ItemPanelManager : MonoBehaviour
 {
-    [SerializeField] private ItemElement itemElementPrefab;
-    [SerializeField] private Transform itemElementParent;
+    [SerializeField] private ItemElement currentItem;
     private PlayerInventoryController inventory;
-    private Dictionary<ItemType, ItemElement> itemElements = new Dictionary<ItemType, ItemElement>();
+    [SerializeField] private GameObject keyItem;
     private void Awake()
     {
         inventory = FindObjectOfType<PlayerInventoryController>();
-        inventory.OnItemStart += StartItem;
-        inventory.OnItemChange += ChangeItem;
+        inventory.OnSelectItem += SelectItem;
+        inventory.OnUpdateItem += UpdateItem;
+        inventory.OnKeyStatusChange += ShowKey;
     }
 
-    private void ChangeItem(InventoryItem obj)
+    private void ShowKey(bool show)
     {
-        itemElements[obj.type].SetAmount(obj.amount);
+        keyItem.SetActive(show);
     }
 
-    private void StartItem(InventoryItem obj)
+    private void UpdateItem(InventoryItem obj)
     {
-        var newElement = Instantiate(itemElementPrefab, itemElementParent);
-        newElement.SetData(obj.icon, obj.amount, itemElements.Count, obj.discovered);
-        itemElements.Add(obj.type, newElement);
+        currentItem.SetAmount(obj.amount);
+    }
+
+    private void SelectItem(InventoryItem obj)
+    {
+        currentItem.SetData(obj.icon, obj.amount);
     }
 }

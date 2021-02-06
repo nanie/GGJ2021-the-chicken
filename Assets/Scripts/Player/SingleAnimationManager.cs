@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SingleAnimationManager : MonoBehaviour, IAnimatorManager
 {
+    [SerializeField] private SpriteRenderer _itemSprite;
     private Animator _animator;
     private void Start()
     {
@@ -39,8 +40,9 @@ public class SingleAnimationManager : MonoBehaviour, IAnimatorManager
         _animator.SetBool("walking", true);
     }
 
-    public void CollectItem()
+    public void CollectItem(Sprite item)
     {
+        _itemSprite.sprite = item;
         _animator.SetTrigger("collect");
     }
     

@@ -9,49 +9,81 @@ public class PlayerInventoryController : MonoBehaviour
     [SerializeField] private PlayerInventoryData _inventory;
     [SerializeField] private UseItem useItem;
     [SerializeField] private SingleAnimationManager animationManager;
-    public Action<InventoryItem> OnItemChange = delegate (InventoryItem item) { };
-    public Action<InventoryItem> OnItemStart = delegate (InventoryItem item) { };
+    [SerializeField] private Sprite _keyIcon;
+
+    public Action<InventoryItem> OnSelectItem = delegate (InventoryItem item) { };
+    public Action<InventoryItem> OnUpdateItem = delegate (InventoryItem item) { };
+    public Action<bool> OnKeyStatusChange = delegate (bool hasKey) { };
     public bool hasKey;
+    private ItemType _currentItem;
+    private int _currentIndex;
+    private List<InventoryItem> _discoveredItems;
     private void Start()
     {
-        foreach (var item in _inventory._items)
+        _discoveredItems = _inventory.Items.Where(q => q.discovered).ToList();
+        if (_discoveredItems.Count > 0)
         {
-            OnItemStart.Invoke(item);
+            _currentItem = _discoveredItems[_currentIndex].type;
+            OnSelectItem.Invoke(_discoveredItems[_currentIndex]);
         }
     }
-
     private void Update()
     {
-        foreach (var item in _inventory._items)
+        if (_discoveredItems.Count < 1)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            if (item.amount > 0 && Input.GetKeyDown(item.keyCode))
+            _currentIndex = (_currentIndex + 1) % _discoveredItems.Count;
+            _currentItem = _discoveredItems[_currentIndex].type;
+            OnSelectItem.Invoke(_discoveredItems[_currentIndex]);
+        }
+        else if (Input.GetKeyDown(KeyCode.I))
+        {
+            _currentIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
+            _currentItem = _discoveredItems[_currentIndex].type;
+            OnSelectItem.Invoke(_discoveredItems[_currentIndex]);
+        }
+        else if (Input.GetButtonDown("Fire3"))
+        {
+            if (_discoveredItems[_currentIndex].amount > 0 && useItem.CanUseItemType(_currentItem))
             {
-                if (useItem.CanUseItemType(item.type))
-                {
-                    item.amount--;
-                    OnItemChange.Invoke(item);
-                    useItem.UseItemByType(item.type);
-                }
+                _discoveredItems[_currentIndex].amount--;
+                useItem.UseItemByType(_currentItem);
+                OnUpdateItem.Invoke(_discoveredItems[_currentIndex]);
             }
         }
     }
-    public void CollectItem()
+
+    public void UseKey()
     {
-        CollectItem(ItemType.healthPotion);
+        if (hasKey)
+        {
+            hasKey = true;
+            OnKeyStatusChange.Invoke(hasKey);
+        }
     }
+
     public void CollectItem(ItemType type)
     {
-        if (_inventory._items.Any(q => q.type == type))
+        if (_inventory.Items.Any(q => q.type == type))
         {
-            var item = _inventory._items.Where(q => q.type == type).First();
+            var item = _inventory.Items.Where(q => q.type == type).First();
             item.amount++;
+            if (!item.discovered)
+                animationManager.CollectItem(item.icon);
             item.discovered = true;
-            OnItemChange.Invoke(item);
+            _discoveredItems.Add(item);
+
+            if (_currentItem == type)
+                OnUpdateItem.Invoke(_discoveredItems[_currentIndex]);
         }
         else if (type == ItemType.key)
         {
-            animationManager.CollectItem();
+            animationManager.CollectItem(_keyIcon);
             hasKey = true;
+            OnKeyStatusChange.Invoke(hasKey);
         }
+       
     }
 }
