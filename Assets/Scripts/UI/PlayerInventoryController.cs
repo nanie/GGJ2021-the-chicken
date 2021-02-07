@@ -38,7 +38,7 @@ public class PlayerInventoryController : MonoBehaviour
         if (_discoveredItems.Count < 1)
             return;
 
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.U))
         {
             _currentIndex = (_currentIndex + 1) % _discoveredItems.Count;
             var nextItemIndex = (_currentIndex + 1) % _discoveredItems.Count;
@@ -46,7 +46,7 @@ public class PlayerInventoryController : MonoBehaviour
             _currentItem = _discoveredItems[_currentIndex].type;
             OnSelectItem.Invoke(_discoveredItems[_currentIndex], _discoveredItems[nextItemIndex], _discoveredItems[previousItemIndex]);
         }
-        else if (Input.GetKeyDown(KeyCode.I))
+        else if (Input.GetKeyDown(KeyCode.O))
         {
             _currentIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
             var nextItemIndex = (_currentIndex + 1) % _discoveredItems.Count;
@@ -54,7 +54,7 @@ public class PlayerInventoryController : MonoBehaviour
             _currentItem = _discoveredItems[_currentIndex].type;
             OnSelectItem.Invoke(_discoveredItems[_currentIndex], _discoveredItems[nextItemIndex], _discoveredItems[previousItemIndex]);
         }
-        else if (Input.GetButtonDown("Fire3"))
+        else if (Input.GetKeyDown(KeyCode.I))
         {
             if (_discoveredItems[_currentIndex].amount > 0 && useItem.CanUseItemType(_currentItem))
             {

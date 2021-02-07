@@ -11,20 +11,26 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Vector2 attackOffsetLeft;
     [SerializeField] private string inputButtonNormal = "Fire1";
     [SerializeField] private string inputButtonSpecial = "Fire2";
+    [SerializeField] private string inputButtonDodge = "Fire3";
     [SerializeField] private LayerMask attackMask;
     [SerializeField] private float attackSpeed = 0.5f;
+    [SerializeField] private float dodgeTime = 0.5f;
     public Action<bool, bool> OnPlayerAttack = delegate (bool isCharged, bool isQuick) { };
+    public Action OnPlayerDodge = delegate () { };
     private PlayerController playerController;
     private float holdTime;
     private HorizontalDirection direction;
     private int attackPowerBonus = 0;
     private IAttackSkill selectedSkill;
     private float timer;
-    
+    private DamageManager _damageManager;
+    bool _dodging = false;
     void Start()
     {
         playerController = GetComponent<PlayerController>();
+        _damageManager = GetComponent<DamageManager>();
         direction = playerController.originalSpriteDirection;
+        _damageManager.CanReceiveDamage += delegate () { return !_dodging; };
     }
 
     void Update()
@@ -33,11 +39,21 @@ public class PlayerAttack : MonoBehaviour
 
         SetDirection();
 
+        if (_dodging)
+            return;
+
         if (Input.GetButtonDown(inputButtonNormal) && timer <= 0)
         {
             timer = attackSpeed;
             OnPlayerAttack.Invoke(false, false);
             NormalAttack();
+        }
+
+        if (Input.GetButtonDown(inputButtonDodge) && timer <= 0)
+        {
+            timer = attackSpeed;
+            OnPlayerDodge.Invoke();
+            StartCoroutine(Dodge());
         }
 
         if (selectedSkill == null)
@@ -65,6 +81,13 @@ public class PlayerAttack : MonoBehaviour
             holdTime = 0;
         }
 
+    }
+
+    IEnumerator Dodge()
+    {
+        _dodging = true;
+        yield return new WaitForSeconds(dodgeTime);
+        _dodging = false;
     }
 
     private void NormalAttack()

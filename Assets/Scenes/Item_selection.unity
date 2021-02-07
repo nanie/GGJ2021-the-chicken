@@ -4591,6 +4591,14 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1331912658}
+    - target: {fileID: 2247922476813481393, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247922476813481393, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: Para desviar use a tecla J
+      objectReference: {fileID: 0}
     - target: {fileID: 2247922477021341543, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4957,22 +4965,42 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2580325093453840847, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    - target: {fileID: 1181366112, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1935523736, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6731437595995976420, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    - target: {fileID: 1935523736, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2000298075, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8336136155442521963, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    - target: {fileID: 2000298075, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2111216167, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4946277606653365504, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
+    - target: {fileID: 2111216167, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5142107320512110574, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: cameraShake
       value: 
       objectReference: {fileID: 1122889235}
+    - target: {fileID: 5399053613744998701, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5399053613744998701, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_SortingOrder
       value: 2

@@ -15,6 +15,12 @@ public class SingleAnimationManager : MonoBehaviour, IAnimatorManager
         dgm.OnCharacterDie += CharacterDied;
         PlayerAttack playerAttack = GetComponent<PlayerAttack>();
         playerAttack.OnPlayerAttack += PlayerAttacked;
+        playerAttack.OnPlayerDodge += PlayerDodged; 
+    }
+
+    private void PlayerDodged()
+    {
+        _animator.SetTrigger("Dodge");
     }
 
     private void PlayerAttacked(bool isCharged, bool isQuick)

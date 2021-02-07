@@ -7,6 +7,7 @@ public class DamageManager : MonoBehaviour
 {
     public Action<int> OnCharacterDamaged = delegate (int currentHealth) { };
     public Action OnCharacterDie = delegate () { };
+    public Func<bool> CanReceiveDamage = delegate () { return true; };
     private int maxHealth = 12;
     private int currentHealth = 12;
 
@@ -15,12 +16,11 @@ public class DamageManager : MonoBehaviour
         maxHealth = amount;
         currentHealth = amount;
     }
-    private void Start()
-    {
-        
-    }
     public void SetDamage(int damageAmount)
     {
+        if (!CanReceiveDamage.Invoke())
+            return;
+
         currentHealth -= damageAmount;
         if (currentHealth <= 0)
         {
@@ -28,7 +28,7 @@ public class DamageManager : MonoBehaviour
         }
         else
         {
-            
+
             OnCharacterDamaged.Invoke(currentHealth);
         }
     }
