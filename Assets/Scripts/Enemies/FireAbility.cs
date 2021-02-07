@@ -49,6 +49,7 @@ public class FireAbility : FollowerEnemy
                 }
             }
         }
+        
         else // ataque normal
         {
             timer -= Time.deltaTime;
