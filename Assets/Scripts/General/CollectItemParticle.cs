@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(ParticleSystem))]
 public class CollectItemParticle : MonoBehaviour
 {
-    public Sprite test;
-
     ParticleSystem _particle;
 
     void Start()

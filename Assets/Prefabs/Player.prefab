@@ -568,7 +568,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7923908070845566657, guid: dbd6275d5abd9bc44983f4ae6a89de86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -596,7 +596,6 @@ GameObject:
   - component: {fileID: 8699752602800080211}
   - component: {fileID: 5142107320512110574}
   - component: {fileID: 1186969536}
-  - component: {fileID: 8343479603246889599}
   - component: {fileID: 8343479603246889601}
   m_Layer: 3
   m_Name: Player
@@ -685,6 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3a13df2b39c29d4aa9037bbb3b7e33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _itemSprite: {fileID: 5399053613744998701}
 --- !u!114 &8699752602800080211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,56 +729,12 @@ MonoBehaviour:
   attackOffsetLeft: {x: -0.42, y: 0.72}
   inputButtonNormal: Fire1
   inputButtonSpecial: Fire2
+  inputButtonDodge: Fire3
   attackMask:
     serializedVersion: 2
     m_Bits: 128
   attackSpeed: 0.5
---- !u!114 &8343479603246889599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8343479602076765633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02fbc7d744c2a8b479c0bde6328a31be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Items:
-  - type: 0
-    amount: 0
-    discovered: 0
-    icon: {fileID: -7441673065448537632, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-    keyCode: 49
-  - type: 1
-    amount: 0
-    discovered: 0
-    icon: {fileID: -1968470836017087105, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-    keyCode: 50
-  - type: 2
-    amount: 0
-    discovered: 0
-    icon: {fileID: 5774960318254082537, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-    keyCode: 51
-  - type: 3
-    amount: 0
-    discovered: 0
-    icon: {fileID: 5119107928633020237, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-    keyCode: 52
-  - type: 4
-    amount: 0
-    discovered: 0
-    icon: {fileID: -2279120764523411834, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-    keyCode: 53
-  - type: 5
-    amount: 0
-    discovered: 0
-    icon: {fileID: 495666354684792990, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
-    keyCode: 54
-  useItem: {fileID: 8343479603246889601}
-  animationManager: {fileID: 0}
-  hasKey: 0
+  dodgeTime: 0.5
 --- !u!114 &8343479603246889601
 MonoBehaviour:
   m_ObjectHideFlags: 0

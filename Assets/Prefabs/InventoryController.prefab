@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 24491752}
   - component: {fileID: 24491754}
   - component: {fileID: 24491753}
+  - component: {fileID: 446368310}
   m_Layer: 0
   m_Name: ItemCollectedParticle
   m_TagString: Untagged
@@ -4880,6 +4881,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &446368310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24491751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb7b987c1973e4489bba27dd1800f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &374012162
 GameObject:
   m_ObjectHideFlags: 0
@@ -9746,6 +9759,7 @@ MonoBehaviour:
   _movingParticle: {fileID: 1888984508}
   _playerItemCollectPivot: {fileID: 0}
   _ItemCollectedPivot: {fileID: 0}
+  _collectItemParticle: {fileID: 446368310}
   hasKey: 0
 --- !u!114 &1888984508
 MonoBehaviour:
@@ -9759,5 +9773,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4d07edf1a95f5408e5c1190a1f096c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleObject: {fileID: 374012162}
+  _particleObject: {fileID: 374012164}
   _duration: 1
