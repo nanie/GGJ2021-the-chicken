@@ -18,4 +18,5 @@ public class InventoryItem
     public bool discovered;
     public Sprite icon;
     public KeyCode keyCode;
+    public Gradient particleColor;
 }

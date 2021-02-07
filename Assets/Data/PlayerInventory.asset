@@ -14,32 +14,206 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _items:
   - type: 0
-    amount: 0
-    discovered: 0
+    amount: 18
+    discovered: 1
     icon: {fileID: -7441673065448537632, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 49
+    particleColor:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.64062923, b: 0.24313724, a: 1}
+      key1: {r: 1, g: 0, b: 0, a: 1}
+      key2: {r: 1, g: 0, b: 0.7470617, a: 0}
+      key3: {r: 0.6187506, g: 0, b: 1, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 19275
+      ctime2: 41249
+      ctime3: 65535
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 4
+      m_NumAlphaKeys: 2
   - type: 1
-    amount: 0
-    discovered: 0
+    amount: 9
+    discovered: 1
     icon: {fileID: -1968470836017087105, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 50
+    particleColor:
+      serializedVersion: 2
+      key0: {r: 0.03921566, g: 0.9529412, b: 0.7113726, a: 1}
+      key1: {r: 0.5256047, g: 0.9528302, b: 0.04045032, a: 1}
+      key2: {r: 0.98823535, g: 0.9803922, b: 0, a: 0}
+      key3: {r: 0.98823535, g: 0.627451, b: 0.003921569, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 30840
+      ctime1: 36430
+      ctime2: 46453
+      ctime3: 56861
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 3
+      m_NumAlphaKeys: 2
   - type: 2
-    amount: 0
-    discovered: 0
+    amount: 8
+    discovered: 1
     icon: {fileID: 5774960318254082537, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 51
+    particleColor:
+      serializedVersion: 2
+      key0: {r: 0, g: 1, b: 0.86651444, a: 1}
+      key1: {r: 0.007843137, g: 0.3355983, b: 1, a: 1}
+      key2: {r: 0.32599998, g: 0.12272941, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 64957
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 65535
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
   - type: 3
     amount: 0
     discovered: 0
     icon: {fileID: 5119107928633020237, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 52
+    particleColor:
+      serializedVersion: 2
+      key0: {r: 1, g: 0, b: 0, a: 1}
+      key1: {r: 1, g: 0.67668825, b: 0, a: 1}
+      key2: {r: 0, g: 1, b: 0.509953, a: 0}
+      key3: {r: 0.27732944, g: 0, b: 1, a: 0}
+      key4: {r: 1, g: 0, b: 0.548224, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 17348
+      ctime2: 32768
+      ctime3: 50501
+      ctime4: 65535
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 5
+      m_NumAlphaKeys: 2
   - type: 4
     amount: 0
     discovered: 0
     icon: {fileID: -2279120764523411834, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 53
+    particleColor:
+      serializedVersion: 2
+      key0: {r: 1, g: 0, b: 0, a: 1}
+      key1: {r: 1, g: 0.67668825, b: 0, a: 1}
+      key2: {r: 0, g: 1, b: 0.509953, a: 0}
+      key3: {r: 0.27732944, g: 0, b: 1, a: 0}
+      key4: {r: 1, g: 0, b: 0.548224, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 17348
+      ctime2: 32768
+      ctime3: 50501
+      ctime4: 65535
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 5
+      m_NumAlphaKeys: 2
   - type: 5
     amount: 0
     discovered: 0
     icon: {fileID: 495666354684792990, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 54
+    particleColor:
+      serializedVersion: 2
+      key0: {r: 1, g: 0, b: 0, a: 1}
+      key1: {r: 1, g: 0.67668825, b: 0, a: 1}
+      key2: {r: 0, g: 1, b: 0.509953, a: 0}
+      key3: {r: 0.27732944, g: 0, b: 1, a: 0}
+      key4: {r: 1, g: 0, b: 0.548224, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 17348
+      ctime2: 32768
+      ctime3: 50501
+      ctime4: 65535
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 5
+      m_NumAlphaKeys: 2

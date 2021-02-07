@@ -10,6 +10,10 @@ public class PlayerInventoryController : MonoBehaviour
     [SerializeField] private UseItem useItem;
     [SerializeField] private SingleAnimationManager animationManager;
     [SerializeField] private Sprite _keyIcon;
+    [SerializeField] private MovingParticle _movingParticle;
+    [SerializeField] private Transform _playerItemCollectPivot;
+    [SerializeField] private RectTransform _ItemCollectedPivot;
+    [SerializeField] private CollectItemParticle _collectItemParticle;
 
     public Action<InventoryItem> OnSelectItem = delegate (InventoryItem item) { };
     public Action<InventoryItem> OnUpdateItem = delegate (InventoryItem item) { };
@@ -72,9 +76,12 @@ public class PlayerInventoryController : MonoBehaviour
             item.amount++;
             if (!item.discovered)
                 animationManager.CollectItem(item.icon);
+            else
+                _collectItemParticle.ShowItem(_playerItemCollectPivot.position, item.icon);
+
             item.discovered = true;
             _discoveredItems.Add(item);
-
+            _movingParticle.StartAnimationMovingTarget(_playerItemCollectPivot.position, _ItemCollectedPivot, item.particleColor.colorKeys);
             if (_currentItem == type)
                 OnUpdateItem.Invoke(_discoveredItems[_currentIndex]);
         }
@@ -84,6 +91,6 @@ public class PlayerInventoryController : MonoBehaviour
             hasKey = true;
             OnKeyStatusChange.Invoke(hasKey);
         }
-       
+
     }
 }
