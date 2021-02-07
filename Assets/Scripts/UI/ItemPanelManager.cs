@@ -12,7 +12,7 @@ public class ItemPanelManager : MonoBehaviour
     {
         inventory = FindObjectOfType<PlayerInventoryController>();
         inventory.OnSelectItem += SelectItem;
-        inventory.OnUpdateItem += UpdateItem;
+        inventory.OnUpdateItem += SelectItem;
         inventory.OnKeyStatusChange += ShowKey;
     }
 
@@ -21,13 +21,8 @@ public class ItemPanelManager : MonoBehaviour
         keyItem.SetActive(show);
     }
 
-    private void UpdateItem(InventoryItem obj)
+    private void SelectItem(InventoryItem obj, InventoryItem next, InventoryItem previous)
     {
-        currentItem.SetAmount(obj.amount);
-    }
-
-    private void SelectItem(InventoryItem obj)
-    {
-        currentItem.SetData(obj.icon, obj.amount);
+        currentItem.SetData(obj.icon, obj.amount, next.icon, previous.icon);
     }
 }

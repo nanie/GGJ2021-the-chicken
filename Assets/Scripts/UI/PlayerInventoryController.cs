@@ -15,8 +15,8 @@ public class PlayerInventoryController : MonoBehaviour
     [SerializeField] private RectTransform _ItemCollectedPivot;
     [SerializeField] private CollectItemParticle _collectItemParticle;
 
-    public Action<InventoryItem> OnSelectItem = delegate (InventoryItem item) { };
-    public Action<InventoryItem> OnUpdateItem = delegate (InventoryItem item) { };
+    public Action<InventoryItem, InventoryItem, InventoryItem> OnSelectItem = delegate (InventoryItem item, InventoryItem nextItem, InventoryItem previousItem) { };
+    public Action<InventoryItem, InventoryItem, InventoryItem> OnUpdateItem = delegate (InventoryItem item, InventoryItem nextItem, InventoryItem previousItem) { };
     public Action<bool> OnKeyStatusChange = delegate (bool hasKey) { };
     public bool hasKey;
     private ItemType _currentItem;
@@ -28,7 +28,9 @@ public class PlayerInventoryController : MonoBehaviour
         if (_discoveredItems.Count > 0)
         {
             _currentItem = _discoveredItems[_currentIndex].type;
-            OnSelectItem.Invoke(_discoveredItems[_currentIndex]);
+            var nextItemIndex = (_currentIndex + 1) % _discoveredItems.Count;
+            var previousItemIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
+            OnSelectItem.Invoke(_discoveredItems[_currentIndex], _discoveredItems[nextItemIndex], _discoveredItems[previousItemIndex]);
         }
     }
     private void Update()
@@ -39,14 +41,18 @@ public class PlayerInventoryController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.O))
         {
             _currentIndex = (_currentIndex + 1) % _discoveredItems.Count;
+            var nextItemIndex = (_currentIndex + 1) % _discoveredItems.Count;
+            var previousItemIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
             _currentItem = _discoveredItems[_currentIndex].type;
-            OnSelectItem.Invoke(_discoveredItems[_currentIndex]);
+            OnSelectItem.Invoke(_discoveredItems[_currentIndex], _discoveredItems[nextItemIndex], _discoveredItems[previousItemIndex]);
         }
         else if (Input.GetKeyDown(KeyCode.I))
         {
             _currentIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
+            var nextItemIndex = (_currentIndex + 1) % _discoveredItems.Count;
+            var previousItemIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
             _currentItem = _discoveredItems[_currentIndex].type;
-            OnSelectItem.Invoke(_discoveredItems[_currentIndex]);
+            OnSelectItem.Invoke(_discoveredItems[_currentIndex], _discoveredItems[nextItemIndex], _discoveredItems[previousItemIndex]);
         }
         else if (Input.GetButtonDown("Fire3"))
         {
@@ -54,7 +60,9 @@ public class PlayerInventoryController : MonoBehaviour
             {
                 _discoveredItems[_currentIndex].amount--;
                 useItem.UseItemByType(_currentItem);
-                OnUpdateItem.Invoke(_discoveredItems[_currentIndex]);
+                var nextItemIndex = (_currentIndex + 1) % _discoveredItems.Count;
+                var previousItemIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
+                OnUpdateItem.Invoke(_discoveredItems[_currentIndex], _discoveredItems[nextItemIndex], _discoveredItems[previousItemIndex]);
             }
         }
     }
@@ -82,8 +90,9 @@ public class PlayerInventoryController : MonoBehaviour
             item.discovered = true;
             _discoveredItems.Add(item);
             _movingParticle.StartAnimationMovingTarget(_playerItemCollectPivot.position, _ItemCollectedPivot, item.particleColor.colorKeys);
-            if (_currentItem == type)
-                OnUpdateItem.Invoke(_discoveredItems[_currentIndex]);
+            var nextItemIndex = (_currentIndex + 1) % _discoveredItems.Count;
+            var previousItemIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
+            OnUpdateItem.Invoke(_discoveredItems[_currentIndex], _discoveredItems[nextItemIndex], _discoveredItems[previousItemIndex]);
         }
         else if (type == ItemType.key)
         {

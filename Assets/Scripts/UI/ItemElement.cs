@@ -6,9 +6,11 @@ using TMPro;
 public class ItemElement : MonoBehaviour
 {
     [SerializeField] private Image imgIcon;
+    [SerializeField] private Image nextIcon;
+    [SerializeField] private Image previousIcon;
     [SerializeField] private TextMeshProUGUI textAmount;
 
-    public void SetData(Sprite icon, int amount)
+    private void SetData(Sprite icon, int amount)
     {
         imgIcon.gameObject.SetActive(true);
         textAmount.gameObject.SetActive(true);
@@ -24,18 +26,15 @@ public class ItemElement : MonoBehaviour
         }
     }
 
-    public void SetAmount(int amount)
+    public void SetData(Sprite icon, int amount, Sprite next, Sprite previous)
     {
-        imgIcon.gameObject.SetActive(true);
-        textAmount.gameObject.SetActive(true);
-        textAmount.text = $"x{amount}";
-        if (amount <= 0)
+        if(next != icon)
         {
-            imgIcon.color = new Color(255, 255, 255, 0.5f);
-        }
-        else
-        {
-            imgIcon.color = new Color(255, 255, 255, 1f);
-        }
+            nextIcon.transform.parent.gameObject.SetActive(true);
+            nextIcon.sprite = next;
+            previousIcon.transform.parent.gameObject.SetActive(true);
+            previousIcon.sprite = previous;
+        }   
+        SetData(icon, amount);
     }
 }
