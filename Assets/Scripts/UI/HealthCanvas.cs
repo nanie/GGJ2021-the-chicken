@@ -6,59 +6,86 @@ using System;
 using UnityEngine.UI;
 public class HealthCanvas : MonoBehaviour
 {
-    //TODO aplicara a barra de corações para os outros códigos
     [SerializeField] private DamageManager playerDamageManager;
-    public Image[] healthImage;
-    public Sprite[] heartSprites;
+    //Esse prefab contem um controlador de 1 coração
+    [SerializeField] private HealthHeartSpriteElement _heartPrefab;
+    [SerializeField] private Transform _heartParentPanel;
+
+    private List<HealthHeartSpriteElement> _elementList = new List<HealthHeartSpriteElement>();
+
     private int fullHeartSpriteAmount = 0;
     private int partialHeartSpriteAmount = 0;
+    private const int HEART_SIZE = 4;
     private void OnEnable()
     {
         playerDamageManager.OnCharacterDamaged += SetDamage;
+        playerDamageManager.OnMaxHealthChange += SetMaxHealth;
+
+        for (int i = 0; i < playerDamageManager.GetCurrent() / HEART_SIZE; i++)
+        {
+            var element = Instantiate(_heartPrefab, _heartParentPanel);
+            element.SetMax();
+            _elementList.Add(element);
+        }
+    }
+
+    private void SetMaxHealth(int maxHealth)
+    {
+        if (maxHealth > _elementList.Count)
+        {
+            for (int i = 0; i < maxHealth - _elementList.Count; i++)
+            {
+                var element = Instantiate(_heartPrefab, _heartParentPanel);
+                element.SetMax();
+                _elementList.Add(element);
+            }
+        }
+        else if (maxHealth < _elementList.Count)
+        {
+            for (int i = _elementList.Count - maxHealth; i < _elementList.Count; i++)
+            {
+                Destroy(_elementList[i].gameObject);
+                _elementList.RemoveAt(_elementList.Count - 1);
+            }
+        }
+
         SetDamage(playerDamageManager.GetCurrent());
     }
+
     private void SetDamage(int health)
     {
-        
-        fullHeartSpriteAmount = playerDamageManager.GetCurrent() / 4;
-        partialHeartSpriteAmount = playerDamageManager.GetCurrent() % 4;
+        if (health <= 0)
+        {
+            foreach (var element in _elementList)
+            {
+                element.SetEmpty();
+            }
+            return;
+        }
+
+        fullHeartSpriteAmount = playerDamageManager.GetCurrent() / HEART_SIZE;
+        partialHeartSpriteAmount = playerDamageManager.GetCurrent() % HEART_SIZE;
+        //Set all full hearts
         for (int i = 0; i < fullHeartSpriteAmount; i++)
         {
-            healthImage[i].sprite = heartSprites[0];
+            _elementList[i].SetMax();
         }
-
+        //Set partial if exists
         if (partialHeartSpriteAmount > 0)
         {
-            if (partialHeartSpriteAmount == 1)
-            {
-                healthImage[fullHeartSpriteAmount].sprite = heartSprites[3];
-            }
-            if (partialHeartSpriteAmount == 2)
-            {
-                healthImage[fullHeartSpriteAmount].sprite = heartSprites[2];
-            }
-            if (partialHeartSpriteAmount == 3)
-            {
-                healthImage[fullHeartSpriteAmount].sprite = heartSprites[1];
-            }
+            _elementList[fullHeartSpriteAmount].SetValue(partialHeartSpriteAmount);
+        }
+        else
+        {
+            _elementList[fullHeartSpriteAmount].SetEmpty();
         }
 
-        for (int i = fullHeartSpriteAmount; i + 1 <= healthImage.Length; i++)
+        //Set all empty hearts
+        for (int i = fullHeartSpriteAmount + 1; i < _elementList.Count; i++)
         {
-            if (partialHeartSpriteAmount == 0)
-            {
-                healthImage[fullHeartSpriteAmount].sprite = heartSprites[4];
-            }
-            else if (i + 1 < healthImage.Length)
-            {
-                healthImage[fullHeartSpriteAmount + 1].sprite = heartSprites[4];
-            }
-            else if (playerDamageManager.GetCurrent() == 0)
-            {
-                healthImage[fullHeartSpriteAmount].sprite = heartSprites[4];
-            }
+            _elementList[i].SetEmpty();
         }
     }
 
-   
+
 }
