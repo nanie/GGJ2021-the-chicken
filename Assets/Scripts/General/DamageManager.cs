@@ -30,7 +30,6 @@ public class DamageManager : MonoBehaviour
         }
         else
         {
-
             OnCharacterDamaged.Invoke(currentHealth);
         }
     }

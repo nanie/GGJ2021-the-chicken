@@ -16,12 +16,16 @@ public class HealthCanvas : MonoBehaviour
     private int fullHeartSpriteAmount = 0;
     private int partialHeartSpriteAmount = 0;
     private const int HEART_SIZE = 4;
-    private void OnEnable()
+    private void OnStart()
     {
         playerDamageManager.OnCharacterDamaged += SetDamage;
         playerDamageManager.OnMaxHealthChange += SetMaxHealth;
 
-        for (int i = 0; i < playerDamageManager.GetCurrent() / HEART_SIZE; i++)
+        //Calcula a quantidade total de corações necessarios na tela
+        var totalHeartQuantity = playerDamageManager.GetCurrent() / HEART_SIZE;
+
+        //Cria pra cada coração um HealthHeartSpriteElement
+        for (int i = 0; i < totalHeartQuantity; i++)
         {
             var element = Instantiate(_heartPrefab, _heartParentPanel);
             element.SetMax();
@@ -31,7 +35,7 @@ public class HealthCanvas : MonoBehaviour
 
     private void SetMaxHealth(int maxHealth)
     {
-        if (maxHealth > _elementList.Count)
+        if (maxHealth > (_elementList.Count * HEART_SIZE))
         {
             for (int i = 0; i < maxHealth - _elementList.Count; i++)
             {
@@ -42,10 +46,11 @@ public class HealthCanvas : MonoBehaviour
         }
         else if (maxHealth < _elementList.Count)
         {
-            for (int i = _elementList.Count - maxHealth; i < _elementList.Count; i++)
+            //TODO reescrever de uma forma menos confusa
+            for (int i = _elementList.Count - 1; i < maxHealth % HEART_SIZE; i--)
             {
                 Destroy(_elementList[i].gameObject);
-                _elementList.RemoveAt(_elementList.Count - 1);
+                _elementList.RemoveAt(i);
             }
         }
 
