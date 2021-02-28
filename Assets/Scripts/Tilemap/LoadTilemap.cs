@@ -10,7 +10,7 @@ public class LoadTilemap : MonoBehaviour
     public Tilemap highlightMap;
     public int roomQuantity = 5;
     public GameObject[] prefabEnemy;
-    int roomSize = 15;
+    int roomSize = 3;
 
 
     void Start()

@@ -703,7 +703,7 @@ TilemapRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 4, y: 4, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -1432,7 +1432,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529663976}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellSize: {x: 9, y: 9, z: 9}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -1463,7 +1463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097cef687d7d6a04da2313dca465ce3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rule: {fileID: 11400000, guid: 08002d404144b40bf842342dda8fa3e4, type: 2}
+  rule: {fileID: 11400000, guid: bf2c4a14f01c9b54b9a0fadf500a36e1, type: 2}
   highlightMap: {fileID: 133954133}
   roomQuantity: 20
   prefabEnemy:
@@ -2174,16 +2174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDamageManager: {fileID: 8343479603246889597}
-  healthImage:
-  - {fileID: 747524891}
-  - {fileID: 1545619153}
-  - {fileID: 14372722}
-  heartSprites:
-  - {fileID: 7794559271647552849, guid: dbd6275d5abd9bc44983f4ae6a89de86, type: 3}
-  - {fileID: 2126175259771158437, guid: dbd6275d5abd9bc44983f4ae6a89de86, type: 3}
-  - {fileID: -4015368140016930161, guid: dbd6275d5abd9bc44983f4ae6a89de86, type: 3}
-  - {fileID: 1402587297927393159, guid: dbd6275d5abd9bc44983f4ae6a89de86, type: 3}
-  - {fileID: -1631402403672871588, guid: dbd6275d5abd9bc44983f4ae6a89de86, type: 3}
+  _heartPrefab: {fileID: 0}
+  _heartParentPanel: {fileID: 0}
 --- !u!1 &974308088
 GameObject:
   m_ObjectHideFlags: 0
@@ -3611,8 +3603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDamageManager: {fileID: 8343479603246889597}
-  healthImage: []
-  heartSprites: []
+  _heartPrefab: {fileID: 0}
+  _heartParentPanel: {fileID: 0}
 --- !u!1 &1864830159
 GameObject:
   m_ObjectHideFlags: 0
