@@ -17,7 +17,6 @@ public class LoadTilemap : MonoBehaviour
     {
         BuildMap();
         StartCoroutine(RecalculatePaths());
-
     }
 
     IEnumerator RecalculatePaths()
