@@ -60,8 +60,8 @@ public class BossBehaviour : BaseEnemy
 
     private void ChooseNextSkill()
     {
-        var config = skillConfig.Where(q => q.health < CurrentHealth).OrderByDescending(q => q.health).First();
-        StartCoroutine(ExecuteSkill(config.skills[UnityEngine.Random.Range(0, config.skills.Length)]));
+        var config = skillConfig.Where(q => q.health < CurrentHealth).OrderByDescending(q => q.health).First(); // config recebe as skillConfig onde health < que vida atual ordenando da maior health para a menor e pegando o primeiro skillConfig do array resultante (gus)
+        StartCoroutine(ExecuteSkill(config.skills[UnityEngine.Random.Range(0, config.skills.Length)])); //executa uma habilidade aleatória q esta no array de config
     }
 
     IEnumerator ExecuteSkill(BossSkill skill)
@@ -128,8 +128,8 @@ public class BossSkillConfig
 public class BossSkill
 {
     public GameObject prefab;
-    public float skillReuse;
-    public float skillChargeTime;
+    public float skillReuse; // tempo de recarga da habilidade
+    public float skillChargeTime; // tempo de conjuração da habilidade
     public bool singleChild;
     public Transform[] spawnPoints;
 }
