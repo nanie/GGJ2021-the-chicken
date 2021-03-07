@@ -35,6 +35,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+        
         timer -= Time.deltaTime;
 
         SetDirection();
@@ -92,7 +93,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void NormalAttack()
     {
-        var hitInfo = Physics2D.OverlapCircleAll(transform.position, attackRadius, attackMask);
+        var hitInfo = Physics2D.OverlapCircleAll(CalculateAttackOffset(), attackRadius, attackMask);
         if (hitInfo.Length > 0)
         {
             foreach (var enemy in hitInfo)
@@ -113,11 +114,13 @@ public class PlayerAttack : MonoBehaviour
         else if (horizontalAxis < 0)
             direction = HorizontalDirection.left;
     }
-
+    
     private void OnDrawGizmosSelected()
     {
+        
         if (Application.isPlaying)
         {
+            Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(CalculateAttackOffset(), attackRadius);
         }
         else
@@ -136,7 +139,11 @@ public class PlayerAttack : MonoBehaviour
     private Vector3 CalculateAttackOffset()
     {
         if (direction == HorizontalDirection.right)
-            return transform.position + (Vector3)attackOffsetRight;
-        return transform.position + (Vector3)attackOffsetLeft;
+        {
+            return transform.position + new Vector3(attackOffsetRight.x, attackOffsetRight.y, 0);
+        }
+        return transform.position + new Vector3(attackOffsetLeft.x, attackOffsetLeft.y, 0);
     }
+
+    
 }
