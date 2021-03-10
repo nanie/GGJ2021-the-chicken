@@ -4406,6 +4406,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 853036204}
+    - target: {fileID: 21911064543023957, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
+      objectReference: {fileID: 0}
     - target: {fileID: 330275561613549075, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4682,9 +4686,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -4.35
       objectReference: {fileID: 0}
+    - target: {fileID: 2478710910214482442, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
+      objectReference: {fileID: 0}
     - target: {fileID: 2518643961204349814, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032257578144013218, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032257578270735694, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032257578866984607, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 3163898719401195072, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_fontAsset
@@ -4694,6 +4714,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -7765074980683238397, guid: a4b5e79147a942a40b6d42964f2bfcf4, type: 2}
+    - target: {fileID: 3351182916648780122, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
+      objectReference: {fileID: 0}
     - target: {fileID: 3351182916648780122, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_IsActive
       value: 1
