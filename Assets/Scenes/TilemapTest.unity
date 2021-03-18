@@ -703,7 +703,7 @@ TilemapRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 4, y: 4, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -1470,6 +1470,13 @@ MonoBehaviour:
   - {fileID: 4973792041207809524, guid: f6fdec01778fe564ba952890003427b3, type: 3}
   - {fileID: 3337033368135543498, guid: 232958c18a99df541b833a3eca8fe3a8, type: 3}
   - {fileID: 3276799227998191004, guid: e948a0a51fec3e04a8a3cef860157d6e, type: 3}
+  _width: 30
+  _height: 30
+  _maxRooms: 15
+  _roomMaxSize: 5
+  _roomMinSize: 3
+  _corridorSize: 1
+  _extraCorridors: 5
 --- !u!1 &545605137
 GameObject:
   m_ObjectHideFlags: 0
