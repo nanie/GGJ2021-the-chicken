@@ -992,7 +992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 29.9926}
+  m_AnchoredPosition: {x: 0, y: 29.992554}
   m_SizeDelta: {x: 0, y: -59.9853}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &390977756
@@ -1940,16 +1940,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDamageManager: {fileID: 8343479603246889597}
-  healthImage:
-  - {fileID: 747524891}
-  - {fileID: 1545619153}
-  - {fileID: 14372722}
-  heartSprites:
-  - {fileID: 7794559271647552849, guid: dbd6275d5abd9bc44983f4ae6a89de86, type: 3}
-  - {fileID: 2126175259771158437, guid: dbd6275d5abd9bc44983f4ae6a89de86, type: 3}
-  - {fileID: -4015368140016930161, guid: dbd6275d5abd9bc44983f4ae6a89de86, type: 3}
-  - {fileID: 1402587297927393159, guid: dbd6275d5abd9bc44983f4ae6a89de86, type: 3}
-  - {fileID: -1631402403672871588, guid: dbd6275d5abd9bc44983f4ae6a89de86, type: 3}
+  _heartPrefab: {fileID: 8665326993981390810, guid: f8aa884b8a5cb3f4a86eb28e0c3c61ec, type: 3}
+  _heartParentPanel: {fileID: 957653442}
 --- !u!1 &974308088
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,7 +2187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.31652832, y: 0.018188477}
+  m_AnchoredPosition: {x: -0.3166504, y: 0.018188477}
   m_SizeDelta: {x: 13.2946, y: 13.9639}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &992041018
@@ -2704,7 +2696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -41.59192, y: -31.900024}
+  m_AnchoredPosition: {x: -41.59204, y: -31.900024}
   m_SizeDelta: {x: 54.7837, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288777068
@@ -3587,8 +3579,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDamageManager: {fileID: 8343479603246889597}
-  healthImage: []
-  heartSprites: []
+  _heartPrefab: {fileID: 0}
+  _heartParentPanel: {fileID: 0}
 --- !u!1 &1864830159
 GameObject:
   m_ObjectHideFlags: 0
@@ -4414,6 +4406,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 853036204}
+    - target: {fileID: 21911064543023957, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
+      objectReference: {fileID: 0}
     - target: {fileID: 330275561613549075, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4690,9 +4686,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -4.35
       objectReference: {fileID: 0}
+    - target: {fileID: 2478710910214482442, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
+      objectReference: {fileID: 0}
     - target: {fileID: 2518643961204349814, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032257578144013218, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032257578270735694, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032257578866984607, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 3163898719401195072, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_fontAsset
@@ -4702,6 +4714,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -7765074980683238397, guid: a4b5e79147a942a40b6d42964f2bfcf4, type: 2}
+    - target: {fileID: 3351182916648780122, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_Name
+      value: Poring_StartFollowTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351182916648780122, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5510773563168239873, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4
@@ -5016,6 +5036,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1186969536, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: attackRadius
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 1935523734, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5071,6 +5095,10 @@ PrefabInstance:
     - target: {fileID: 8343479602076765633, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343479602076765633, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8343479602076765635, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_RootOrder
