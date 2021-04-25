@@ -16,7 +16,7 @@ public class HealthCanvas : MonoBehaviour
     private int fullHeartSpriteAmount = 0;
     private int partialHeartSpriteAmount = 0;
     private const int HEART_SIZE = 4;
-    private void OnStart()
+    private void Start()
     {
         playerDamageManager.OnCharacterDamaged += SetDamage;
         playerDamageManager.OnMaxHealthChange += SetMaxHealth;
