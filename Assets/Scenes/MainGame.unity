@@ -1940,8 +1940,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDamageManager: {fileID: 8343479603246889597}
-  _heartPrefab: {fileID: 0}
-  _heartParentPanel: {fileID: 0}
+  _heartPrefab: {fileID: 8665326993981390810, guid: f8aa884b8a5cb3f4a86eb28e0c3c61ec, type: 3}
+  _heartParentPanel: {fileID: 957653442}
 --- !u!1 &974308088
 GameObject:
   m_ObjectHideFlags: 0
