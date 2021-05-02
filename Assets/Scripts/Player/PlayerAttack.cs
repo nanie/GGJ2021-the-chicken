@@ -9,12 +9,9 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private int attackPower;
     [SerializeField] private Vector2 attackOffsetRight;
     [SerializeField] private Vector2 attackOffsetLeft;
-    [SerializeField] private string inputButtonNormal = "Fire1";
-    [SerializeField] private string inputButtonSpecial = "Fire2";
-    [SerializeField] private string inputButtonDodge = "Fire3";
     [SerializeField] private LayerMask attackMask;
     [SerializeField] private float attackSpeed = 0.5f;
-    [SerializeField] private float dodgeTime = 0.5f;
+    [SerializeField] private float dodgeTime = 3f;
     public Action<bool, bool> OnPlayerAttack = delegate (bool isCharged, bool isQuick) { };
     public Action OnPlayerDodge = delegate () { };
     private PlayerController playerController;
@@ -43,24 +40,14 @@ public class PlayerAttack : MonoBehaviour
         if (_dodging)
             return;
 
-        if (Input.GetButtonDown(inputButtonNormal) && timer <= 0)
-        {
-            timer = attackSpeed;
-            OnPlayerAttack.Invoke(false, false);
-            NormalAttack();
-        }
+       
 
-        if (Input.GetButtonDown(inputButtonDodge) && timer <= 0)
-        {
-            timer = attackSpeed;
-            OnPlayerDodge.Invoke();
-            StartCoroutine(Dodge());
-        }
+        
 
         if (selectedSkill == null)
             return;
 
-        if (Input.GetButton(inputButtonSpecial))
+       /* if (Input.GetButton(inputButtonSpecial))
         {
             holdTime += Time.deltaTime;
             playerController.PlayerCanWalk(false);
@@ -80,7 +67,7 @@ public class PlayerAttack : MonoBehaviour
                 selectedSkill.UseSkillQuick(transform, attackMask);
             }
             holdTime = 0;
-        }
+        }*/
 
     }
 
@@ -145,5 +132,23 @@ public class PlayerAttack : MonoBehaviour
         return transform.position + new Vector3(attackOffsetLeft.x, attackOffsetLeft.y, 0);
     }
 
-    
+    private void OnDodge()
+    {
+        if (timer <= 0)
+        {
+            timer = attackSpeed;
+            OnPlayerDodge.Invoke();
+            StartCoroutine(Dodge());
+        }
+    }
+
+    private void OnNormalFire()
+    {
+        if (timer <= 0)
+        {
+            timer = attackSpeed;
+            OnPlayerAttack.Invoke(false, false);
+            NormalAttack();
+        }
+    }
 }

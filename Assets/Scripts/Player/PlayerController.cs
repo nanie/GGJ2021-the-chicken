@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
@@ -16,8 +16,6 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     private Vector2 direction;
     [Header("Common settings")]
-    [SerializeField] private string horizontalAxis = "Horizontal";
-    [SerializeField] private string verticalAxis = "Vertical";
     private IAnimatorManager animator;
     [Header("Flip Renderer settings")]
     [SerializeField] private bool flipHorizontal;
@@ -37,17 +35,6 @@ public class PlayerController : MonoBehaviour
     {
         if (!_canWalk)
             return;
-        //Find input axis
-        direction.x = Input.GetAxis(horizontalAxis);
-        direction.y = Input.GetAxis(verticalAxis);
-        //Flip sprites if needed
-        if (flipHorizontal && Mathf.Abs(direction.x) > 0.1)
-        {
-            foreach (var item in spriteRenderers)
-            {
-                item.flipX = originalSpriteDirection == HorizontalDirection.left ? direction.x > 0 : direction.x < 0;
-            }
-        }
 
         if (animator != null && direction.sqrMagnitude > 0)
         {
@@ -89,5 +76,21 @@ public class PlayerController : MonoBehaviour
     public void SetHatSpeedBonus(float hatSpeedBonus)
     {
         this.hatSpeedBonus = hatSpeedBonus;
+    }
+
+    private void OnMove(InputValue inputValue) // Called when the Move Action from PlayerActions (Input Action element) is performed 
+    {
+        //Find input axis
+        direction.x = inputValue.Get<Vector2>().x;
+        direction.y = inputValue.Get<Vector2>().y;
+
+        //Flip sprites if needed
+        if (flipHorizontal && Mathf.Abs(direction.x) > 0.1)
+        {
+            foreach (var item in spriteRenderers)
+            {
+                item.flipX = originalSpriteDirection == HorizontalDirection.left ? direction.x > 0 : direction.x < 0;
+            }
+        }
     }
 }
