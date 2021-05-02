@@ -27,14 +27,6 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Look"",
-                    ""type"": ""Value"",
-                    ""id"": ""1e8f7f84-e7a2-4657-af72-f4bfb2305a10"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""NormalFire"",
                     ""type"": ""Button"",
                     ""id"": ""c452752f-299b-4fec-a39d-a187c780e340"",
@@ -46,6 +38,30 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
                     ""name"": ""Dodge"",
                     ""type"": ""Button"",
                     ""id"": ""10dda212-7303-4fab-9f9f-da31d8651cb5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pocao1"",
+                    ""type"": ""Button"",
+                    ""id"": ""936824a6-1571-4742-8d45-82d5782dba86"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pocao2"",
+                    ""type"": ""Button"",
+                    ""id"": ""c3f5424e-bc0a-45e1-89b3-c69200d80b53"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pocao3"",
+                    ""type"": ""Button"",
+                    ""id"": ""ae4fd95d-a8a1-4879-90ee-65695619150b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -142,39 +158,6 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c1f7a91b-d0fd-4a62-997e-7fb9b69bf235"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8c8e490b-c610-4785-884f-f04217b23ca4"",
-                    ""path"": ""<Pointer>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse;Touch"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3e5f5442-8668-4b27-a940-df99bad7e831"",
-                    ""path"": ""<Joystick>/{Hatswitch}"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""143bb1cd-cc10-4eca-a2f0-a3664166fe91"",
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
@@ -258,6 +241,39 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Dodge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""20582b72-13cb-43d0-a985-060015e39b9f"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pocao1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8de8b6e7-ccdc-4946-9112-246eb21c88ed"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pocao2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c3fc9b7b-ad15-45a3-a97e-c8ff99d07eb2"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pocao3"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -836,9 +852,11 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_NormalFire = m_Player.FindAction("NormalFire", throwIfNotFound: true);
         m_Player_Dodge = m_Player.FindAction("Dodge", throwIfNotFound: true);
+        m_Player_Pocao1 = m_Player.FindAction("Pocao1", throwIfNotFound: true);
+        m_Player_Pocao2 = m_Player.FindAction("Pocao2", throwIfNotFound: true);
+        m_Player_Pocao3 = m_Player.FindAction("Pocao3", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -901,17 +919,21 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
-    private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_NormalFire;
     private readonly InputAction m_Player_Dodge;
+    private readonly InputAction m_Player_Pocao1;
+    private readonly InputAction m_Player_Pocao2;
+    private readonly InputAction m_Player_Pocao3;
     public struct PlayerActions
     {
         private @PlayerActionss m_Wrapper;
         public PlayerActions(@PlayerActionss wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
-        public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @NormalFire => m_Wrapper.m_Player_NormalFire;
         public InputAction @Dodge => m_Wrapper.m_Player_Dodge;
+        public InputAction @Pocao1 => m_Wrapper.m_Player_Pocao1;
+        public InputAction @Pocao2 => m_Wrapper.m_Player_Pocao2;
+        public InputAction @Pocao3 => m_Wrapper.m_Player_Pocao3;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -924,15 +946,21 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
                 @Move.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
-                @Look.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                @Look.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                @Look.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
                 @NormalFire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNormalFire;
                 @NormalFire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNormalFire;
                 @NormalFire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNormalFire;
                 @Dodge.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDodge;
                 @Dodge.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDodge;
                 @Dodge.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDodge;
+                @Pocao1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao1;
+                @Pocao1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao1;
+                @Pocao1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao1;
+                @Pocao2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao2;
+                @Pocao2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao2;
+                @Pocao2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao2;
+                @Pocao3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao3;
+                @Pocao3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao3;
+                @Pocao3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao3;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -940,15 +968,21 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
-                @Look.started += instance.OnLook;
-                @Look.performed += instance.OnLook;
-                @Look.canceled += instance.OnLook;
                 @NormalFire.started += instance.OnNormalFire;
                 @NormalFire.performed += instance.OnNormalFire;
                 @NormalFire.canceled += instance.OnNormalFire;
                 @Dodge.started += instance.OnDodge;
                 @Dodge.performed += instance.OnDodge;
                 @Dodge.canceled += instance.OnDodge;
+                @Pocao1.started += instance.OnPocao1;
+                @Pocao1.performed += instance.OnPocao1;
+                @Pocao1.canceled += instance.OnPocao1;
+                @Pocao2.started += instance.OnPocao2;
+                @Pocao2.performed += instance.OnPocao2;
+                @Pocao2.canceled += instance.OnPocao2;
+                @Pocao3.started += instance.OnPocao3;
+                @Pocao3.performed += instance.OnPocao3;
+                @Pocao3.canceled += instance.OnPocao3;
             }
         }
     }
@@ -1106,9 +1140,11 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
         void OnNormalFire(InputAction.CallbackContext context);
         void OnDodge(InputAction.CallbackContext context);
+        void OnPocao1(InputAction.CallbackContext context);
+        void OnPocao2(InputAction.CallbackContext context);
+        void OnPocao3(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

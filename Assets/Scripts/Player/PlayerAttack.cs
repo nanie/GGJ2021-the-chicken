@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private float attackRadius;
@@ -11,7 +11,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Vector2 attackOffsetLeft;
     [SerializeField] private LayerMask attackMask;
     [SerializeField] private float attackSpeed = 0.5f;
-    [SerializeField] private float dodgeTime = 3f;
+    [SerializeField] private float dodgeTime = 0.5f;
     public Action<bool, bool> OnPlayerAttack = delegate (bool isCharged, bool isQuick) { };
     public Action OnPlayerDodge = delegate () { };
     private PlayerController playerController;
@@ -22,6 +22,7 @@ public class PlayerAttack : MonoBehaviour
     private float timer;
     private DamageManager _damageManager;
     bool _dodging = false;
+    [SerializeField]InputActionReference inputAction;
     void Start()
     {
         playerController = GetComponent<PlayerController>();
@@ -36,7 +37,7 @@ public class PlayerAttack : MonoBehaviour
         timer -= Time.deltaTime;
 
         SetDirection();
-
+        
         if (_dodging)
             return;
 
@@ -144,7 +145,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnNormalFire()
     {
-        if (timer <= 0)
+
+        if (timer <= 0 && !_dodging)
         {
             timer = attackSpeed;
             OnPlayerAttack.Invoke(false, false);

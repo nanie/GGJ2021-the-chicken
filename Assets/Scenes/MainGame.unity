@@ -4747,8 +4747,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1186969536, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: inputAction
+      value: 
+      objectReference: {fileID: -8995674746991988808, guid: 58fae8e9cd963774bb607dc21d93a09d, type: 3}
+    - target: {fileID: 1186969536, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: attackRadius
       value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186969536, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: inputAction.m_Id
+      value: 780f1282-0b69-4419-b4c9-5a96df5c3a24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186969536, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+      propertyPath: inputAction.m_Name
+      value: Input
       objectReference: {fileID: 0}
     - target: {fileID: 1935523734, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
       propertyPath: m_IsActive
