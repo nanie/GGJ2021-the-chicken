@@ -12,11 +12,12 @@ public class PlayerInventoryController : MonoBehaviour
     [SerializeField] private SingleAnimationManager animationManager;
     [SerializeField] private Sprite _keyIcon;
     [SerializeField] private MovingParticle _movingParticle;
-    [SerializeField] private Transform[] _playerItemCollectPivot;
-    [SerializeField] private RectTransform _ItemCollectedPivot;
+    [SerializeField] private Transform _playerItemCollectPivot;
+    [SerializeField] private RectTransform[] _ItemCollectedPivot;
     [SerializeField] private CollectItemParticle _collectItemParticle;
     [SerializeField] private InputActionReference[] UsePotionInputActions;
     [SerializeField] private List<InventoryItem> itemsInTheInventory;
+    [SerializeField] private InventorySlot[] inventorySlots;
     public Action<Sprite, int, int> OnSelectItem = delegate (Sprite icon, int amount, int inventorySlotIndex) { };
     public Action<Sprite, int, int> OnUpdateItem = delegate (Sprite icon, int amount, int inventorySlotIndex) { };
     public Action<bool> OnKeyStatusChange = delegate (bool hasKey) { };
@@ -137,7 +138,7 @@ public class PlayerInventoryController : MonoBehaviour
                 }
                 else
                 {
-                    inventorySlotIndex = Array.IndexOf(_playerItemCollectPivot, _playerItemCollectPivot.Where(x => x.GetComponent<InventorySlot>().isOccupied == false).First());
+                    inventorySlotIndex = Array.IndexOf(inventorySlots, inventorySlots.Where(x => x.isOccupied == false).First());
                     itemsInTheInventory.Add(item);
                 }
             }
@@ -150,10 +151,10 @@ public class PlayerInventoryController : MonoBehaviour
             }
             else
             {
-                _collectItemParticle.ShowItem(_playerItemCollectPivot[inventorySlotIndex].position, item.icon);
+                _collectItemParticle.ShowItem(_playerItemCollectPivot.position, item.icon);
             }
 
-            _movingParticle.StartAnimationMovingTarget(_playerItemCollectPivot[inventorySlotIndex].position, _ItemCollectedPivot, item.particleColor.colorKeys);
+            _movingParticle.StartAnimationMovingTarget(_playerItemCollectPivot.position, _ItemCollectedPivot[inventorySlotIndex], item.particleColor.colorKeys);
 
             OnUpdateItem.Invoke(itemsInTheInventory[inventorySlotIndex].icon, itemsInTheInventory[inventorySlotIndex].amount, inventorySlotIndex);
             
