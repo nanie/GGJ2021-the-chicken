@@ -3,20 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class PlayerInventoryController : MonoBehaviour
 {
+    
     [SerializeField] private PlayerInventoryData _inventory;
     [SerializeField] private UseItem useItem;
     [SerializeField] private SingleAnimationManager animationManager;
     [SerializeField] private Sprite _keyIcon;
     [SerializeField] private MovingParticle _movingParticle;
-    [SerializeField] private Transform _playerItemCollectPivot;
+    [SerializeField] private Transform[] _playerItemCollectPivot;
     [SerializeField] private RectTransform _ItemCollectedPivot;
     [SerializeField] private CollectItemParticle _collectItemParticle;
-
-    public Action<InventoryItem, InventoryItem, InventoryItem> OnSelectItem = delegate (InventoryItem item, InventoryItem nextItem, InventoryItem previousItem) { };
-    public Action<InventoryItem, InventoryItem, InventoryItem> OnUpdateItem = delegate (InventoryItem item, InventoryItem nextItem, InventoryItem previousItem) { };
+    [SerializeField] private InputActionReference[] UsePotionInputActions;
+    public Action<Sprite , int , int > OnSelectItem = delegate (Sprite icon, int amount, int inventorySlotIndex) { };
+    public Action<Sprite, int, int> OnUpdateItem = delegate (Sprite icon, int amount, int inventorySlotIndex) { };
     public Action<bool> OnKeyStatusChange = delegate (bool hasKey) { };
     public bool hasKey;
     private ItemType _currentItem;
@@ -27,19 +28,18 @@ public class PlayerInventoryController : MonoBehaviour
         _discoveredItems = _inventory.Items.Where(q => q.discovered).ToList();
         if (_discoveredItems.Count > 0)
         {
-            _currentItem = _discoveredItems[_currentIndex].type;
-            var nextItemIndex = (_currentIndex + 1) % _discoveredItems.Count;
-            var previousItemIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
-            OnSelectItem.Invoke(_discoveredItems[_currentIndex], _discoveredItems[nextItemIndex], _discoveredItems[previousItemIndex]);
+            for (int i = 0; i < _discoveredItems.Count; i++)
+            {
+                OnSelectItem.Invoke(_discoveredItems[i].icon, _discoveredItems[i].amount, i);
+                
+            }          
         }
     }
     private void Update()
     {
-        if (_discoveredItems.Count < 1)
-            return;
-
-        if (Input.GetKeyDown(KeyCode.U))
+        /*if (Input.GetKeyDown(KeyCode.U))
         {
+            
             _currentIndex = (_currentIndex + 1) % _discoveredItems.Count;
             var nextItemIndex = (_currentIndex + 1) % _discoveredItems.Count;
             var previousItemIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
@@ -48,14 +48,16 @@ public class PlayerInventoryController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.O))
         {
+            
             _currentIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
             var nextItemIndex = (_currentIndex + 1) % _discoveredItems.Count;
             var previousItemIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
             _currentItem = _discoveredItems[_currentIndex].type;
             OnSelectItem.Invoke(_discoveredItems[_currentIndex], _discoveredItems[nextItemIndex], _discoveredItems[previousItemIndex]);
         }
-        else if (Input.GetKeyDown(KeyCode.I))
+        else if (UsePotionInputAction[].action.triggered)
         {
+            
             if (_discoveredItems[_currentIndex].amount > 0 && useItem.CanUseItemType(_currentItem))
             {
                 _discoveredItems[_currentIndex].amount--;
@@ -64,7 +66,32 @@ public class PlayerInventoryController : MonoBehaviour
                 var previousItemIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
                 OnUpdateItem.Invoke(_discoveredItems[_currentIndex], _discoveredItems[nextItemIndex], _discoveredItems[previousItemIndex]);
             }
+        }*/
+
+        if (_discoveredItems.Count < 1)
+            return;
+        
+        foreach (InputActionReference inputActionReference in UsePotionInputActions) {
+            if (inputActionReference.action.triggered)
+            {
+                int itemIndex = Array.IndexOf(UsePotionInputActions, inputActionReference);
+                
+                if (_discoveredItems.Exists(x => _discoveredItems.IndexOf(x) == itemIndex))
+                {
+                   
+                    if (_discoveredItems[itemIndex].amount > 0 && useItem.CanUseItemType(_discoveredItems[itemIndex].type))
+                    {
+                        _discoveredItems[itemIndex].amount--;
+                        Debug.Log("Usei Item");
+                        useItem.UseItemByType(_discoveredItems[itemIndex].type);
+                        
+                        OnSelectItem.Invoke(_discoveredItems[itemIndex].icon, _discoveredItems[itemIndex].amount, itemIndex);
+                    }
+                }
+                break;
+            }
         }
+        
     }
 
     public void UseKey()
@@ -80,19 +107,18 @@ public class PlayerInventoryController : MonoBehaviour
     {
         if (_inventory.Items.Any(q => q.type == type))
         {
+            int inventorySlotIndex = Array.IndexOf(_playerItemCollectPivot, _playerItemCollectPivot.Where(x => x.GetComponent<InventorySlot>().isOccupied == false).First());
             var item = _inventory.Items.Where(q => q.type == type).First();
             item.amount++;
             if (!item.discovered)
                 animationManager.CollectItem(item.icon);
             else
-                _collectItemParticle.ShowItem(_playerItemCollectPivot.position, item.icon);
+                _collectItemParticle.ShowItem(_playerItemCollectPivot[inventorySlotIndex].position, item.icon);
 
             item.discovered = true;
             _discoveredItems.Add(item);
-            _movingParticle.StartAnimationMovingTarget(_playerItemCollectPivot.position, _ItemCollectedPivot, item.particleColor.colorKeys);
-            var nextItemIndex = (_currentIndex + 1) % _discoveredItems.Count;
-            var previousItemIndex = (_currentIndex - 1) < 0 ? _discoveredItems.Count - 1 : (_currentIndex - 1);
-            OnUpdateItem.Invoke(_discoveredItems[_currentIndex], _discoveredItems[nextItemIndex], _discoveredItems[previousItemIndex]);
+            _movingParticle.StartAnimationMovingTarget(_playerItemCollectPivot[inventorySlotIndex].position, _ItemCollectedPivot, item.particleColor.colorKeys);
+            OnUpdateItem.Invoke(_discoveredItems[inventorySlotIndex].icon, _discoveredItems[inventorySlotIndex].amount, inventorySlotIndex);
         }
         else if (type == ItemType.key)
         {

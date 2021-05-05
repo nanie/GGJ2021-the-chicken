@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.InputSystem;
 public class NearInteraction : MonoBehaviour
 {
     public UnityEvent OnInteract;
-
+    [SerializeField] InputActionReference NearInteractionInputAction;
     [SerializeField] private bool SingleInteraction = true;
     bool canInteract = false;
-
+    private void Awake()
+    {
+        NearInteractionInputAction.action.Enable();
+    }
     private void Update()
     {
         if (!canInteract)
             return;
-
-        if (Input.GetButtonDown("Fire1"))
+        
+        if (NearInteractionInputAction.action.triggered)
         {
             OnInteract.Invoke();
             if (SingleInteraction)
@@ -23,7 +26,6 @@ public class NearInteraction : MonoBehaviour
                 canInteract = false;
                 Destroy(this);
             }
-
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,4 +37,5 @@ public class NearInteraction : MonoBehaviour
     {
         canInteract = false;
     }
+
 }

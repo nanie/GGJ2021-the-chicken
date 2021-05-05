@@ -35,6 +35,7 @@ public class DamageManager : MonoBehaviour
     }
     public void Heal(int amount)
     {
+        Debug.Log("amount");
         currentHealth += amount;
         currentHealth = currentHealth > maxHealth ? maxHealth : currentHealth;
         OnCharacterDamaged.Invoke(currentHealth);

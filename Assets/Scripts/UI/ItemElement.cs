@@ -9,23 +9,27 @@ public class ItemElement : MonoBehaviour
     [SerializeField] private Image nextIcon;
     [SerializeField] private Image previousIcon;
     [SerializeField] private TextMeshProUGUI textAmount;
-
-    private void SetData(Sprite icon, int amount)
+    [SerializeField] private Image[] inventorySlots;
+    [SerializeField] private Sprite defaultSprite;
+    public void SetData(Sprite icon, int amount, int inventorySlotIndex)
     {
-        imgIcon.gameObject.SetActive(true);
-        textAmount.gameObject.SetActive(true);
-        imgIcon.sprite = icon;
-        textAmount.text = $"x{amount}";
+        Debug.Log("setdata");
         if (amount <= 0)
         {
-            imgIcon.color = new Color(255, 255, 255, 0.5f);
-        }
-        else
+            imgIcon.sprite = defaultSprite;
+            inventorySlots[inventorySlotIndex].GetComponent<InventorySlot>().isOccupied = false;
+        }else
         {
-            imgIcon.color = new Color(255, 255, 255, 1f);
+            inventorySlots[inventorySlotIndex].gameObject.SetActive(true);
+            inventorySlots[inventorySlotIndex].sprite = icon;
+            inventorySlots[inventorySlotIndex].GetComponent<InventorySlot>().isOccupied = true;
         }
     }
-
+       // textAmount.text = $"x{amount}";
+        
+        
+    
+/*
     public void SetData(Sprite icon, int amount, Sprite next, Sprite previous)
     {
         if(next != icon)
@@ -36,5 +40,5 @@ public class ItemElement : MonoBehaviour
             previousIcon.sprite = previous;
         }   
         SetData(icon, amount);
-    }
+    }*/
 }

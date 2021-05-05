@@ -15,7 +15,7 @@ MonoBehaviour:
   _items:
   - type: 0
     amount: 0
-    discovered: 0
+    discovered: 1
     icon: {fileID: -7441673065448537632, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 49
     particleColor:
@@ -83,7 +83,7 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
   - type: 2
     amount: 0
-    discovered: 0
+    discovered: 1
     icon: {fileID: 5774960318254082537, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 51
     particleColor:

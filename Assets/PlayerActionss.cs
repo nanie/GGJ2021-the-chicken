@@ -261,7 +261,7 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Pocao2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false

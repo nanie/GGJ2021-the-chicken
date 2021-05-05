@@ -21,8 +21,8 @@ public class ItemPanelManager : MonoBehaviour
         keyItem.SetActive(show);
     }
 
-    private void SelectItem(InventoryItem obj, InventoryItem next, InventoryItem previous)
+    private void SelectItem(Sprite icon, int amount, int inventorySlotIndex)
     {
-        currentItem.SetData(obj.icon, obj.amount, next.icon, previous.icon);
+        currentItem.SetData( icon,  amount,  inventorySlotIndex);
     }
 }

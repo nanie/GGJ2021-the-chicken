@@ -436,6 +436,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  NearInteractionInputAction: {fileID: 7665185180329712655, guid: 58fae8e9cd963774bb607dc21d93a09d, type: 3}
   SingleInteraction: 1
 --- !u!114 &1989777068
 MonoBehaviour:

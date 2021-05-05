@@ -22,7 +22,7 @@ public class PlayerAttack : MonoBehaviour
     private float timer;
     private DamageManager _damageManager;
     bool _dodging = false;
-    [SerializeField]InputActionReference inputAction;
+    
     void Start()
     {
         playerController = GetComponent<PlayerController>();
@@ -33,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        
+       
         timer -= Time.deltaTime;
 
         SetDirection();
