@@ -5,24 +5,28 @@ using UnityEngine.UI;
 using TMPro;
 public class ItemElement : MonoBehaviour
 {
-    [SerializeField] private Image imgIcon;
+    
     [SerializeField] private Image nextIcon;
     [SerializeField] private Image previousIcon;
-    [SerializeField] private TextMeshProUGUI textAmount;
+    [SerializeField] private TextMeshProUGUI[] textAmount;
     [SerializeField] private Image[] inventorySlots;
     [SerializeField] private Sprite defaultSprite;
     public void SetData(Sprite icon, int amount, int inventorySlotIndex)
     {
-        Debug.Log("setdata");
+
         if (amount <= 0)
         {
-            imgIcon.sprite = defaultSprite;
+            inventorySlots[inventorySlotIndex].sprite = defaultSprite;
             inventorySlots[inventorySlotIndex].GetComponent<InventorySlot>().isOccupied = false;
-        }else
+            textAmount[inventorySlotIndex].gameObject.SetActive(false);
+        }
+        else
         {
-            inventorySlots[inventorySlotIndex].gameObject.SetActive(true);
+            textAmount[inventorySlotIndex].gameObject.SetActive(true);
+            textAmount[inventorySlotIndex].SetText(amount.ToString());
             inventorySlots[inventorySlotIndex].sprite = icon;
             inventorySlots[inventorySlotIndex].GetComponent<InventorySlot>().isOccupied = true;
+
         }
     }
        // textAmount.text = $"x{amount}";

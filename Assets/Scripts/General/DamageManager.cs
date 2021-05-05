@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+using System.Reflection;
+
 public class DamageManager : MonoBehaviour
 {
     public Action<int> OnCharacterDamaged = delegate (int currentHealth) { };
@@ -35,10 +38,13 @@ public class DamageManager : MonoBehaviour
     }
     public void Heal(int amount)
     {
-        Debug.Log("amount");
+ 
         currentHealth += amount;
         currentHealth = currentHealth > maxHealth ? maxHealth : currentHealth;
+        
+      
         OnCharacterDamaged.Invoke(currentHealth);
+        
     }
     public int GetCurrent()
     {

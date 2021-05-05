@@ -35,6 +35,7 @@ public class HealthCanvas : MonoBehaviour
 
     private void SetMaxHealth(int maxHealth)
     {
+        
         if (maxHealth > (_elementList.Count * HEART_SIZE))
         {
             for (int i = 0; i < maxHealth - _elementList.Count; i++)
@@ -59,6 +60,7 @@ public class HealthCanvas : MonoBehaviour
 
     private void SetDamage(int health)
     {
+        
         if (health <= 0)
         {
             foreach (var element in _elementList)
@@ -70,19 +72,26 @@ public class HealthCanvas : MonoBehaviour
 
         fullHeartSpriteAmount = playerDamageManager.GetCurrent() / HEART_SIZE;
         partialHeartSpriteAmount = playerDamageManager.GetCurrent() % HEART_SIZE;
+        
         //Set all full hearts
         for (int i = 0; i < fullHeartSpriteAmount; i++)
         {
             _elementList[i].SetMax();
+            
         }
         //Set partial if exists
         if (partialHeartSpriteAmount > 0)
         {
+            
             _elementList[fullHeartSpriteAmount].SetValue(partialHeartSpriteAmount);
+            
         }
-        else
+        else if(playerDamageManager.GetCurrent() != 12) 
         {
+            
             _elementList[fullHeartSpriteAmount].SetEmpty();
+            
+
         }
 
         //Set all empty hearts
@@ -90,6 +99,7 @@ public class HealthCanvas : MonoBehaviour
         {
             _elementList[i].SetEmpty();
         }
+       
     }
 
 

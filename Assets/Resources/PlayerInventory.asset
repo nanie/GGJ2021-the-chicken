@@ -49,7 +49,7 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
   - type: 1
     amount: 0
-    discovered: 0
+    discovered: 1
     icon: {fileID: -1968470836017087105, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 50
     particleColor:

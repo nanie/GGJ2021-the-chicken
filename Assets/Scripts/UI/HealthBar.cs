@@ -53,5 +53,6 @@ public class HealthBar : MonoBehaviour
     private void ChangeValues(int value)
     {
         barFiller.fillAmount = (float)value / (float)total;
+      
     }
 }

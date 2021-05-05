@@ -18,5 +18,6 @@ public class DamageEffects : MonoBehaviour
         {
             cameraShake.StartShakeCamera();
         }
+
     }
 }

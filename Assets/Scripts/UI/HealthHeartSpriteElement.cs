@@ -22,6 +22,7 @@ public class HealthHeartSpriteElement : MonoBehaviour
 
     public void SetEmpty()
     {
+        Debug.Log("iniciei o SetEmpty");
         healthImage.sprite = heartSprites[0];
     }
 }
