@@ -82,7 +82,7 @@ MonoBehaviour:
       m_NumColorKeys: 3
       m_NumAlphaKeys: 2
   - type: 2
-    amount: 0
+    amount: 5
     discovered: 1
     icon: {fileID: 5774960318254082537, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}
     keyCode: 51

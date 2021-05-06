@@ -149,7 +149,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1989777068, guid: e948a0a51fec3e04a8a3cef860157d6e, type: 3}
       propertyPath: item
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3276799227998191004, guid: e948a0a51fec3e04a8a3cef860157d6e, type: 3}
       propertyPath: m_Name
@@ -2855,10 +2855,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1409546681}
     m_Modifications:
-    - target: {fileID: 1989777068, guid: e948a0a51fec3e04a8a3cef860157d6e, type: 3}
-      propertyPath: item
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3276799227998191004, guid: e948a0a51fec3e04a8a3cef860157d6e, type: 3}
       propertyPath: m_Name
       value: Chest (2)
@@ -4351,6 +4347,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654622536}
   m_CullTransparentMesh: 1
+--- !u!4 &1678624396 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7445318356014754130, guid: b9d00ad40fa9ec5439f403eba74642ad, type: 3}
+  m_PrefabInstance: {fileID: 8343479603246889596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1681293362
 GameObject:
   m_ObjectHideFlags: 0
@@ -5965,6 +5966,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 690086767424081857, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: OpenDoorInputAction
+      value: 
+      objectReference: {fileID: 4755388888070571191, guid: 58fae8e9cd963774bb607dc21d93a09d, type: 3}
     - target: {fileID: 711538101255749008, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.82
@@ -6101,6 +6106,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -7765074980683238397, guid: a4b5e79147a942a40b6d42964f2bfcf4, type: 2}
+    - target: {fileID: 2231399647971879980, guid: 774908ace8f70a749801ba359d398e33, type: 3}
+      propertyPath: item
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2247922476459942830, guid: 774908ace8f70a749801ba359d398e33, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.53
@@ -6495,6 +6504,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 24491755}
     - target: {fileID: 3790498506278196718, guid: 216093627e206554bb04aa2de0df7939, type: 3}
+      propertyPath: _playerItemCollectPivot
+      value: 
+      objectReference: {fileID: 1678624396}
+    - target: {fileID: 3790498506278196718, guid: 216093627e206554bb04aa2de0df7939, type: 3}
+      propertyPath: inventorySlots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790498506278196718, guid: 216093627e206554bb04aa2de0df7939, type: 3}
+      propertyPath: inventorySlots.Array.data[0]
+      value: 
+      objectReference: {fileID: 261435070629581540}
+    - target: {fileID: 3790498506278196718, guid: 216093627e206554bb04aa2de0df7939, type: 3}
+      propertyPath: inventorySlots.Array.data[1]
+      value: 
+      objectReference: {fileID: 2129787307}
+    - target: {fileID: 3790498506278196718, guid: 216093627e206554bb04aa2de0df7939, type: 3}
+      propertyPath: inventorySlots.Array.data[2]
+      value: 
+      objectReference: {fileID: 811787720}
+    - target: {fileID: 3790498506278196718, guid: 216093627e206554bb04aa2de0df7939, type: 3}
+      propertyPath: _ItemCollectedPivot.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790498506278196718, guid: 216093627e206554bb04aa2de0df7939, type: 3}
       propertyPath: itemsInTheInventory.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -6502,6 +6535,18 @@ PrefabInstance:
       propertyPath: UsePotionInputActions.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3790498506278196718, guid: 216093627e206554bb04aa2de0df7939, type: 3}
+      propertyPath: _ItemCollectedPivot.Array.data[0]
+      value: 
+      objectReference: {fileID: 261435070629581539}
+    - target: {fileID: 3790498506278196718, guid: 216093627e206554bb04aa2de0df7939, type: 3}
+      propertyPath: _ItemCollectedPivot.Array.data[1]
+      value: 
+      objectReference: {fileID: 2129787304}
+    - target: {fileID: 3790498506278196718, guid: 216093627e206554bb04aa2de0df7939, type: 3}
+      propertyPath: _ItemCollectedPivot.Array.data[2]
+      value: 
+      objectReference: {fileID: 811787717}
     - target: {fileID: 3790498506278196718, guid: 216093627e206554bb04aa2de0df7939, type: 3}
       propertyPath: _playerItemCollectPivot.Array.size
       value: 3

@@ -65,6 +65,14 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""896c08b0-2fce-4d69-a0f0-a5e553431454"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -274,6 +282,17 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pocao3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""259c752b-c24c-4604-9120-c715d8a5c642"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -857,6 +876,7 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
         m_Player_Pocao1 = m_Player.FindAction("Pocao1", throwIfNotFound: true);
         m_Player_Pocao2 = m_Player.FindAction("Pocao2", throwIfNotFound: true);
         m_Player_Pocao3 = m_Player.FindAction("Pocao3", throwIfNotFound: true);
+        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -924,6 +944,7 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Pocao1;
     private readonly InputAction m_Player_Pocao2;
     private readonly InputAction m_Player_Pocao3;
+    private readonly InputAction m_Player_Interact;
     public struct PlayerActions
     {
         private @PlayerActionss m_Wrapper;
@@ -934,6 +955,7 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
         public InputAction @Pocao1 => m_Wrapper.m_Player_Pocao1;
         public InputAction @Pocao2 => m_Wrapper.m_Player_Pocao2;
         public InputAction @Pocao3 => m_Wrapper.m_Player_Pocao3;
+        public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -961,6 +983,9 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
                 @Pocao3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao3;
                 @Pocao3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao3;
                 @Pocao3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPocao3;
+                @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -983,6 +1008,9 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
                 @Pocao3.started += instance.OnPocao3;
                 @Pocao3.performed += instance.OnPocao3;
                 @Pocao3.canceled += instance.OnPocao3;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
         }
     }
@@ -1145,6 +1173,7 @@ public class @PlayerActionss : IInputActionCollection, IDisposable
         void OnPocao1(InputAction.CallbackContext context);
         void OnPocao2(InputAction.CallbackContext context);
         void OnPocao3(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class LockedDoor : MonoBehaviour
 {
     [SerializeField] private PositionSmoothAnimation doorAnimator;
     [SerializeField] private GameObject needKeyVisualFeedback;
     [SerializeField] private GameObject canOpenVisualFeedback;
+    [SerializeField] private InputActionReference OpenDoorInputAction;
     bool isOpen = false;
     bool canOpen;
     private PlayerInventoryController playerInventory;
@@ -41,7 +42,7 @@ public class LockedDoor : MonoBehaviour
         if (isOpen)
             return;
         if (canOpen)
-            if (Input.GetButton("Fire1"))
+            if (OpenDoorInputAction.action.triggered)
                 OpenDoor();
     }
 

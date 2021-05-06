@@ -16,7 +16,7 @@ public class PlayerInventoryController : MonoBehaviour
     [SerializeField] private RectTransform[] _ItemCollectedPivot;
     [SerializeField] private CollectItemParticle _collectItemParticle;
     [SerializeField] private InputActionReference[] UsePotionInputActions;
-    [SerializeField] private List<InventoryItem> itemsInTheInventory;
+    [SerializeField] private List<InventoryItem> itemsInTheInventory = new List<InventoryItem>();
     [SerializeField] private InventorySlot[] inventorySlots;
     public Action<Sprite, int, int> OnSelectItem = delegate (Sprite icon, int amount, int inventorySlotIndex) { };
     public Action<Sprite, int, int> OnUpdateItem = delegate (Sprite icon, int amount, int inventorySlotIndex) { };
@@ -34,7 +34,7 @@ public class PlayerInventoryController : MonoBehaviour
             for (int i = 0; i < itemsInTheInventory.Count; i++)
             {
                 OnSelectItem.Invoke(itemsInTheInventory[i].icon, itemsInTheInventory[i].amount, i);
-                Debug.Log(i);
+
             }
         }
     }
@@ -83,19 +83,17 @@ public class PlayerInventoryController : MonoBehaviour
                 if (itemsInTheInventory.Exists(x => itemsInTheInventory.IndexOf(x) == itemIndex))
                 {
 
-                    if (itemsInTheInventory[itemIndex].icon != null && useItem.CanUseItemType(itemsInTheInventory[itemIndex].type))
+                    if (itemsInTheInventory[itemIndex].amount > 0 && useItem.CanUseItemType(itemsInTheInventory[itemIndex].type))
                     {
                         itemsInTheInventory[itemIndex].amount--;
 
                         useItem.UseItemByType(itemsInTheInventory[itemIndex].type);
 
                         OnSelectItem.Invoke(itemsInTheInventory[itemIndex].icon, itemsInTheInventory[itemIndex].amount, itemIndex);
-                        if (itemsInTheInventory[itemIndex].amount <= 0)
-                        {
-                            itemsInTheInventory[itemIndex] = null;
-                            
-                        }
+                        
                     }
+
+                    
                 }
                 break;
             }
@@ -119,29 +117,38 @@ public class PlayerInventoryController : MonoBehaviour
         {
             int inventorySlotIndex;
             var item = _inventory.Items.Where(q => q.type == type).First();
-            item.amount++;
+            
 
-            if (itemsInTheInventory.Any(q => q == item) == true)
+            if (itemsInTheInventory.Any(q => q == item && q.amount > 0) == true)
             {
+                foreach(var kkk in itemsInTheInventory)
+                {
+                    Debug.Log(kkk.type + ": " + kkk.amount);
+                }
                 var existingItem = itemsInTheInventory.First(q => q == item);
                 existingItem.amount++;
                 inventorySlotIndex = itemsInTheInventory.IndexOf(itemsInTheInventory.First(q => q == item));
             }
             else
             {
-                Debug.Log(itemsInTheInventory.Any(q => q == null));
-                if (itemsInTheInventory.Any(q => q.icon == null))
+                Debug.Log("nem entrou kkkkkkkkkkkkkkkkkkkk");
+                if (itemsInTheInventory.Any(q => q.amount <= 0))
                 {
-                    inventorySlotIndex = itemsInTheInventory.IndexOf(itemsInTheInventory.Where(q => q.icon == null).First());
+                    Debug.Log("nuloooooooo");
+                    inventorySlotIndex = itemsInTheInventory.IndexOf(itemsInTheInventory.First(q => q.amount <= 0));
                     itemsInTheInventory[inventorySlotIndex] = item;
+                    
                     
                 }
                 else
                 {
-                    inventorySlotIndex = Array.IndexOf(inventorySlots, inventorySlots.Where(x => x.isOccupied == false).First());
+                    Debug.Log("n nuloooooooo");
+                    inventorySlotIndex = Array.IndexOf(inventorySlots, inventorySlots.First(x => x.isOccupied == false));
                     itemsInTheInventory.Add(item);
                 }
             }
+
+            item.amount++;
 
             if (!item.discovered)
             {

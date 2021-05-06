@@ -436,7 +436,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  NearInteractionInputAction: {fileID: 7665185180329712655, guid: 58fae8e9cd963774bb607dc21d93a09d, type: 3}
+  NearInteractionInputAction: {fileID: 4755388888070571191, guid: 58fae8e9cd963774bb607dc21d93a09d, type: 3}
   SingleInteraction: 1
 --- !u!114 &1989777068
 MonoBehaviour:
@@ -450,5 +450,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a4bfaa1e4422a43ba56e45782308de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 0
+  item: 1
   openSprite: {fileID: 3744029606153231639, guid: ab1c7e8b22419f94aa7ca824f00a37f3, type: 3}

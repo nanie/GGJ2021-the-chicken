@@ -17,7 +17,9 @@ public class ItemChest : MonoBehaviour
 
     private void Open()
     {
+        Debug.Log("Open");
         playerInventory.CollectItem(item);
+        Debug.Log("Pós- Open");
         GetComponentInChildren<SpriteRenderer>().sprite = openSprite;
     }
 }
